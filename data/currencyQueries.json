@@ -1,0 +1,32 @@
+{
+  "divine": {
+    "query": {
+      "status": { "option": "online" },
+      "type": "Divine Orb",
+      "stats": [{ "type": "and", "filters": [], "disabled": true }],
+      "filters": {
+        "misc_filters": { "filters": { "stack_size": { "min": 5 } }, "disabled": false },
+        "trade_filters": {
+          "filters": { "price": { "option": "chaos" } },
+          "disabled": false
+        }
+      }
+    },
+    "sort": { "price": 
+  "asc" }
+  },
+  "exalted": {
+    "query": {
+      "status": { "option": "online" },
+      "type": "Exalted Orb",
+      "stats": [{ "type": "and", "filters": [], "disabled": true }],      "filters": {
+        "misc_filters": { "filters": { "stack_size": { "min": 5 } }, "disabled": false },
+        "trade_filters": {
+          "filters": { "price": { "option": "chaos" } },
+          "disabled": false
+        }
+      }
+    },
+    "sort": { "price": "asc" }
+  }
+}
