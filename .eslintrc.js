@@ -17,7 +17,7 @@ module.exports = {
     jest: true,
     browser: true,
   },
-  ignorePatterns: ['.eslintrc.js','webpack-hmr.config.js','next.config.js'],
+  ignorePatterns: ['ecosystem.config.js','.eslintrc.js','webpack-hmr.config.js','next.config.js'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
