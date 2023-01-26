@@ -1,13 +1,19 @@
 import { GridColumns, GridRenderCellParams } from '@mui/x-data-grid';
 import { FlipItemTypes } from '../../../shared/types/flipObjectTypes';
 import Link from '../link/Link';
+import { Box } from '@mui/material';
 
 export const flipDataColumns: GridColumns<FlipItemTypes> = [
     {
         field: 'itemBuyingInfo',
         headerName: 'Item buying',
         renderCell: (params: GridRenderCellParams<string, FlipItemTypes>) => (
-            <div>
+            <Box
+                display={'flex'}
+                alignItems={'center'}
+                justifyContent={'space-between'}
+                width={'100%'}
+            >
                 <Link
                     href={params.row.itemBuyingInfo.poeTradeLink}
                     target="_blank"
@@ -15,7 +21,7 @@ export const flipDataColumns: GridColumns<FlipItemTypes> = [
                     {params.row.itemBuyingInfo.name}
                 </Link>
                 <p>~{params.row.itemBuyingInfo.totalInTrade}</p>
-            </div>
+            </Box>
         ),
         minWidth: 210,
     },
@@ -24,12 +30,20 @@ export const flipDataColumns: GridColumns<FlipItemTypes> = [
         headerName: 'Item selling',
         minWidth: 200,
         renderCell: (params: GridRenderCellParams<string, FlipItemTypes>) => (
-            <Link
-                href={params.row.itemSellingInfo.poeTradeLink}
-                target="_blank"
+            <Box
+                display={'flex'}
+                alignItems={'center'}
+                justifyContent={'space-between'}
+                width={'100%'}
             >
-                {params.row.itemSellingInfo.name}
-            </Link>
+                <Link
+                    href={params.row.itemSellingInfo.poeTradeLink}
+                    target="_blank"
+                >
+                    {params.row.itemSellingInfo.name}
+                </Link>
+                <p>~{params.row.itemSellingInfo.totalInTrade}</p>
+            </Box>
         ),
     },
     {
