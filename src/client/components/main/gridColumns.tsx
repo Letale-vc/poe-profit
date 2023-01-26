@@ -23,12 +23,12 @@ export const flipDataColumns: GridColumns<FlipItemTypes> = [
                 <p>~{params.row.itemBuyingInfo.totalInTrade}</p>
             </Box>
         ),
-        minWidth: 210,
+        minWidth: 220,
     },
     {
         field: 'itemSelling',
         headerName: 'Item selling',
-        minWidth: 200,
+        minWidth: 220,
         renderCell: (params: GridRenderCellParams<string, FlipItemTypes>) => (
             <Box
                 display={'flex'}
