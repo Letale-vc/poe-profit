@@ -17,11 +17,13 @@ export class PriceCalculation implements IItemPriceCalculation {
     });
   }
 
-  private timeListedChecked(listingIndexedDate: Date) {
+  private timeListedChecked(listingIndexedDate: Date, timeSkipInHours: number) {
+    const timeSkipInMS = timeSkipInHours * 3.6e6;
+
     const timeInTrade = new Date(listingIndexedDate);
     const dateTimeNow = new Date();
     const timeListed = dateTimeNow.getTime() - timeInTrade.getTime();
-    const timeListedChecked = timeListed > 1.8e7;
+    const timeListedChecked = timeListed > timeSkipInMS;
     return timeListedChecked;
   }
 
@@ -130,8 +132,17 @@ export class PriceCalculation implements IItemPriceCalculation {
         if (total > 50) {
           const timeListedChecked = this.timeListedChecked(
             currentValue.listing.indexed,
+            5,
           );
           if (index < 4 && timeListedChecked) {
+            return previousValue;
+          }
+        } else {
+          const timeListedChecked = this.timeListedChecked(
+            currentValue.listing.indexed,
+            24,
+          );
+          if (index < 2 && timeListedChecked) {
             return previousValue;
           }
         }
