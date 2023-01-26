@@ -7,11 +7,17 @@ export const flipDataColumns: GridColumns<FlipItemTypes> = [
         field: 'itemBuyingInfo',
         headerName: 'Item buying',
         renderCell: (params: GridRenderCellParams<string, FlipItemTypes>) => (
-            <Link href={params.row.itemBuyingInfo.poeTradeLink} target="_blank">
-                {params.row.itemBuyingInfo.name}
-            </Link>
+            <div>
+                <Link
+                    href={params.row.itemBuyingInfo.poeTradeLink}
+                    target="_blank"
+                >
+                    {params.row.itemBuyingInfo.name}
+                </Link>
+                <p>~{params.row.itemBuyingInfo.totalInTrade}</p>
+            </div>
         ),
-        minWidth: 200,
+        minWidth: 210,
     },
     {
         field: 'itemSelling',
