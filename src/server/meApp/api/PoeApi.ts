@@ -1,14 +1,14 @@
 import axios, { AxiosInstance, CreateAxiosDefaults, isAxiosError } from 'axios';
 import { TradeQueryType } from '../types/TradeQueryType';
 import {
-  PoeFirstResponse,
-  PoeSecondResponse,
-  PoeTradeDataItemsResponse,
-  ResponseLeagueList,
+  PoeFirstResponseType,
+  PoeSecondResponseType,
+  PoeTradeDataItemsResponseType,
+  ResponseLeagueListType,
 } from '../types/response-poe-fetch';
-import { SearchItemsPoeApi } from '../searchItems/interface/SearchItemsPoeApi.interface';
+import { ISearchItemsPoeApi } from '../searchItems/interface/SearchItemsPoeApi.interface';
 
-export class PoeApi implements SearchItemsPoeApi {
+export class PoeApi implements ISearchItemsPoeApi {
   leagueName: string;
 
   private readonly defaultOptions: CreateAxiosDefaults = {
@@ -45,7 +45,7 @@ export class PoeApi implements SearchItemsPoeApi {
   }
 
   private async _takeLeagueName() {
-    const { data } = await this.instance.get<ResponseLeagueList>(
+    const { data } = await this.instance.get<ResponseLeagueListType>(
       'https://www.pathofexile.com/api/trade/data/leagues',
     );
     const leaguePc = data.result.filter((el) => el.realm === 'pc');
@@ -60,14 +60,14 @@ export class PoeApi implements SearchItemsPoeApi {
   }
 
   async poeTradeDataItems() {
-    const { data } = await this.instance.get<PoeTradeDataItemsResponse>(
+    const { data } = await this.instance.get<PoeTradeDataItemsResponseType>(
       'https://www.pathofexile.com/api/trade/data/items',
     );
     return data;
   }
 
   async poeFirsRequest(requestQuery: TradeQueryType) {
-    const { data } = await this.instance.post<PoeFirstResponse>(
+    const { data } = await this.instance.post<PoeFirstResponseType>(
       `https://www.pathofexile.com/api/trade/search/${this.leagueName}`,
       requestQuery,
     );
@@ -75,7 +75,7 @@ export class PoeApi implements SearchItemsPoeApi {
   }
 
   async poeSecondRequest(arrayIds: string[], queryId: string) {
-    const { data } = await this.instance.get<PoeSecondResponse>(
+    const { data } = await this.instance.get<PoeSecondResponseType>(
       `https://www.pathofexile.com/api/trade/fetch/${arrayIds.join(
         ',',
       )}?query=${queryId}`,
