@@ -1,6 +1,6 @@
 import { CurrencyPriceEntity } from './entity/CurrencyPriceEntity';
 import { round } from '../helpers/utils';
-import { PoeSecondResult } from '../types/response-poe-fetch';
+import { PoeSecondResultType } from '../types/response-poe-fetch';
 import { PriceEntity } from './entity/PriceEntity';
 import { IItemPriceCalculation } from '../item/interface/IItemPriceCalculation';
 
@@ -8,16 +8,27 @@ export class PriceCalculation implements IItemPriceCalculation {
   currencyPrice: CurrencyPriceEntity;
 
   constructor(
-    private readonly divineListing: PoeSecondResult[],
-    private readonly exaltedListing: PoeSecondResult[],
+    private readonly divineListing: PoeSecondResultType[],
+    private readonly exaltedListing: PoeSecondResultType[],
   ) {
     this.currencyPrice = this.getCurrencyPrice({
       divineListing: this.divineListing,
       exaltedListing: this.exaltedListing,
     });
   }
+  // Значення для максимальної різниці у відсотках
+  static readonly differenceToCurrency: Record<string, number> = {
+    chaos: 10,
+    divine: 2,
+    exalted: 2,
+  };
 
-  private timeListedChecked(listingIndexedDate: Date, timeSkipInHours: number) {
+  // Перевірка часу, пройденого з моменту публікації оголошення на трейд сайті
+  private timeListedChecked = (
+    listingIndexedDate: Date,
+    timeSkipInHours: number,
+  ) => {
+    // Обчислення часу, що пройшов в мілісекундах
     const timeSkipInMS = timeSkipInHours * 3.6e6;
 
     const timeInTrade = new Date(listingIndexedDate);
@@ -25,19 +36,15 @@ export class PriceCalculation implements IItemPriceCalculation {
     const timeListed = dateTimeNow.getTime() - timeInTrade.getTime();
     const timeListedChecked = timeListed > timeSkipInMS;
     return timeListedChecked;
-  }
+  };
 
-  private differenceChecked(
+  // Перевірка різниці між попередньою та поточною ціною у відсотках
+  private differenceChecked = (
     previousValue: PriceEntity,
-    currentValue: PoeSecondResult,
-  ) {
-    const differenceToCurrency: { [key: string]: number } = {
-      chaos: 10,
-      divine: 2,
-      exalted: 2,
-    };
+    currentValue: PoeSecondResultType,
+  ) => {
     const currencyName = currentValue.listing.price.currency;
-    if (!differenceToCurrency[currencyName]) {
+    if (!PriceCalculation.differenceToCurrency[currencyName]) {
       return true;
     }
     const currentValueListingPrice = currentValue.listing.price.amount;
@@ -45,104 +52,174 @@ export class PriceCalculation implements IItemPriceCalculation {
     const differenceInPercent =
       (currentValueListingPrice / previousValue[currencyName]) * 100 - 100;
     const doesItExistBigDifferencePrice =
-      differenceInPercent > differenceToCurrency[currencyName];
+      differenceInPercent > PriceCalculation.differenceToCurrency[currencyName];
     return doesItExistBigDifferencePrice;
-  }
+  };
 
-  private addItemPriceToCalculation(
+  // Розрахунок ціни предмета в залежності від валюти
+  calculateItemPrice(
     previousValue: PriceEntity,
-    currentValue: PoeSecondResult,
+    currentValue: PoeSecondResultType,
     maxStackSize: number,
-  ) {
-    const { chaos, divine, exalted } = previousValue;
-    const howMuchToDivide = chaos === 0 ? 1 : 2;
+  ): PriceEntity {
     const currentValueListingPrice = currentValue.listing.price.amount;
     const currencyName = currentValue.listing.price.currency;
 
-    const price = new PriceEntity();
+    let price = { ...previousValue };
 
+    // Визначення валюти і виклик відповідної функції розрахунку ціни
     switch (currencyName) {
-      case 'chaos': {
-        price.chaos = (chaos + currentValueListingPrice) / howMuchToDivide;
-        const convertChaosInDivine =
-          currentValueListingPrice / this.currencyPrice.divinePriceInChaos;
-        price.divine = (divine + convertChaosInDivine) / howMuchToDivide;
-        const convertChaosInExalted =
-          currentValueListingPrice / this.currencyPrice.exaltedPriceInChaos;
-        price.exalted = (exalted + convertChaosInExalted) / howMuchToDivide;
-        price.priceInChaosIfFullStackSize = maxStackSize * price.chaos;
-        price.priceInExaltedIfFullStackSize = maxStackSize * price.exalted;
-        price.priceInDivineIfFullStackSize = maxStackSize * price.divine;
-
-        return price;
-      }
-      case 'divine': {
-        const convertDivineInChaos =
-          currentValueListingPrice * this.currencyPrice.divinePriceInChaos;
-
-        const convertDivineInExalted =
-          convertDivineInChaos / this.currencyPrice.exaltedPriceInChaos;
-
-        price.chaos = (chaos + convertDivineInChaos) / howMuchToDivide;
-        price.divine = (divine + currentValueListingPrice) / howMuchToDivide;
-        price.exalted = (exalted + convertDivineInExalted) / howMuchToDivide;
-        price.priceInChaosIfFullStackSize = maxStackSize * price.chaos;
-        price.priceInDivineIfFullStackSize = maxStackSize * price.divine;
-        price.priceInExaltedIfFullStackSize = maxStackSize * price.exalted;
-
-        return price;
-      }
-      case 'exalted': {
-        const convertExaltedInChaos =
-          currentValueListingPrice * this.currencyPrice.exaltedPriceInChaos;
-        const convertExaltedInDivine =
-          convertExaltedInChaos / this.currencyPrice.divinePriceInChaos;
-
-        price.chaos = (chaos + convertExaltedInChaos) / howMuchToDivide;
-        price.divine = (divine + convertExaltedInDivine) / howMuchToDivide;
-        price.exalted = (exalted + currentValueListingPrice) / howMuchToDivide;
-        price.priceInChaosIfFullStackSize = maxStackSize * price.chaos;
-        price.priceInDivineIfFullStackSize = maxStackSize * price.divine;
-        price.priceInExaltedIfFullStackSize = maxStackSize * price.exalted;
-
-        return price;
-      }
-      default: {
+      case 'chaos':
+        price = this.addItemPriceForChaos(
+          price,
+          previousValue,
+          currentValueListingPrice,
+          maxStackSize,
+        );
+        break;
+      case 'divine':
+        price = this.addItemPriceForDivine(
+          price,
+          previousValue,
+          currentValueListingPrice,
+          maxStackSize,
+        );
+        break;
+      case 'exalted':
+        price = this.addItemPriceForExalted(
+          price,
+          previousValue,
+          currentValueListingPrice,
+          maxStackSize,
+        );
+        break;
+      default:
         return previousValue;
-      }
     }
+
+    return price;
   }
 
-  private itemPriceCalculation(
-    itemsArray: PoeSecondResult[],
+  // Розрахунок ціни предмета для валюти Chaos
+  private addItemPriceForChaos(
+    price: PriceEntity,
+    previousValue: { chaos: number; divine: number; exalted: number },
+    currentValueListingPrice: number,
+    maxStackSize: number,
+  ): PriceEntity {
+    const { chaos, divine, exalted } = previousValue;
+    const howMuchToDivide = chaos === 0 ? 1 : 2;
+
+    const updatedPrice = { ...price };
+    updatedPrice.chaos = (chaos + currentValueListingPrice) / howMuchToDivide;
+    const convertChaosInDivine =
+      currentValueListingPrice / this.currencyPrice.divinePriceInChaos;
+    updatedPrice.divine = (divine + convertChaosInDivine) / howMuchToDivide;
+    const convertChaosInExalted =
+      currentValueListingPrice / this.currencyPrice.exaltedPriceInChaos;
+    updatedPrice.exalted = (exalted + convertChaosInExalted) / howMuchToDivide;
+    updatedPrice.priceInChaosIfFullStackSize =
+      maxStackSize * updatedPrice.chaos;
+    updatedPrice.priceInExaltedIfFullStackSize =
+      maxStackSize * updatedPrice.exalted;
+    updatedPrice.priceInDivineIfFullStackSize =
+      maxStackSize * updatedPrice.divine;
+
+    return updatedPrice;
+  }
+
+  // Розрахунок ціни предмета для валюти Divine
+  private addItemPriceForDivine(
+    price: PriceEntity,
+    previousValue: { chaos: number; divine: number; exalted: number },
+    currentValueListingPrice: number,
+    maxStackSize: number,
+  ): PriceEntity {
+    const { chaos, divine, exalted } = previousValue;
+    const howMuchToDivide = chaos === 0 ? 1 : 2;
+
+    const updatedPrice = { ...price };
+    const convertDivineInChaos =
+      currentValueListingPrice * this.currencyPrice.divinePriceInChaos;
+    const convertDivineInExalted =
+      convertDivineInChaos / this.currencyPrice.exaltedPriceInChaos;
+
+    updatedPrice.chaos = (chaos + convertDivineInChaos) / howMuchToDivide;
+    updatedPrice.divine = (divine + currentValueListingPrice) / howMuchToDivide;
+    updatedPrice.exalted = (exalted + convertDivineInExalted) / howMuchToDivide;
+    updatedPrice.priceInChaosIfFullStackSize =
+      maxStackSize * updatedPrice.chaos;
+    updatedPrice.priceInDivineIfFullStackSize =
+      maxStackSize * updatedPrice.divine;
+    updatedPrice.priceInExaltedIfFullStackSize =
+      maxStackSize * updatedPrice.exalted;
+
+    return updatedPrice;
+  }
+
+  // Розрахунок ціни предмета для валюти Exalted
+  private addItemPriceForExalted(
+    price: PriceEntity,
+    previousValue: { chaos: number; divine: number; exalted: number },
+    currentValueListingPrice: number,
+    maxStackSize: number,
+  ): PriceEntity {
+    const { chaos, divine, exalted } = previousValue;
+    const howMuchToDivide = chaos === 0 ? 1 : 2;
+
+    const updatedPrice = { ...price };
+    const convertExaltedInChaos =
+      currentValueListingPrice * this.currencyPrice.exaltedPriceInChaos;
+    const convertExaltedInDivine =
+      convertExaltedInChaos / this.currencyPrice.divinePriceInChaos;
+
+    updatedPrice.chaos = (chaos + convertExaltedInChaos) / howMuchToDivide;
+    updatedPrice.divine = (divine + convertExaltedInDivine) / howMuchToDivide;
+    updatedPrice.exalted =
+      (exalted + currentValueListingPrice) / howMuchToDivide;
+    updatedPrice.priceInChaosIfFullStackSize =
+      maxStackSize * updatedPrice.chaos;
+    updatedPrice.priceInDivineIfFullStackSize =
+      maxStackSize * updatedPrice.divine;
+    updatedPrice.priceInExaltedIfFullStackSize =
+      maxStackSize * updatedPrice.exalted;
+
+    return updatedPrice;
+  }
+
+  private itemPriceCalculation = (
+    itemsArray: PoeSecondResultType[],
     total: number,
     maxStackSize: number,
-  ) {
-    const defaultInitialCount = new PriceEntity();
-
-    defaultInitialCount.chaos = 0;
-    defaultInitialCount.divine = 0;
-    defaultInitialCount.exalted = 0;
-    defaultInitialCount.priceInChaosIfFullStackSize = 0;
-    defaultInitialCount.priceInDivineIfFullStackSize = 0;
-    defaultInitialCount.priceInExaltedIfFullStackSize = 0;
+  ) => {
+    const defaultInitialCount = PriceEntity.createDefault();
 
     const resultValue = itemsArray.reduce(
       (previousValue, currentValue, index) => {
+        const timeSkipInHoursForTotalGreaterThan50 = 5;
+        const timeSkipInHoursForTotalLessThanOrEqualTo50 = 24;
+        const maxItemsToSkipForTotalGreaterThan50 = 4;
+        const maxItemsToSkipForTotalLessThanOrEqualTo50 = 2;
         if (total > 50) {
           const timeListedChecked = this.timeListedChecked(
             currentValue.listing.indexed,
-            5,
+            timeSkipInHoursForTotalGreaterThan50,
           );
-          if (index < 4 && timeListedChecked) {
+          if (
+            index < maxItemsToSkipForTotalGreaterThan50 &&
+            timeListedChecked
+          ) {
             return previousValue;
           }
         } else {
           const timeListedChecked = this.timeListedChecked(
             currentValue.listing.indexed,
-            24,
+            timeSkipInHoursForTotalLessThanOrEqualTo50,
           );
-          if (index < 2 && timeListedChecked) {
+          if (
+            index < maxItemsToSkipForTotalLessThanOrEqualTo50 &&
+            timeListedChecked
+          ) {
             return previousValue;
           }
         }
@@ -153,7 +230,7 @@ export class PriceCalculation implements IItemPriceCalculation {
           }
         }
 
-        const countPrice = this.addItemPriceToCalculation(
+        const countPrice = this.calculateItemPrice(
           previousValue,
           currentValue,
           maxStackSize,
@@ -164,14 +241,14 @@ export class PriceCalculation implements IItemPriceCalculation {
     );
 
     return resultValue;
-  }
+  };
 
-  getItemPrice(
-    itemsArray: PoeSecondResult[],
+  getItemPrice = (
+    itemsArray: PoeSecondResultType[],
     total: number,
     maxStackSize: number,
     priceMultiplier = 1,
-  ) {
+  ) => {
     const itemPrice = this.itemPriceCalculation(
       itemsArray,
       total,
@@ -194,9 +271,11 @@ export class PriceCalculation implements IItemPriceCalculation {
     );
 
     return price;
-  }
+  };
 
-  private currencyPriceCalculation(listingCurrencyInTrade: PoeSecondResult[]) {
+  private currencyPriceCalculation = (
+    listingCurrencyInTrade: PoeSecondResultType[],
+  ) => {
     const countAllListingPrice = listingCurrencyInTrade.reduce((acc, value) => {
       return value.listing.price.amount + acc;
     }, 0);
@@ -205,13 +284,16 @@ export class PriceCalculation implements IItemPriceCalculation {
       0,
     );
     return currencyPriceRound;
-  }
+  };
 
-  private getCurrencyPrice(arg: {
-    divineListing: PoeSecondResult[];
-    exaltedListing: PoeSecondResult[];
-  }) {
-    const { divineListing, exaltedListing } = arg;
+  // Отримання курсу обміну валютами Divine і Exalted у Chaos
+  private getCurrencyPrice = ({
+    divineListing,
+    exaltedListing,
+  }: {
+    divineListing: PoeSecondResultType[];
+    exaltedListing: PoeSecondResultType[];
+  }) => {
     const currencyPrice = new CurrencyPriceEntity();
     currencyPrice.divinePriceInChaos =
       this.currencyPriceCalculation(divineListing);
@@ -219,5 +301,5 @@ export class PriceCalculation implements IItemPriceCalculation {
       this.currencyPriceCalculation(exaltedListing);
 
     return currencyPrice;
-  }
+  };
 }
