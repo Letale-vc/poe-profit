@@ -6,6 +6,7 @@ describe('FlipQueriesController', () => {
   let queriesController: FlipQueriesController;
   const queriesService = {
     getAll: jest.fn().mockResolvedValueOnce([]),
+    getAllToClient: jest.fn().mockResolvedValueOnce([]),
     update: jest.fn(),
     remove: jest.fn(),
     add: jest.fn(),

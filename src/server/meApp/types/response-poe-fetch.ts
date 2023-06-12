@@ -42,7 +42,7 @@ interface ItemSocketType {
   sColour: 'R' | 'G' | 'B' | 'W' | 'A' | 'DV';
 }
 
-interface ItemType {
+export interface ItemType {
   verified: boolean;
   w: number;
   h: number;
@@ -170,6 +170,6 @@ export interface PoeSecondResultType {
   item: ItemType;
 }
 
-export interface PoeSecondResponseType {
+export interface PoeSecondResponse {
   result: PoeSecondResultType[];
 }

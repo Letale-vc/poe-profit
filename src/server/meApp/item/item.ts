@@ -10,15 +10,18 @@ export class Item implements IFlipObjectItem {
     private readonly itemPrice: IItemPriceCalculation,
   ) {}
 
-  private getPoeTradeLink(id: string) {
+  getPoeTradeLink(id: string) {
     const poeTradeLinkURL = new URL('https://www.pathofexile.com/trade/search');
     poeTradeLinkURL.pathname = `${poeTradeLinkURL.pathname}/${this.leagueName}/${id}`;
     return poeTradeLinkURL.toString();
   }
 
-  private getName(tradeQuery: TradeQueryType) {
+  getName(tradeQuery: TradeQueryType) {
     const { name, type, term } = tradeQuery.query;
     if (typeof name === 'string' && typeof type === 'string') {
+      return name;
+    }
+    if (typeof name === 'string' && !type) {
       return name;
     }
     if (!name && typeof type === 'string') {

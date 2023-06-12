@@ -57,7 +57,7 @@ export class PriceCalculation implements IItemPriceCalculation {
   };
 
   // Розрахунок ціни предмета в залежності від валюти
-  calculateItemPrice(
+  private calculateItemPrice(
     previousValue: PriceEntity,
     currentValue: PoeSecondResultType,
     maxStackSize: number,
