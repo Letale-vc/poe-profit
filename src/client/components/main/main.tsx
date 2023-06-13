@@ -12,7 +12,6 @@ export interface MainPropsType {
 
 export const Main: FC<MainPropsType> = ({ flipData }) => {
     const { data = flipData, refetch } = useGetPoeFlipDataQuery();
-    console.log(data);
     useEffect(() => {
         const interval = setInterval(refetch, 5000);
         return () => {
