@@ -1,9 +1,9 @@
 # me ignores
 
-data/flipData.json
+/data/flipData.json
 
-yran.lock
-package-lock.json
+/yran.lock
+/package-lock.json
 .idea
 
 # Logs
