@@ -1,8 +1,8 @@
 import {
-  PoeFirstResponse,
-  PoeSecondResponse,
-  PoeSecondResult,
-  PoeTradeDataItemsResponse,
+  PoeFirstResponseType,
+  PoeSecondResponseType,
+  PoeSecondResultType,
+  PoeTradeDataItemsResponseType,
 } from '../../types/response-poe-fetch';
 
 export class PoeApiInterface {
@@ -10,17 +10,17 @@ export class PoeApiInterface {
 
   init: () => Promise<void>;
 
-  poeTradeDataItems: () => Promise<PoeTradeDataItemsResponse>;
+  poeTradeDataItems: () => Promise<PoeTradeDataItemsResponseType>;
 
-  poeFirsRequest: (query: string) => Promise<PoeFirstResponse>;
+  poeFirsRequest: (query: string) => Promise<PoeFirstResponseType>;
 
   poeSecondRequest: (
     arrayIds: string[],
     queryId: string,
-  ) => Promise<PoeSecondResponse>;
+  ) => Promise<PoeSecondResponseType>;
 
   makeARequestToAnyItem: (query: string) => Promise<{
-    result: PoeSecondResult[];
+    result: PoeSecondResultType[];
     id: string;
     total: number;
   }>;

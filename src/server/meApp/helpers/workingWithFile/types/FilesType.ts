@@ -1,5 +1,5 @@
 import { QueriesFlipEntity } from '../../../flipQueries/entity/query.entity';
-import { PoeTradeDataItemsResponse } from '../../../types/response-poe-fetch';
+import { PoeTradeDataItemsResponseType } from '../../../types/response-poe-fetch';
 import { TradeQueryType } from '../../../types/TradeQueryType';
 import { fileNames } from '../FileNames';
 
@@ -11,7 +11,7 @@ export interface CurrencyQueriesFileType {
 export type ReturnFileType<T> = T extends typeof fileNames.CURRENCY_QUERIES
   ? CurrencyQueriesFileType
   : T extends typeof fileNames.POE_TRADE_DATA_ITEMS
-  ? PoeTradeDataItemsResponse
+  ? PoeTradeDataItemsResponseType
   : T extends typeof fileNames.POE_DATA
   ? FlipDataFileType
   : T extends typeof fileNames.POE_QUERIES_SEARCH

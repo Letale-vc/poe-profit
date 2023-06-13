@@ -12,7 +12,7 @@ export interface MainPropsType {
 
 export const Main: FC<MainPropsType> = ({ flipData }) => {
     const { data = flipData, refetch } = useGetPoeFlipDataQuery();
-
+    console.log(data);
     useEffect(() => {
         const interval = setInterval(refetch, 5000);
         return () => {
@@ -39,27 +39,29 @@ export const Main: FC<MainPropsType> = ({ flipData }) => {
                 </Button>
             </Box>
 
-            <DataGrid
-                getRowId={(row) =>
-                    `${row.itemBuyingInfo.name}_${row.itemSellingInfo.name}_${row.queriesFlipUuid}`
-                }
-                initialState={{
-                    sorting: {
-                        sortModel: [
-                            {
-                                field: 'profitInChaosPerTrade',
-                                sort: 'desc',
-                            },
-                        ],
-                    },
-                }}
-                rows={(data && data.flipData) || []}
-                columns={flipDataColumns}
-                disableSelectionOnClick
-                autoHeight
-                density="compact"
-                hideFooter
-            />
+            {data && (
+                <DataGrid
+                    getRowId={(row) =>
+                        `${row.itemBuyingInfo.name}_${row?.itemSellingInfo?.name}_${row.queriesFlipUuid}`
+                    }
+                    initialState={{
+                        sorting: {
+                            sortModel: [
+                                {
+                                    field: 'profitInChaosPerTrade',
+                                    sort: 'desc',
+                                },
+                            ],
+                        },
+                    }}
+                    rows={data.flipData}
+                    columns={flipDataColumns}
+                    disableSelectionOnClick
+                    autoHeight
+                    density="compact"
+                    hideFooter
+                />
+            )}
         </Box>
     );
 };

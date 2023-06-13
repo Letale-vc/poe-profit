@@ -34,11 +34,13 @@ export class App {
     this.poeApi = new PoeApi();
     await this.poeApi.init();
 
-    this.flipData = new FlipData();
+    this.flipData = new FlipData(new WorkingWithFile(fileNames.POE_DATA));
     await this.flipData.init();
     this.cashFlipData = await this.flipData.getAll();
 
-    this.flipQueries = new FlipQueries();
+    this.flipQueries = new FlipQueries(
+      new WorkingWithFile(fileNames.POE_QUERIES_SEARCH),
+    );
     await this.flipQueries.init();
     this.cashFlipQueries = await this.flipQueries.getAll();
 

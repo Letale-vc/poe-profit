@@ -1,10 +1,8 @@
 import { FlipObjectEntity } from '../flipObject/entity/FlipObjectEntity';
-import { fileNames } from '../helpers/workingWithFile/FileNames';
-import { WorkingWithFile } from '../helpers/workingWithFile/WorkingWithFile';
 import { IFlipDataFileWorks } from './interface/IFlipDataFileWorks';
 
 export class FlipData {
-  fileWorks: IFlipDataFileWorks = new WorkingWithFile(fileNames.POE_DATA);
+  constructor(private readonly fileWorks: IFlipDataFileWorks) {}
 
   async init() {
     if (!this.fileWorks.fileExist()) {

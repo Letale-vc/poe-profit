@@ -1,11 +1,11 @@
-export interface PoeFirstResponse {
+export interface PoeFirstResponseType {
   id: string;
   complexity: number;
   result: string[];
   total: number;
 }
 
-export interface ResponseLeagueList {
+export interface ResponseLeagueListType {
   result: {
     id: string;
     realm: string;
@@ -13,7 +13,7 @@ export interface ResponseLeagueList {
   }[];
 }
 
-export interface PoeTradeDataItemsResult {
+export interface PoeTradeDataItemsResultType {
   id: string;
   label: string;
   entries: {
@@ -25,10 +25,10 @@ export interface PoeTradeDataItemsResult {
     };
   }[];
 }
-export interface PoeTradeDataItemsResponse {
-  result: PoeTradeDataItemsResult[];
+export interface PoeTradeDataItemsResponseType {
+  result: PoeTradeDataItemsResultType[];
 }
-interface ItemProperty {
+interface ItemPropertyType {
   name: string;
   values: [[string, number]];
   displayMode: number;
@@ -36,13 +36,13 @@ interface ItemProperty {
   progress?: number;
   suffix?: string;
 }
-interface ItemSocket {
+interface ItemSocketType {
   group: number;
   attr: 'S' | 'D' | 'I' | 'G' | 'A' | 'DV';
   sColour: 'R' | 'G' | 'B' | 'W' | 'A' | 'DV';
 }
 
-interface Item {
+export interface ItemType {
   verified: boolean;
   w: number;
   h: number;
@@ -63,8 +63,8 @@ interface Item {
   fractured?: true;
   synthesised?: true;
   name: string;
-  sockets?: ItemSocket[];
-  socketedItems?: Item[];
+  sockets?: ItemSocketType[];
+  socketedItems?: ItemType[];
   typeLine: string;
   baseType: string;
   identified: boolean;
@@ -81,11 +81,11 @@ interface Item {
   cisRaceReward?: true;
   seaRaceReward?: true;
   thRaceReward?: true;
-  properties?: ItemProperty[];
-  notableProperties?: ItemProperty[];
-  requirements?: ItemProperty[];
-  additionalProperties?: ItemProperty[];
-  nextLevelRequirements?: ItemProperty[];
+  properties?: ItemPropertyType[];
+  notableProperties?: ItemPropertyType[];
+  requirements?: ItemPropertyType[];
+  additionalProperties?: ItemPropertyType[];
+  nextLevelRequirements?: ItemPropertyType[];
   talismanTier?: number;
   secDescrText?: string;
   utilityMods?: string[];
@@ -131,7 +131,7 @@ interface Item {
   hybrid?: {
     isVaalGem?: boolean;
     baseTypeName?: string;
-    properties?: ItemProperty[];
+    properties?: ItemPropertyType[];
   };
   extended?: {
     category?: string;
@@ -146,7 +146,7 @@ interface Item {
   socket: number;
   colour?: string;
 }
-export interface PoeSecondResult {
+export interface PoeSecondResultType {
   id: string;
   listing: {
     method: 'psapi';
@@ -167,9 +167,9 @@ export interface PoeSecondResult {
       currency: string;
     };
   };
-  item: Item;
+  item: ItemType;
 }
 
-export interface PoeSecondResponse {
-  result: PoeSecondResult[];
+export interface PoeSecondResponseType {
+  result: PoeSecondResultType[];
 }

@@ -1,7 +1,7 @@
-import { PoeSecondResult } from '../../types/response-poe-fetch';
+import { PoeSecondResultType } from '../../types/response-poe-fetch';
 
 export interface IPoeTradeItemInfo {
-  result: PoeSecondResult[];
+  result: PoeSecondResultType[];
   id: string;
   total: number;
 }

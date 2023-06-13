@@ -1,9 +1,9 @@
 import { delay } from '../helpers/utils';
 import { TradeQueryType } from '../types/TradeQueryType';
-import { SearchItemsPoeApi } from './interface/SearchItemsPoeApi.interface';
+import { ISearchItemsPoeApi } from './interface/SearchItemsPoeApi.interface';
 
 export class SearchItems {
-  constructor(private readonly poeApi: SearchItemsPoeApi) {}
+  constructor(private readonly poeApi: ISearchItemsPoeApi) {}
 
   async makeARequestToAnyItem(requestQuery: TradeQueryType) {
     await delay(); // this delay is needed in order not to get the rate limit. Default 10seconds
@@ -28,7 +28,7 @@ export class SearchItems {
     return { result: secondResponse.result, id, total };
   }
 
-  private howManyItemsToSkipInTheList(totalList: number) {
+  howManyItemsToSkipInTheList(totalList: number) {
     switch (true) {
       case totalList > 50 && totalList < 100:
         return 3;

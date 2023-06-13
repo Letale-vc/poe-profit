@@ -1,16 +1,18 @@
 import { TradeQueryType } from '../../types/TradeQueryType';
 import {
-  PoeFirstResponse,
-  PoeSecondResponse,
+  PoeFirstResponseType,
+  PoeSecondResponseType,
 } from '../../types/response-poe-fetch';
 
-export class SearchItemsPoeApi {
+export class ISearchItemsPoeApi {
   leagueName: string;
 
-  poeFirsRequest: (requestQuery: TradeQueryType) => Promise<PoeFirstResponse>;
+  poeFirsRequest: (
+    requestQuery: TradeQueryType,
+  ) => Promise<PoeFirstResponseType>;
 
   poeSecondRequest: (
     arrayIds: string[],
     queryId: string,
-  ) => Promise<PoeSecondResponse>;
+  ) => Promise<PoeSecondResponseType>;
 }

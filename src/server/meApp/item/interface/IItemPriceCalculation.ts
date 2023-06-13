@@ -1,9 +1,9 @@
 import { PriceEntity } from '../../priceCalculation/entity/PriceEntity';
-import { PoeSecondResult } from '../../types/response-poe-fetch';
+import { PoeSecondResultType } from '../../types/response-poe-fetch';
 
 export interface IItemPriceCalculation {
   getItemPrice: (
-    arrayListing: PoeSecondResult[],
+    arrayListing: PoeSecondResultType[],
     total: number,
     maxStackSize: number,
     priceMultiplier: number,

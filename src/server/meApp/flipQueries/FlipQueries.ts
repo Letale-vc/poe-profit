@@ -1,17 +1,13 @@
 import { QueriesFlipEntity } from './entity/query.entity';
 import * as uuid from 'uuid';
 import { NewFlipQueriesType } from './types/NewFlipQueriesType';
-import { fileNames } from '../helpers/workingWithFile/FileNames';
-import { WorkingWithFile } from '../helpers/workingWithFile/WorkingWithFile';
 import { IFlipQueriesFileWorks } from './interface/IFlipQueriesFileWorks';
 import { UpdateFlipQueriesType } from './types/UpdateFlipQueriesType';
 import { TradeQueryType } from '../types/TradeQueryType';
 import { DeleteFlipQueriesType } from './types/DeleteFlipQueriesType';
 
 export class FlipQueries {
-  fileWorks: IFlipQueriesFileWorks = new WorkingWithFile(
-    fileNames.POE_QUERIES_SEARCH,
-  );
+  constructor(private readonly fileWorks: IFlipQueriesFileWorks) {}
 
   async init() {
     if (!this.fileWorks.fileExist()) {

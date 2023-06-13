@@ -15,7 +15,7 @@ export class WorkingWithFile<S extends FileNamesType>
     this.pathFileFolder = this.getPathFolderFile();
   }
 
-  getPathFolderFile() {
+  getPathFolderFile(): string {
     return path.join(this.pathFolder, this.fileName);
   }
 
@@ -25,9 +25,9 @@ export class WorkingWithFile<S extends FileNamesType>
     return fileParse;
   }
 
-  async saveJsonInFile(data: any) {
-    const stringifyPoeData = JSON.stringify(data, null, 4);
-    return fsPromises.writeFile(this.pathFileFolder, stringifyPoeData);
+  async saveJsonInFile(data: any): Promise<void> {
+    const stringifyData = JSON.stringify(data, null, 4);
+    return fsPromises.writeFile(this.pathFileFolder, stringifyData);
   }
 
   async fileInfo() {

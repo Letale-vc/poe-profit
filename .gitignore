@@ -1,7 +1,11 @@
 # me ignores
 
+/data/flipData.json
 data/flipData.json
-yarn.lock
+/yran.lock
+yran.lock
+/package-lock.json
+package-lock.json
 .idea
 
 # Logs
@@ -138,7 +142,7 @@ dist
 .vscode-test
 # IDE - VSCode
 .vscode/*
-!.vscode/settings.json
+.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
