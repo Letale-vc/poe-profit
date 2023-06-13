@@ -2,10 +2,10 @@
 
 /data/flipData.json
 data/flipData.json
-# /yran.lock
-# yran.lock
-# /package-lock.json
-# package-lock.json
+/yran.lock
+yran.lock
+/package-lock.json
+package-lock.json
 .idea
 
 # Logs
