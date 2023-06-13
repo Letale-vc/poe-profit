@@ -1,6 +1,7 @@
 # me ignores
 
 data/flipData.json
+
 yran.lock
 package-lock.json
 .idea
@@ -139,7 +140,7 @@ dist
 .vscode-test
 # IDE - VSCode
 .vscode/*
-!.vscode/settings.json
+.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
