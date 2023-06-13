@@ -170,6 +170,6 @@ export interface PoeSecondResultType {
   item: ItemType;
 }
 
-export interface PoeSecondResponse {
+export interface PoeSecondResponseType {
   result: PoeSecondResultType[];
 }

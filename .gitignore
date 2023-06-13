@@ -1,7 +1,8 @@
 # me ignores
 
 data/flipData.json
-yarn.lock
+yran.lock
+package-lock.json
 .idea
 
 # Logs
