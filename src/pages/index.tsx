@@ -1,18 +1,29 @@
 import { GetServerSideProps } from 'next';
-import { Main, MainPropsType } from '../client/components/main/main';
-import { flipApi, getPoeFlipData } from '../client/lib/apiConfig';
+import { Main } from '../client/components/Main/Main';
+import { MainPropsType } from '../client/components/Main/Types/MainTypes';
+import { flipApi, getData } from '../client/lib/apiConfig';
 import { wrapper } from '../client/lib/store';
+import { RequestAndDataTypeNames } from '../shared/constants/RequestAndDataType';
+import { checkIpAddress } from '../shared/utils/checkIpAddress';
 
 export const getServerSideProps: GetServerSideProps<MainPropsType> =
-    wrapper.getServerSideProps((store) => async () => {
-        store.dispatch(getPoeFlipData.initiate());
+    wrapper.getServerSideProps((store) => async (ctx) => {
+        store.dispatch(getData.initiate(RequestAndDataTypeNames.flip));
+        const ipv6Address =
+            ctx.req.headers['x-forwarded-for'] || ctx.req.socket.remoteAddress;
+
+        const adminAddress = checkIpAddress(ipv6Address);
 
         await Promise.all(
             store.dispatch(flipApi.util.getRunningQueriesThunk()),
         );
-        const { data } = getPoeFlipData.select()(store.getState());
+        const { data } = getData.select(RequestAndDataTypeNames.flip)(
+            store.getState(),
+        );
         return {
-            props: data || {},
+            props: (data && { data, adminAddress }) || {
+                adminAddress,
+            },
         };
     });
 

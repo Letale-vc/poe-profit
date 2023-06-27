@@ -1,91 +1,116 @@
-{
-  "divine": {
-    "query": {
-      "status": {
-        "option": "online"
-      },
-      "type": "Divine Orb",
-      "stats": [
-        {
-          "type": "and",
-          "filters": [],
-          "disabled": true
-        }
-      ],
-      "filters": {
-        "misc_filters": {
-          "filters": {
-            "stack_size": {
-              "min": 5
-            }
-          },
-          "disabled": false
+[
+  {
+    "name": "divine",
+    "request": {
+      "query": {
+        "status": {
+          "option": "online"
         },
-        "trade_filters": {
-          "filters": {
-            "price": {
-              "option": "chaos"
-            }
+        "type": "Divine Orb",
+        "stats": [
+          {
+            "type": "and",
+            "filters": [],
+            "disabled": true
+          }
+        ],
+        "filters": {
+          "misc_filters": {
+            "filters": {
+              "stack_size": {
+                "min": 5
+              }
+            },
+            "disabled": false
           },
-          "disabled": false
+          "trade_filters": {
+            "filters": {
+              "price": {
+                "option": "chaos"
+              }
+            },
+            "disabled": false
+          }
         }
+      },
+      "sort": {
+        "price": "asc"
       }
-    },
-    "sort": {
-      "price": "asc"
     }
   },
-  "exalted": {
-    "query": {
-      "status": {
-        "option": "online"
-      },
-      "type": "Exalted Orb",
-      "stats": [
-        {
-          "type": "and",
-          "filters": [],
-          "disabled": true
-        }
-      ],
-      "filters": {
-        "misc_filters": {
-          "filters": {
-            "stack_size": {
-              "min": 5
-            }
-          },
-          "disabled": false
+  {
+    "name": "exalted",
+    "request": {
+      "query": {
+        "status": {
+          "option": "online"
         },
-        "trade_filters": {
-          "filters": {
-            "price": {
-              "option": "chaos"
-            }
+        "type": "Exalted Orb",
+        "stats": [
+          {
+            "type": "and",
+            "filters": [],
+            "disabled": true
+          }
+        ],
+        "filters": {
+          "misc_filters": {
+            "filters": {
+              "stack_size": {
+                "min": 5
+              }
+            },
+            "disabled": false
           },
-          "disabled": false
+          "trade_filters": {
+            "filters": {
+              "price": {
+                "option": "chaos"
+              }
+            },
+            "disabled": false
+          }
         }
+      },
+      "sort": {
+        "price": "asc"
       }
-    },
-    "sort": {
-      "price": "asc"
     }
   },
-  "awakened-sextant": {
-    "query": {
-      "status": {
-        "option": "online"
-      },
-      "type": "Awakened Sextant",
-      "stats": [
-        {
-          "type": "and",
-          "filters": []
+  {
+    "name": "awakened-sextant",
+    "request": {
+      "query": {
+        "status": {
+          "option": "online"
+        },
+        "type": "Awakened Sextant",
+        "stats": [
+          {
+            "type": "and",
+            "filters": []
+          }
+        ],
+        "filters": {
+          "misc_filters": {
+            "filters": {
+              "stack_size": {
+                "min": 5
+              }
+            }
+          },
+          "trade_filters": {
+            "filters": {
+              "price": {
+                "option": "chaos"
+              }
+            }
+          }
         }
-      ]
-    },
-    "sort": {
-      "price": "asc"
+      },
+      "sort": {
+        "price": "asc"
+      }
     }
   }
-}
+]

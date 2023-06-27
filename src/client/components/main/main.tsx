@@ -1,24 +1,40 @@
 import { DataGrid } from '@mui/x-data-grid';
-import { FC, useEffect } from 'react';
-import { Box, Button } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Box, Button, Tab } from '@mui/material';
 import Link from '../link/Link';
-import { useGetPoeFlipDataQuery } from '../../lib/apiConfig';
-import { flipDataColumns } from './gridColumns';
-import { PoeFlipDataType } from '../../../shared/types/flipObjectTypes';
+import { createProfitDataColumns } from './MainGridColumns';
+import {
+    RequestAndDataTypeNames,
+    RequestAndDataTypeNamesTypes,
+} from '../../../shared/constants/RequestAndDataType';
+import { TabContext, TabList, TabPanel } from '@mui/lab';
+import { useGetDataQuery } from '../../lib/apiConfig';
+import { MainPropsType } from './Types/MainTypes';
+import { NextPage } from 'next';
 
-export interface MainPropsType {
-    flipData?: PoeFlipDataType;
-}
-
-export const Main: FC<MainPropsType> = ({ flipData }) => {
-    const { data = flipData, refetch } = useGetPoeFlipDataQuery();
-    console.log(data);
+export const Main: NextPage<MainPropsType> = ({ data, adminAddress }) => {
+    const [value, setValue] = useState<RequestAndDataTypeNamesTypes>(
+        RequestAndDataTypeNames.flip,
+    );
+    const { data: profitData = data, refetch } = useGetDataQuery(value);
+    const handleChangeTab = (
+        event: React.SyntheticEvent,
+        newValue: RequestAndDataTypeNamesTypes,
+    ) => {
+        setValue(newValue);
+    };
     useEffect(() => {
         const interval = setInterval(refetch, 5000);
         return () => {
             clearInterval(interval);
         };
     }, [refetch]);
+
+    const lastUpdate =
+        profitData && profitData.lastUpdate
+            ? new Date(profitData.lastUpdate).toLocaleString()
+            : '';
+    const profitDataColumns = createProfitDataColumns(value);
 
     return (
         <Box sx={{ width: '100%', height: '100vh', mt: 2 }}>
@@ -29,38 +45,87 @@ export const Main: FC<MainPropsType> = ({ flipData }) => {
                 mb={2}
             >
                 <Box marginLeft={2} flexGrow={1}>
-                    <p suppressHydrationWarning>{`Last update:  ${
-                        (data && new Date(data.lastUpdate).toLocaleString()) ||
-                        ''
-                    }`}</p>
+                    <p
+                        suppressHydrationWarning
+                    >{`Last update:  ${lastUpdate}`}</p>
                 </Box>
-                <Button component={Link} href="/change-queries">
-                    change queries
-                </Button>
+                {adminAddress && (
+                    <>
+                        <Button component={Link} href="/settings">
+                            settings
+                        </Button>
+                        <Button component={Link} href="/changeRequest">
+                            change queries
+                        </Button>
+                    </>
+                )}
             </Box>
 
-            {data && (
-                <DataGrid
-                    getRowId={(row) =>
-                        `${row.itemBuyingInfo.name}_${row?.itemSellingInfo?.name}_${row.queriesFlipUuid}`
-                    }
-                    initialState={{
-                        sorting: {
-                            sortModel: [
-                                {
-                                    field: 'profitInChaosPerTrade',
-                                    sort: 'desc',
+            {profitData && profitData.data && (
+                <TabContext value={value}>
+                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                        <TabList
+                            onChange={handleChangeTab}
+                            aria-label="Table profit info"
+                        >
+                            <Tab
+                                label="Flip Table profit info"
+                                value={RequestAndDataTypeNames.flip}
+                            />
+                            <Tab
+                                label="ExpGem Table profit info"
+                                value={RequestAndDataTypeNames.expGems}
+                            />
+                        </TabList>
+                    </Box>
+                    <TabPanel value={RequestAndDataTypeNames.flip}>
+                        <DataGrid
+                            sx={{ minHeight: '82vh' }}
+                            getRowId={(row) =>
+                                `${row.itemBuying.name}_${row?.itemSelling?.name}_${row.requestUuid}`
+                            }
+                            columnVisibilityModel={{
+                                sellingInChaos: false,
+                            }}
+                            initialState={{
+                                sorting: {
+                                    sortModel: [
+                                        {
+                                            field: 'profitInChaos',
+                                            sort: 'desc',
+                                        },
+                                    ],
                                 },
-                            ],
-                        },
-                    }}
-                    rows={data.flipData}
-                    columns={flipDataColumns}
-                    disableSelectionOnClick
-                    autoHeight
-                    density="compact"
-                    hideFooter
-                />
+                            }}
+                            rows={profitData.data}
+                            columns={profitDataColumns}
+                            disableRowSelectionOnClick
+                            // autoHeight
+                            density="compact"
+                            hideFooter
+                        />
+                    </TabPanel>
+                    <TabPanel value={RequestAndDataTypeNames.expGems}>
+                        <DataGrid
+                            sx={{ minHeight: '82vh' }}
+                            getRowId={(row) =>
+                                `${row.itemBuying.name}_${row.itemSelling.name}_${row.requestUuid}`
+                            }
+                            columnVisibilityModel={{
+                                profitPerTradeInChaos: false,
+                                maxStackSize: false,
+                                profitPerTradeInDivine: false,
+                                fullStackSizeDivine: false,
+                            }}
+                            rows={profitData.data}
+                            columns={profitDataColumns}
+                            disableRowSelectionOnClick
+                            // autoHeight
+                            density="compact"
+                            hideFooter
+                        />
+                    </TabPanel>
+                </TabContext>
             )}
         </Box>
     );
