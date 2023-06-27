@@ -1,10 +1,10 @@
 # me ignores
 
-/data/flipData.json
 data/flipData.json
-/yran.lock
+data/ExpGemsData.json
+data/ExpGemsRequests.json
+data/Settings.json
 yran.lock
-/package-lock.json
 package-lock.json
 .idea
 

@@ -1,22 +1,19 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/query/react';
 import { HYDRATE } from 'next-redux-wrapper';
-import { PoeFlipDataType } from '../../shared/types/flipObjectTypes';
 import {
-  FlipQueriesType,
-  NewFlipQueriesType,
-} from '../../shared/types/FlipQueriesTypes';
+  ObjectRequestType,
+  NewRequestType,
+  UpdateRequestType,
+  SettingsType,
+  UpdateSettingsType,
+} from '../../MyApp/FileManagers';
+
+import { apiRouts } from '../../shared/constants/ApiRouts';
+import { RequestAndDataTypeNamesTypes } from '../../shared/constants/RequestAndDataType';
+import { DataToClientType } from '../../shared/types/ObjectDataTypes';
+
 import { envAwareUrl } from '../../shared/utils/fetch';
 
-// interface ErrorType {
-//   data: { statusCode: number; message: string[]; error: string };
-// }
-
-// as unknown as BaseQueryFn<string | FetchArgs, unknown, ErrorType>,
-
-// const createApi = buildCreateApi(
-//   coreModule(),
-//   reactHooksModule({ unstable__sideEffectsInRender: true }),
-// );
 export const flipApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: envAwareUrl('/api'),
@@ -27,50 +24,74 @@ export const flipApi = createApi({
       return action.payload[reducerPath];
     }
   },
-  tagTypes: ['flipQueries', 'flip-data'],
+  tagTypes: ['PoeRequests', 'flip-data', 'settings'],
   endpoints: (builder) => ({
-    getPoeFlipData: builder.query<PoeFlipDataType, void>({
-      query: () => ({ url: 'flipData' }),
+    getData: builder.query<DataToClientType, RequestAndDataTypeNamesTypes>({
+      query: (arg) => ({ url: `${apiRouts.Data}?type=${arg}` }),
     }),
-    getPoeFlipQuery: builder.query<FlipQueriesType[], void>({
-      query: () => ({
-        url: 'flipQueries',
+    getSettings: builder.query<SettingsType, void>({
+      query: () => ({ url: apiRouts.settings }),
+      providesTags: ['settings'],
+    }),
+
+    changeSettings: builder.mutation<SettingsType, UpdateSettingsType>({
+      query: (arg) => ({ url: apiRouts.settings, method: 'PUT', body: arg }),
+      invalidatesTags: ['settings'],
+    }),
+
+    getPoeRequestsData: builder.query<
+      ObjectRequestType[],
+      RequestAndDataTypeNamesTypes
+    >({
+      query: (arg) => ({
+        url: `${apiRouts.PoeRequests}?type=${arg}`,
       }),
       providesTags: (result) =>
         result
           ? [
               ...result.map(
-                (data) => ({ type: 'flipQueries', ...data } as const),
+                (data) => ({ type: 'PoeRequests', ...data } as const),
               ),
             ]
           : [],
     }),
-    deletePoeFlipQuery: builder.mutation<void, FlipQueriesType>({
+    deletePoeRequest: builder.mutation<
+      void,
+      { request: ObjectRequestType; requestType: RequestAndDataTypeNamesTypes }
+    >({
       query: (arg) => ({
-        url: 'flipQueries',
+        url: `${apiRouts.PoeRequests}?type=${arg.requestType}`,
         method: 'DELETE',
-        body: arg,
+        body: arg.request,
       }),
       invalidatesTags: (result, error, data) => [
-        { type: 'flipQueries', ...data },
+        { type: 'PoeRequests', ...data },
       ],
     }),
-    addFlipQuery: builder.mutation<void, NewFlipQueriesType>({
+    addPoeRequest: builder.mutation<
+      void,
+      { request: NewRequestType; requestType: RequestAndDataTypeNamesTypes }
+    >({
       query: (arg) => ({
-        url: 'flipQueries',
+        url: `${apiRouts.PoeRequests}?type=${arg.requestType}`,
         method: 'POST',
-        body: arg,
-      }),
-      invalidatesTags: () => [{ type: 'flipQueries' }],
-    }),
-    editFlipQuery: builder.mutation<void, FlipQueriesType>({
-      query: (arg) => ({
-        url: 'flipQueries',
-        method: 'PUT',
-        body: arg,
+        body: arg.request,
       }),
       invalidatesTags: (result, error, data) => [
-        { type: 'flipQueries', ...data },
+        { type: 'PoeRequests', ...data },
+      ],
+    }),
+    editPoeRequest: builder.mutation<
+      void,
+      { request: UpdateRequestType; requestType: RequestAndDataTypeNamesTypes }
+    >({
+      query: (arg) => ({
+        url: `${apiRouts.PoeRequests}?type=${arg.requestType}`,
+        method: 'PUT',
+        body: arg.request,
+      }),
+      invalidatesTags: (result, error, data) => [
+        { type: 'PoeRequests', ...data },
       ],
     }),
   }),
@@ -78,12 +99,14 @@ export const flipApi = createApi({
 
 // Export hooks for usage in functional components
 export const {
-  useEditFlipQueryMutation,
-  useGetPoeFlipQueryQuery,
-  useDeletePoeFlipQueryMutation,
-  useAddFlipQueryMutation,
-  useGetPoeFlipDataQuery,
+  useGetDataQuery,
+  useGetSettingsQuery,
+  useChangeSettingsMutation,
+  useGetPoeRequestsDataQuery,
+  useEditPoeRequestMutation,
+  useDeletePoeRequestMutation,
+  useAddPoeRequestMutation,
   // util: { getRunningQueriesThunk },
 } = flipApi;
 // export endpoints for use in SSR
-export const { getPoeFlipData, getPoeFlipQuery } = flipApi.endpoints;
+export const { getData, getPoeRequestsData, getSettings } = flipApi.endpoints;
