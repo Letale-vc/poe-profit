@@ -1,87 +1,154 @@
-import { Item } from './Item';
 import { PoeTradeItemInfoType } from './Interface/PoeTradeItemInfo';
+import { Item } from './Item';
 import { Price } from './Price/Price';
-
-// Mock Price class
-const mockPriceInstance = {
-  itemPriceInChaos: 10, //  очікуване значення
-  fullStackSizeInChaos: 100, //  очікуване значення
-};
-jest.mock('./Price/Price', () => {
-  return {
-    Price: jest.fn().mockImplementation(() => mockPriceInstance),
-  };
+jest.mock('./Price/Price');
+afterEach(() => {
+  jest.clearAllMocks();
 });
 
 describe('Item', () => {
-  let item: Item;
-  let mockPoeTradeItemInfo: PoeTradeItemInfoType;
-  const mockUrl = `https://www.pathofexile.com/trade/search/standard/12345`;
+  const poeTradeItemInfo: PoeTradeItemInfoType = {
+    result: [
+      {
+        id: '123456',
+        listing: {
+          method: 'psapi',
+          indexed: new Date(),
+          stash: {
+            name: 'Test Stash',
+            x: 1,
+            y: 2,
+          },
+          whisper: '@testuser Hi, I want to buy your item for 10 chaos',
+          whisper_token: 'token',
+          account: {
+            name: 'testuser',
+            lastCharacterName: 'TestCharacter',
+            online: { league: 'Standard' },
+            language: 'en_US',
+            realm: 'pc',
+          },
+          price: {
+            type: '~b/o',
+            amount: 10,
+            currency: 'chaos',
+          },
+        },
+        item: {
+          ilvl: 0,
+          inventoryId: '',
+          verified: true,
+          w: 1,
+          h: 1,
+          icon: 'https://example.com/icon.png',
+          stackSize: 1,
+          maxStackSize: 10,
+          league: 'Standard',
+          id: '123456',
+          name: 'Test Item',
+          typeLine: 'Test Type',
+          baseType: 'Test Base',
+          identified: true,
+          sockets: [],
+          socket: 0,
+        },
+      },
+    ],
+    id: '789',
+    total: 1,
+  };
 
-  beforeEach(() => {
-    mockPoeTradeItemInfo = {
+  const poeTradeLink = 'https://example.com/poetrade';
+  const itemName = 'Test Item';
+
+  it('should create an instance of Price with the correct arguments', () => {
+    const poeTradeLink = 'https://example.com';
+    const itemName = 'Test Item';
+
+    new Item(poeTradeItemInfo, poeTradeLink, itemName);
+
+    expect(Price).toHaveBeenCalledTimes(1);
+    expect(Price).toHaveBeenCalledWith(poeTradeItemInfo.result, 1, 10, 1); // Перевірте правильність переданих аргументів
+  });
+
+  it('should set the correct values for maxStackSize, name, poeTradeLink, and totalInTrade', () => {
+    const item = new Item(poeTradeItemInfo, poeTradeLink, itemName);
+
+    expect(item.maxStackSize).toBe(10);
+    expect(item.name).toBe(itemName);
+    expect(item.poeTradeLink).toBe(poeTradeLink);
+    expect(item.totalInTrade).toBe(1);
+  });
+
+  it('should create an instance of Price', () => {
+    const item = new Item(poeTradeItemInfo, poeTradeLink, itemName);
+
+    expect(item.price).toBeInstanceOf(Price);
+  });
+
+  it('should calculate the correct priceMultiplier when explicitMods are present', () => {
+    const poeTradeItemInfoWithExplicitMods: PoeTradeItemInfoType = {
       result: [
         {
-          id: '12345',
+          id: '123456',
           listing: {
             method: 'psapi',
             indexed: new Date(),
-            stash: { name: 'Test Stash', x: 1, y: 1 },
-            whisper: 'Test Whisper',
-            whisper_token: 'abcdef',
+            stash: {
+              name: 'Test Stash',
+              x: 1,
+              y: 2,
+            },
+            whisper: '@testuser Hi, I want to buy your item for 10 chaos',
+            whisper_token: 'token',
             account: {
-              name: 'Test Account',
-              lastCharacterName: 'Test Character',
+              name: 'testuser',
+              lastCharacterName: 'TestCharacter',
               online: { league: 'Standard' },
-              language: 'en',
+              language: 'en_US',
               realm: 'pc',
             },
-            price: { type: 'currency', amount: 1, currency: 'chaos' },
+            price: {
+              type: '~b/o',
+              amount: 10,
+              currency: 'chaos',
+            },
           },
           item: {
             verified: true,
             w: 1,
             h: 1,
-            icon: 'Test Icon',
+            icon: 'https://example.com/icon.png',
+            stackSize: 1,
+            maxStackSize: 10,
+            league: 'Standard',
+            id: '123456',
             name: 'Test Item',
             typeLine: 'Test Type',
-            baseType: 'Test Base Type',
+            baseType: 'Test Base',
             identified: true,
-            ilvl: 1,
-            inventoryId: 'Test Inventory',
-            socket: 1,
+            ilvl: 0,
+            explicitMods: ['10x'],
+            inventoryId: '',
+            sockets: [],
+            socket: 0,
           },
         },
       ],
-      id: '12345',
+      id: '789',
       total: 1,
     };
 
-    item = new Item(mockPoeTradeItemInfo, mockUrl, 'itemName');
-  });
-
-  it('should have a maxStackSize value', () => {
-    expect(item.maxStackSize).toBe(1);
-  });
-
-  it('should have a name value', () => {
-    expect(item.name).toBe('itemName');
-  });
-
-  it('should have a poeTradeLink value', () => {
-    expect(item.poeTradeLink).toBe(mockUrl);
-  });
-
-  it('should have a totalInTrade value', () => {
-    expect(item.totalInTrade).toBe(1);
-  });
-
-  it('should create a Price object with the correct parameters', () => {
-    expect(Price).toHaveBeenCalledWith(
-      mockPoeTradeItemInfo.result,
-      mockPoeTradeItemInfo.total,
-      item.maxStackSize,
-      1,
+    const item = new Item(
+      poeTradeItemInfoWithExplicitMods,
+      poeTradeLink,
+      itemName,
     );
+
+    const priceMultiplier = item.findPriceMultiplier(
+      poeTradeItemInfoWithExplicitMods,
+    );
+
+    expect(priceMultiplier).toBe(10);
   });
 });

@@ -23,12 +23,12 @@ export class Item implements ItemType {
     this.price = new Price(result, total, this.maxStackSize, priceMultiplier);
   }
 
-  private findPriceMultiplier = (poeTradeItemInfo: PoeTradeItemInfoType) => {
+  findPriceMultiplier = (poeTradeItemInfo: PoeTradeItemInfoType) => {
     const explicitMods = poeTradeItemInfo?.result[0]?.item?.explicitMods;
 
     if (explicitMods && explicitMods.length > 0) {
       const str = explicitMods[0];
-      const match = str.match(/\d+X/);
+      const match = str.match(/\d+x/);
       if (match) {
         const number = parseInt(match[0], 10);
         return number;
