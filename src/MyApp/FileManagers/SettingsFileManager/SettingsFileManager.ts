@@ -23,8 +23,8 @@ export class SettingsFileManager extends WorkingWithFile<SettingsType> {
 
   async _initFile(): Promise<void> {
     const initSettings: SettingsType = {
-      expGemUpdate: false,
-      flipUpdate: false,
+      expGemUpdate: true,
+      flipUpdate: true,
       poesessid: '',
     };
     this.settingsCash = initSettings;
