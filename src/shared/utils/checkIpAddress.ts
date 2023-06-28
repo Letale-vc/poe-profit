@@ -15,11 +15,11 @@ export const checkIpAddress = (
   let findAdminAddress = false;
   if (typeof ipAddress === 'string') {
     const ipv4Address = ipAddress.replace('::ffff:', '');
-    findAdminAddress = ipv4Address === myIpAddress;
+    findAdminAddress = ipv4Address === myIpAddress || ipv4Address === '127.0.0.1'
   } else if (Array.isArray(ipAddress)) {
     ipAddress.forEach((el) => {
       const ipv4Address = el?.replace('::ffff:', '');
-      findAdminAddress = ipv4Address === myIpAddress;
+      findAdminAddress = ipv4Address === myIpAddress || ipv4Address === '127.0.0.1'
     });
   }
   return findAdminAddress;
