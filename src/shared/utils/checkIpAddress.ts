@@ -9,7 +9,7 @@ export const checkIpAddress = (
     cookies: NextApiRequestCookies
   }
 ): boolean => {
-  const ipAddress = req.headers['x-real-ip']
+  const ipAddress = req.headers['x-real-ip'] || req.socket.remoteAddress
   logger.info(`IP Address: ${ipAddress} trying to get close section`);
   if (NODE_ENV === 'development') return true;
   let findAdminAddress = false;
