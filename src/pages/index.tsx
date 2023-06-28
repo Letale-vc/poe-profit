@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { Main } from '../client/components/Main/Main';
+import { Main } from '../client/components/Main/main';
 import { MainPropsType } from '../client/components/Main/Types/MainTypes';
 import { flipApi, getData } from '../client/lib/apiConfig';
 import { wrapper } from '../client/lib/store';
