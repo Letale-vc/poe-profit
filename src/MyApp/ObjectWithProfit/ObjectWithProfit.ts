@@ -28,6 +28,7 @@ export class ObjectWithProfit implements ObjectProfitDataType {
       poeTradeItemSellingInfo,
       flipRequest.itemSelling.url,
       flipRequest.itemSelling.name,
+      this.findPriceMultiplier(poeTradeItemBuyingInfo),
     );
     const profitAll = this.calculateProfit();
     this.profitInDivine = profitAll.divine;
@@ -37,7 +38,7 @@ export class ObjectWithProfit implements ObjectProfitDataType {
     this.profitPerTradeInChaos = profitPerTradeAll.chaos;
   }
 
-  private calculateProfit() {
+  calculateProfit() {
     const { fullStackSize } = this.itemBuying.price;
     const { oneItem } = this.itemSelling.price;
     const profitAll = new CurrencyData();
@@ -52,7 +53,7 @@ export class ObjectWithProfit implements ObjectProfitDataType {
     return profitAll;
   }
 
-  private calculateProfitPerTrade(profitAll: CurrencyData) {
+  calculateProfitPerTrade(profitAll: CurrencyData) {
     const profitPerTradeAll = new CurrencyData();
     for (const [currency, profit] of Object.entries(profitAll)) {
       const decimalPlaces = currency === 'chaos' ? 0 : 2;
@@ -64,4 +65,18 @@ export class ObjectWithProfit implements ObjectProfitDataType {
     }
     return profitPerTradeAll;
   }
+  findPriceMultiplier = (poeTradeItemInfo: PoeTradeItemInfoType) => {
+    const explicitMods = poeTradeItemInfo?.result[0]?.item?.explicitMods;
+
+    if (explicitMods && explicitMods.length > 0) {
+      const str = explicitMods[0];
+      const match = str.match(/\d+x/i);
+      if (match) {
+        const number = parseInt(match[0], 10);
+        return number;
+      }
+    }
+
+    return 1;
+  };
 }
