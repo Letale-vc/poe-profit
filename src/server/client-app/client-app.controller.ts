@@ -14,12 +14,11 @@ export class ClientAppController {
   @Get('/changeRequest')
   @Render('changeRequest')
   queriesChange(@Req() req: Request, @Res() res: Response) {
-    const ipv6Address =
-      req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    const ipv6Address = req.headers['X-Real-IP'] || req.socket.remoteAddress;
 
     const adminAddress = checkIpAddress(ipv6Address);
     if (!adminAddress) {
-      res.redirect(301, '/');
+      return res.redirect(301, '/');
     }
     return {};
   }
@@ -27,12 +26,10 @@ export class ClientAppController {
   @Get('/settings')
   @Render('settings')
   settings(@Req() req: Request, @Res() res: Response) {
-    const ipv6Address =
-      req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    const ipv6Address = req.headers['X-Real-IP'] || req.socket.remoteAddress;
     const adminAddress = checkIpAddress(ipv6Address);
     if (!adminAddress) {
-      res.redirect(301, '/');
-      return;
+      return res.redirect(301, '/');
     }
     return {};
   }

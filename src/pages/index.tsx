@@ -10,7 +10,7 @@ export const getServerSideProps: GetServerSideProps<MainPropsType> =
     wrapper.getServerSideProps((store) => async (ctx) => {
         store.dispatch(getData.initiate(RequestAndDataTypeNames.flip));
         const ipv6Address =
-            ctx.req.headers['x-forwarded-for'] || ctx.req.socket.remoteAddress;
+            ctx.req.headers['X-Real-IP'] || ctx.req.socket.remoteAddress;
 
         const adminAddress = checkIpAddress(ipv6Address);
 
