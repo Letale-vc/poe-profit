@@ -82,7 +82,7 @@ export const Main: NextPage<MainPropsType> = ({ data, adminAddress }) => {
                         <DataGrid
                             sx={{ minHeight: '82vh' }}
                             getRowId={(row) =>
-                                `${row.itemBuying.name}_${row?.itemSelling?.name}_${row.requestUuid}`
+                                `${row.itemBuying.name}_${row.itemSelling.name}_${row.requestUuid}`
                             }
                             columnVisibilityModel={{
                                 sellingInChaos: false,

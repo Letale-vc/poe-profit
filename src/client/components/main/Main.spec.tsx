@@ -1,7 +1,7 @@
 import { useGetDataQuery } from '../../lib/apiConfig';
+import { render, screen, fireEvent } from '@testing-library/react';
+import MockWrapper from '../../../../tests/components/MockWrapper';
 import { Main } from './Main';
-import TestWrapper from '../../../../tests/components/TestWrapper';
-import { render } from '@testing-library/react';
 
 jest.mock('../../lib/apiConfig', () => ({
     useGetDataQuery: jest.fn(),
@@ -20,13 +20,19 @@ describe('Main Component', () => {
         });
 
         render(
-            <TestWrapper>
+            <MockWrapper>
                 <Main adminAddress />
-            </TestWrapper>,
+            </MockWrapper>,
         );
+
+        expect(screen.getByText(`Last update:`)).toBeInTheDocument();
+        expect(screen.getByText('settings')).toBeInTheDocument();
+        expect(screen.getByText('change queries')).toBeInTheDocument();
+        expect(screen.queryByText('Flip Table profit info')).toBeNull();
+        expect(screen.queryByText('ExpGem Table profit info')).toBeNull();
     });
 
-    test('displays last update time correctly', async () => {
+    test('renders Main component correctly №2', async () => {
         const { useGetDataQuery } = await import('../../lib/apiConfig');
         const mockUseGetPoeFlipDataQuery = useGetDataQuery as jest.Mock;
         const lastUpdate = new Date().toLocaleString();
@@ -36,9 +42,47 @@ describe('Main Component', () => {
         });
 
         render(
-            <TestWrapper>
-                <Main adminAddress />
-            </TestWrapper>,
+            <MockWrapper>
+                <Main adminAddress={false} />
+            </MockWrapper>,
         );
+
+        expect(
+            screen.getByText(`Last update: ${lastUpdate}`),
+        ).toBeInTheDocument();
+        expect(screen.queryByText('settings')).toBeNull();
+        expect(screen.queryByText('change queries')).toBeNull();
+        expect(screen.getByText('Flip Table profit info')).toBeInTheDocument();
+        expect(
+            screen.getByText('ExpGem Table profit info'),
+        ).toBeInTheDocument();
+    });
+
+    test('changes active tab correctly', () => {
+        const mockData = {
+            data: [],
+            lastUpdate: new Date().toLocaleString(),
+        };
+
+        mockUseGetProfitDataQuery.mockReturnValue({
+            data: mockData,
+        });
+
+        render(
+            <MockWrapper>
+                <Main adminAddress />
+            </MockWrapper>,
+        );
+
+        const flipTab = screen.getByText('Flip Table profit info');
+        const expGemTab = screen.getByText('ExpGem Table profit info');
+
+        expect(flipTab).toHaveAttribute('aria-selected', 'true');
+        expect(expGemTab).toHaveAttribute('aria-selected', 'false');
+
+        fireEvent.click(expGemTab);
+
+        expect(flipTab).toHaveAttribute('aria-selected', 'false');
+        expect(expGemTab).toHaveAttribute('aria-selected', 'true');
     });
 });
