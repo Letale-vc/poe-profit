@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 interface TestWrapperProps {
     children: ReactNode;
 }
-const TestWrapper: React.FC<TestWrapperProps> = ({ children }) => {
+export const MockWrapper: React.FC<TestWrapperProps> = ({ children }) => {
     const router = {
         basePath: '',
         pathname: '/',
@@ -32,4 +32,4 @@ const TestWrapper: React.FC<TestWrapperProps> = ({ children }) => {
     );
 };
 
-export default TestWrapper;
+export default MockWrapper;
