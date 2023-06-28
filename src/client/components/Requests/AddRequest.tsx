@@ -46,7 +46,7 @@ export const AddRequest: FC<AddRequestPropsType> = ({
 
     const addRowFromServerHandler = useCallback(async () => {
         try {
-            await addQuery({ request: newRow, requestType });
+            await addQuery({ request: newRow, requestType }).unwrap();
             setSnackbar({
                 children: 'Successfully saved',
                 severity: 'success',

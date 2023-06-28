@@ -65,7 +65,8 @@ export const Settings: NextPage<SettingsPropsType> = ({
             if (!settings) {
                 return;
             }
-            await changeSettings(settings);
+            await changeSettings(settings).unwrap();
+
             setSnackbar({ children: 'Settings saved', severity: 'success' });
         } catch (error) {
             console.error(error);
