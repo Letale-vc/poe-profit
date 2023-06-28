@@ -1,17 +1,23 @@
+import { IncomingMessage } from 'http';
 import { logger } from '../../MyApp/Logger/LoggerPino';
 import { myIpAddress, NODE_ENV } from '../constants/env';
+import type {Request} from 'express'
+import { NextApiRequestCookies } from 'next/dist/server/api-utils';
 
 export const checkIpAddress = (
-  ipv6Address: string | string[] | undefined,
+  req: Request | IncomingMessage & {
+    cookies: NextApiRequestCookies
+  }
 ): boolean => {
-  logger.info(`IP Address: ${ipv6Address} trying to get close section`);
+  const ipAddress = req.headers['x-real-ip']
+  logger.info(`IP Address: ${ipAddress} trying to get close section`);
   if (NODE_ENV === 'development') return true;
   let findAdminAddress = false;
-  if (typeof ipv6Address === 'string') {
-    const ipv4Address = ipv6Address.replace('::ffff:', '');
+  if (typeof ipAddress === 'string') {
+    const ipv4Address = ipAddress.replace('::ffff:', '');
     findAdminAddress = ipv4Address === myIpAddress;
-  } else if (Array.isArray(ipv6Address)) {
-    ipv6Address.forEach((el) => {
+  } else if (Array.isArray(ipAddress)) {
+    ipAddress.forEach((el) => {
       const ipv4Address = el?.replace('::ffff:', '');
       findAdminAddress = ipv4Address === myIpAddress;
     });

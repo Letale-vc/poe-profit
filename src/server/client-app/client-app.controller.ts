@@ -8,15 +8,13 @@ export class ClientAppController {
   @Get('/')
   @Render('index')
   home() {
-    return;
+    return { someData: 'someData' };
   }
 
   @Get('/changeRequest')
   @Render('changeRequest')
   queriesChange(@Req() req: Request, @Res() res: Response) {
-    const ipv6Address = req.headers['X-Real-IP'] || req.socket.remoteAddress;
-
-    const adminAddress = checkIpAddress(ipv6Address);
+    const adminAddress = checkIpAddress(req);
     if (!adminAddress) {
       return res.redirect(301, '/');
     }
@@ -26,8 +24,7 @@ export class ClientAppController {
   @Get('/settings')
   @Render('settings')
   settings(@Req() req: Request, @Res() res: Response) {
-    const ipv6Address = req.headers['X-Real-IP'] || req.socket.remoteAddress;
-    const adminAddress = checkIpAddress(ipv6Address);
+    const adminAddress = checkIpAddress(req);
     if (!adminAddress) {
       return res.redirect(301, '/');
     }

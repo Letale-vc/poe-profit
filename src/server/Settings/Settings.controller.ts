@@ -15,8 +15,7 @@ export class SettingsController {
 
   @Get()
   async getSettings(@Req() req: Request) {
-    const ipv6Address = req.headers['X-Real-IP'] || req.socket.remoteAddress;
-    const adminAddress = checkIpAddress(ipv6Address);
+    const adminAddress = checkIpAddress(req);
     if (NODE_ENV === 'development' || adminAddress) {
       return this._settingsManagerProvider.settingsCash;
     }
@@ -25,8 +24,7 @@ export class SettingsController {
 
   @Put()
   async update(@Req() req: Request, @Body() settings: UpdateSettingsDto) {
-    const ipv6Address = req.headers['X-Real-IP'] || req.socket.remoteAddress;
-    const adminAddress = checkIpAddress(ipv6Address);
+    const adminAddress = checkIpAddress(req);
     if (NODE_ENV === 'development' || adminAddress) {
       return this._settingsManagerProvider.update(settings);
     }
