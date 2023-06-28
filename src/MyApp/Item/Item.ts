@@ -28,7 +28,7 @@ export class Item implements ItemType {
 
     if (explicitMods && explicitMods.length > 0) {
       const str = explicitMods[0];
-      const match = str.match(/\d+x/);
+      const match = str.match(/\d+x/i);
       if (match) {
         const number = parseInt(match[0], 10);
         return number;
