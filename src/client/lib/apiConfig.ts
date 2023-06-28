@@ -29,8 +29,11 @@ export const flipApi = createApi({
     getData: builder.query<DataToClientType, RequestAndDataTypeNamesTypes>({
       query: (arg) => ({ url: `${apiRouts.Data}?type=${arg}` }),
     }),
-    getSettings: builder.query<SettingsType, void>({
-      query: () => ({ url: apiRouts.settings }),
+    getSettings: builder.query<SettingsType, void | string>({
+      query: (arg) => ({
+        url: apiRouts.settings,
+        headers: arg ? { 'X-Real-IP': arg } : {},
+      }),
       providesTags: ['settings'],
     }),
 
