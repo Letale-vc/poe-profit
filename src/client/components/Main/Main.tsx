@@ -11,6 +11,7 @@ import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { useGetDataQuery } from '../../lib/apiConfig';
 import { MainPropsType } from './Types/MainTypes';
 import { NextPage } from 'next';
+import { NODE_ENV } from '../../../shared';
 
 export const Main: NextPage<MainPropsType> = ({ data, adminAddress }) => {
     const [value, setValue] = useState<RequestAndDataTypeNamesTypes>(
@@ -54,9 +55,11 @@ export const Main: NextPage<MainPropsType> = ({ data, adminAddress }) => {
                         <Button component={Link} href="/settings">
                             settings
                         </Button>
-                        <Button component={Link} href="/changeRequest">
-                            change queries
-                        </Button>
+                        {NODE_ENV === 'development' && (
+                            <Button component={Link} href="/changeRequest">
+                                change queries
+                            </Button>
+                        )}
                     </>
                 )}
             </Box>

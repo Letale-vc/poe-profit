@@ -41,44 +41,15 @@ export class ItemPriceCalculation implements ItemPriceCalculationInterface {
   };
   private calculatePriceInChaos = (
     itemsArray: PoeSecondResultType[],
-    total: number,
   ): number => {
     const defaultInitialCount = 0;
 
     const resultValue = itemsArray.reduce(
       (previousValue, currentValue, index) => {
-        const timeSkipInHoursForTotalGreaterThan50 = 5;
-        const timeSkipInHoursForTotalLessThanOrEqualTo50 = 24;
-        const maxItemsToSkipForTotalGreaterThan50 = 4;
-        const maxItemsToSkipForTotalLessThanOrEqualTo50 = 2;
         const currentValueListingPrice = currentValue.listing.price.amount;
         const currencyName = currentValue.listing.price.currency;
         if (!(currencyName in this.currencyPriceInChaos)) {
           return previousValue;
-        }
-
-        if (total > 50) {
-          const timeListedChecked = this.timeListedChecked(
-            currentValue.listing.indexed,
-            timeSkipInHoursForTotalGreaterThan50,
-          );
-          if (
-            index < maxItemsToSkipForTotalGreaterThan50 &&
-            timeListedChecked
-          ) {
-            return previousValue;
-          }
-        } else {
-          const timeListedChecked = this.timeListedChecked(
-            currentValue.listing.indexed,
-            timeSkipInHoursForTotalLessThanOrEqualTo50,
-          );
-          if (
-            index < maxItemsToSkipForTotalLessThanOrEqualTo50 &&
-            timeListedChecked
-          ) {
-            return previousValue;
-          }
         }
 
         const newPrice = this.countPriceInChaos(
@@ -88,8 +59,12 @@ export class ItemPriceCalculation implements ItemPriceCalculationInterface {
         );
 
         if (previousValue !== 0) {
+          const timeListedChecked = this.timeListedChecked(
+            currentValue.listing.indexed,
+            24,
+          );
           const diffCheck = this.differenceChecked(previousValue, newPrice);
-          if (index > 3 && diffCheck) {
+          if (index > 3 && diffCheck && timeListedChecked) {
             return previousValue;
           }
         }
@@ -127,12 +102,11 @@ export class ItemPriceCalculation implements ItemPriceCalculationInterface {
 
   getPricesInChaos = (
     itemsArray: PoeSecondResultType[],
-    total: number,
     maxStackSize: number,
     priceMultiplier = 1,
   ) => {
     const itemPriceInChaos =
-      this.calculatePriceInChaos(itemsArray, total) * priceMultiplier;
+      this.calculatePriceInChaos(itemsArray) * priceMultiplier;
 
     const fullStackSizeInChaos =
       maxStackSize * itemPriceInChaos * priceMultiplier;

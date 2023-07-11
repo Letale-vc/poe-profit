@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "allowSyntheticDefaultImports": true,
-    "target": "ES5",
+    "target": "ESNext",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": ".",
@@ -28,7 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "jest.config.11ts",
+    "jest.config.ts",
     "tsconfig.next-jest.json"
   ],
   "exclude": ["node_modules", "dist", ".next"]

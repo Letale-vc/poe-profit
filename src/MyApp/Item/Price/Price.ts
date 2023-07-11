@@ -7,14 +7,12 @@ export class Price implements PriceType {
   fullStackSize;
   constructor(
     itemsArray: PoeSecondResultType[],
-    total: number,
     maxStackSize: number,
     priceMultiplier: number,
   ) {
     const priceCalculator = ItemPriceCalculation.getInstance();
     const priceInChaos = priceCalculator.getPricesInChaos(
       itemsArray,
-      total,
       maxStackSize,
       priceMultiplier,
     );

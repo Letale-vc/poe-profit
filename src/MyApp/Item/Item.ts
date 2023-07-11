@@ -20,6 +20,6 @@ export class Item implements ItemType {
     this.name = itemName;
     this.poeTradeLink = poeTradeLink;
     this.totalInTrade = total;
-    this.price = new Price(result, total, this.maxStackSize, priceMultiplier);
+    this.price = new Price(result, this.maxStackSize, priceMultiplier);
   }
 }

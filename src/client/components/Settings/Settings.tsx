@@ -19,6 +19,7 @@ import {
     useGetSettingsQuery,
 } from '../../lib/apiConfig';
 import { SettingsPropsType } from './types/SettingsPropsType';
+import { NODE_ENV } from '../../../shared';
 
 export const Settings: NextPage<SettingsPropsType> = ({
     settings: DefaultSettings,
@@ -90,9 +91,11 @@ export const Settings: NextPage<SettingsPropsType> = ({
                 <Button component={Link} href="/">
                     go to main
                 </Button>
-                <Button component={Link} href="/changeRequest">
-                    change queries
-                </Button>
+                {NODE_ENV === 'development' && (
+                    <Button component={Link} href="/changeRequest">
+                        change queries
+                    </Button>
+                )}
             </Box>
             <Box mt={4} maxWidth={450}>
                 <form onSubmit={handleSubmit}>

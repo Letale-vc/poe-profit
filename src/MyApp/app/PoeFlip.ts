@@ -4,4 +4,5 @@ const PoeFlip = async () => {
   const initApp = await App.getInstance();
   await initApp.start();
 };
-PoeFlip();
+
+Promise.resolve().then(() => PoeFlip());
