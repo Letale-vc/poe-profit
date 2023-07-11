@@ -8,7 +8,7 @@ declare const module: any;
 
 async function bootstrap() {
   // запуск мого додатка
-  import('../MyApp');
+  await import('../MyApp');
 
   const app = await NestFactory.create(AppModule.initialize());
   app.enableCors({
