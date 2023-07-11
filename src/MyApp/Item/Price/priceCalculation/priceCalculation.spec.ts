@@ -34,13 +34,11 @@ describe('ItemPriceCalculation', () => {
           },
         },
       ] as PoeSecondResultType[];
-      const total = 1;
       const maxStackSize = 1;
       const priceMultiplier = 1;
 
       const result = itemPriceCalculation.getPricesInChaos(
         itemsArray,
-        total,
         maxStackSize,
         priceMultiplier,
       );
@@ -76,13 +74,11 @@ describe('ItemPriceCalculation', () => {
           },
         },
       ] as PoeSecondResultType[];
-      const total = 2;
       const maxStackSize = 1;
       const priceMultiplier = 1;
 
       const result = itemPriceCalculation.getPricesInChaos(
         itemsArray,
-        total,
         maxStackSize,
         priceMultiplier,
       );

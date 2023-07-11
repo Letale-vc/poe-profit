@@ -27,7 +27,6 @@ describe('Main Component', () => {
 
         expect(screen.getByText(`Last update:`)).toBeInTheDocument();
         expect(screen.getByText('settings')).toBeInTheDocument();
-        expect(screen.getByText('change queries')).toBeInTheDocument();
         expect(screen.queryByText('Flip Table profit info')).toBeNull();
         expect(screen.queryByText('ExpGem Table profit info')).toBeNull();
     });

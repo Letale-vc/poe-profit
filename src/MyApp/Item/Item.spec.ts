@@ -122,7 +122,7 @@ describe('Item', () => {
     new Item(poeTradeItemInfo, poeTradeLink, itemName);
 
     expect(Price).toHaveBeenCalledTimes(1);
-    expect(Price).toHaveBeenCalledWith(poeTradeItemInfo.result, 1, 10, 1); // Перевірте правильність переданих аргументів
+    expect(Price).toHaveBeenCalledWith(poeTradeItemInfo.result, 10, 1); // Перевірте правильність переданих аргументів
   });
 
   it('should set the correct values for maxStackSize, name, poeTradeLink, and totalInTrade', () => {
