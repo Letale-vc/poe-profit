@@ -35,7 +35,9 @@ export const createProfitDataColumns = (
         sortable: false,
         field: 'itemSelling',
         headerName:
-            type === RequestAndDataTypeNames.flip ? 'Item buying' : 'Gem lvl 5',
+            type === RequestAndDataTypeNames.flip
+                ? 'Item selling'
+                : 'Gem lvl 5',
         minWidth: type === RequestAndDataTypeNames.flip ? 230 : 380,
         renderCell: (params) => (
             <Box

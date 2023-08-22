@@ -42,7 +42,7 @@ export class ItemPriceCalculation implements ItemPriceCalculationInterface {
   private calculatePriceInChaos = (
     itemsArray: PoeSecondResultType[],
   ): number => {
-    const defaultInitialCount = 0;
+    const defaultInitialCount = [0, 0];
 
     const resultValue = itemsArray.reduce(
       (previousValue, currentValue, index) => {
@@ -51,29 +51,31 @@ export class ItemPriceCalculation implements ItemPriceCalculationInterface {
         if (!(currencyName in this.currencyPriceInChaos)) {
           return previousValue;
         }
-
+        if (previousValue[1] === 3) {
+          return previousValue;
+        }
         const newPrice = this.countPriceInChaos(
-          previousValue,
+          previousValue[0],
           currentValueListingPrice,
           currencyName,
         );
 
-        if (previousValue !== 0) {
+        if (previousValue[0] !== 0) {
           const timeListedChecked = this.timeListedChecked(
             currentValue.listing.indexed,
             24,
           );
-          const diffCheck = this.differenceChecked(previousValue, newPrice);
+          const diffCheck = this.differenceChecked(previousValue[0], newPrice);
           if (index > 3 && diffCheck && timeListedChecked) {
             return previousValue;
           }
         }
-        return newPrice;
+        return [newPrice, previousValue[1] + 1];
       },
       defaultInitialCount,
     );
 
-    return resultValue;
+    return resultValue[0];
   };
 
   // Перевірка різниці між попередньою та поточною ціною у відсотках
