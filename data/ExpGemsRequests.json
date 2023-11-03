@@ -74,7 +74,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Chaos%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac60-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da0-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -151,7 +151,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Cold%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac61-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da1-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -228,7 +228,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Fire%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac62-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da2-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -305,7 +305,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Lightning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac63-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da3-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -382,7 +382,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Ancestral%20Call%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac64-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da4-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -459,7 +459,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Arrow%20Nova%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac65-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da5-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -536,7 +536,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Blasphemy%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340ac66-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da6-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -613,7 +613,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Brutality%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d370-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da7-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -690,7 +690,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Burning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d371-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da8-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -767,7 +767,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20On%20Critical%20Strike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d372-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06da9-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -844,7 +844,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20While%20Channelling%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d373-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06daa-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -921,7 +921,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Chain%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d374-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06dab-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -998,7 +998,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cold%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d375-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06dac-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1075,7 +1075,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Controlled%20Destruction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d376-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06dad-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1152,7 +1152,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Hextouch%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d377-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e06dae-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1229,7 +1229,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Deadly%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d378-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b0-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1306,7 +1306,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Focus%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d379-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b1-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1383,7 +1383,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Empower%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d37a-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b2-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1460,7 +1460,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Enhance%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d37b-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b3-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1537,7 +1537,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Enlighten%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d37c-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b4-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1614,7 +1614,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fire%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d37d-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b5-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1691,7 +1691,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fork%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d37e-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b6-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1768,7 +1768,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Generosity%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d37f-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b7-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1845,7 +1845,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Greater%20Multiple%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d380-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b8-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1922,7 +1922,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Increased%20Area%20of%20Effect%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d381-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094b9-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -1999,7 +1999,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Lightning%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d382-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094ba-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2076,7 +2076,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Physical%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d383-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094bb-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2153,7 +2153,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Splash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d384-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094bc-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2230,7 +2230,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Minion%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d385-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094bd-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2307,7 +2307,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Multistrike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d386-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094be-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2384,7 +2384,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Cascade%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d387-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094bf-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2461,7 +2461,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Echo%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d388-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c0-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2538,7 +2538,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Swift%20Affliction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d389-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c1-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2615,7 +2615,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unbound%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d38a-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c2-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2692,7 +2692,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unleash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d38b-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c3-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2769,7 +2769,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Vicious%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d38c-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c4-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2846,7 +2846,7 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Void%20Manipulation%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d38d-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c5-7a7c-11ee-b4ba-5fd81eab70ea"
     },
     {
         "itemBuying": {
@@ -2923,6 +2923,6 @@
             },
             "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Damage%20with%20Attacks%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
         },
-        "uuid": "6340d38e-7a71-11ee-a5e7-0fad00f381f7"
+        "uuid": "02e094c6-7a7c-11ee-b4ba-5fd81eab70ea"
     }
 ]

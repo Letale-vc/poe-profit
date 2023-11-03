@@ -1,4 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+#my
+/data/expGemsData.json
+/data/ExpGemsRequests.json
+/data/Settings.json
+/data/flipData.json
 
 # dependencies
 /node_modules

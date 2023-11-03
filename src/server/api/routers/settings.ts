@@ -1,11 +1,11 @@
 import { ProfitApp } from '~/server/MyApp';
 import { updateSettingsSchema } from '~/server/MyApp/FileManagers';
-import { createTRPCRouter, publicProcedure } from '~/server/api/trpc';
+import { createTRPCRouter, forbiddenProcedure } from '~/server/api/trpc';
 export const settingsRout = createTRPCRouter({
-  get: publicProcedure.query(() => {
-    return ProfitApp.settings.loadFile();
+  get: forbiddenProcedure.query(async () => {
+    return await ProfitApp.settings.loadFile();
   }),
-  updateSettings: publicProcedure
+  updateSettings: forbiddenProcedure
     .input(updateSettingsSchema)
     .mutation(async ({ input }) => {
       const { ProfitApp } = await import('~/server/MyApp/app/PoeProfit');

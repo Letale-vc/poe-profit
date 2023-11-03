@@ -19,7 +19,7 @@ import { api } from '~/utils/api';
 
 export const Settings: NextPage = () => {
   const { data } = api.settings.get.useQuery();
-  const { mutate } = api.settings.updateSettings.useMutation({
+  const { mutateAsync } = api.settings.updateSettings.useMutation({
     onSuccess: () => {
       setSnackbar({ children: 'Settings saved', severity: 'success' });
     },
@@ -38,7 +38,6 @@ export const Settings: NextPage = () => {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       setSettings(data);
     }
   }, [data]);
@@ -66,8 +65,8 @@ export const Settings: NextPage = () => {
     });
   };
 
-  const handleSubmit = (_: React.FormEvent<HTMLFormElement>) => {
-    mutate(settings);
+  const handleSubmit = async (_: React.FormEvent<HTMLFormElement>) => {
+    await mutateAsync(settings);
   };
 
   return (
