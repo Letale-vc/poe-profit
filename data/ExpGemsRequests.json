@@ -1,0 +1,2928 @@
+[
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Chaos Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Chaos Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Chaos Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Chaos%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Chaos Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Chaos Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Chaos Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Chaos%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3010-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Cold Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Cold Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Cold Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Cold%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Cold Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Cold Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Cold Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Cold%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3011-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Fire Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Fire Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Fire Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Fire%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Fire Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Fire Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Fire Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Fire%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3012-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Lightning Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Lightning Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Lightning Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Lightning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Lightning Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Added Lightning Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Added Lightning Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Lightning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3013-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Ancestral Call Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Ancestral Call Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Ancestral Call Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Ancestral%20Call%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Ancestral Call Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Ancestral Call Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Ancestral Call Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Ancestral%20Call%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3014-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Arrow Nova Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Arrow Nova Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Arrow Nova Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Arrow%20Nova%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Arrow Nova Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Arrow Nova Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Arrow Nova Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Arrow%20Nova%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3015-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Blasphemy Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Blasphemy Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Blasphemy Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Blasphemy%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Blasphemy Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Blasphemy Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Blasphemy Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Blasphemy%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3016-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Brutality Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Brutality Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Brutality Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Brutality%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Brutality Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Brutality Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Brutality Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Brutality%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3017-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Burning Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Burning Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Burning Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Burning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Burning Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Burning Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Burning Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Burning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3018-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast On Critical Strike Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Cast On Critical Strike Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Cast On Critical Strike Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20On%20Critical%20Strike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast On Critical Strike Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Cast On Critical Strike Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Cast On Critical Strike Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20On%20Critical%20Strike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f3019-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast While Channelling Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Cast While Channelling Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Cast While Channelling Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20While%20Channelling%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast While Channelling Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Cast While Channelling Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Cast While Channelling Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20While%20Channelling%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5720-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Chain Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Chain Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Chain Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Chain%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Chain Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Chain Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Chain Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Chain%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5721-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cold Penetration Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Cold Penetration Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Cold Penetration Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cold%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cold Penetration Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Cold Penetration Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Cold Penetration Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cold%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5722-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Controlled Destruction Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Controlled Destruction Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Controlled Destruction Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Controlled%20Destruction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Controlled Destruction Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Controlled Destruction Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Controlled Destruction Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Controlled%20Destruction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5723-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Hextouch Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Hextouch Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Hextouch Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Hextouch%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Hextouch Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Hextouch Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Hextouch Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Hextouch%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5724-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Deadly Ailments Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Deadly Ailments Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Deadly Ailments Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Deadly%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Deadly Ailments Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Deadly Ailments Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Deadly Ailments Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Deadly%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5725-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Focus Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Elemental Focus Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Elemental Focus Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Focus%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Focus Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Elemental Focus Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Elemental Focus Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Focus%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5726-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Empower Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Empower Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Empower Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Empower%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Empower Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Empower Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Empower Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Empower%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5727-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Enhance Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Enhance Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Enhance Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Enhance%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Enhance Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Enhance Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Enhance Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Enhance%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5728-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Enlighten Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Enlighten Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Enlighten Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Enlighten%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Enlighten Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Enlighten Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Enlighten Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Enlighten%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5729-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fire Penetration Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Fire Penetration Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Fire Penetration Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fire%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fire Penetration Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Fire Penetration Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Fire Penetration Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fire%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f572a-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fork Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Fork Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Fork Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fork%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fork Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Fork Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Fork Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fork%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f572b-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Generosity Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Generosity Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Generosity Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Generosity%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Generosity Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Generosity Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Generosity Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Generosity%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f572c-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Greater Multiple Projectiles Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Greater Multiple Projectiles Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Greater Multiple Projectiles Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Greater%20Multiple%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Greater Multiple Projectiles Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Greater Multiple Projectiles Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Greater Multiple Projectiles Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Greater%20Multiple%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f572d-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Increased Area of Effect Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Increased Area of Effect Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Increased Area of Effect Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Increased%20Area%20of%20Effect%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Increased Area of Effect Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Increased Area of Effect Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Increased Area of Effect Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Increased%20Area%20of%20Effect%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f572e-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Lightning Penetration Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Lightning Penetration Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Lightning Penetration Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Lightning%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Lightning Penetration Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Lightning Penetration Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Lightning Penetration Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Lightning%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f572f-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Physical Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Melee Physical Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Melee Physical Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Physical%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Physical Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Melee Physical Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Melee Physical Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Physical%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5730-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Splash Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Melee Splash Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Melee Splash Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Splash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Splash Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Melee Splash Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Melee Splash Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Splash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5731-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Minion Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Minion Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Minion Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Minion%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Minion Damage Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Minion Damage Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Minion Damage Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Minion%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5732-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Multistrike Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Multistrike Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Multistrike Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Multistrike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Multistrike Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Multistrike Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Multistrike Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Multistrike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5733-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Cascade Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Spell Cascade Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Spell Cascade Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Cascade%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Cascade Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Spell Cascade Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Spell Cascade Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Cascade%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5734-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Echo Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Spell Echo Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Spell Echo Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Echo%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Echo Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Spell Echo Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Spell Echo Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Echo%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5735-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Swift Affliction Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Swift Affliction Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Swift Affliction Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Swift%20Affliction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Swift Affliction Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Swift Affliction Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Swift Affliction Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Swift%20Affliction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5736-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unbound Ailments Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Unbound Ailments Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Unbound Ailments Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unbound%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unbound Ailments Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Unbound Ailments Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Unbound Ailments Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unbound%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5737-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unleash Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Unleash Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Unleash Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unleash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unleash Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Unleash Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Unleash Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unleash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5738-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Vicious Projectiles Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Vicious Projectiles Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Vicious Projectiles Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Vicious%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Vicious Projectiles Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Vicious Projectiles Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Vicious Projectiles Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Vicious%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f5739-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Void Manipulation Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Void Manipulation Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Void Manipulation Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Void%20Manipulation%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Void Manipulation Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Void Manipulation Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Void Manipulation Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Void%20Manipulation%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f573a-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    },
+    {
+        "itemBuying": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Damage with Attacks Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":null,\"max\":1},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Elemental Damage with Attacks Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Elemental Damage with Attacks Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": null,
+                                    "max": 1
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Damage%20with%20Attacks%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "itemSelling": {
+            "queryId": "{\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Damage with Attacks Support\",\"stats\":[{\"type\":\"and\",\"filters\":[],\"disabled\":false}],\"filters\":{\"misc_filters\":{\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}},\"disabled\":false}}},\"sort\":{\"price\":\"asc\"}}",
+            "name": "Awakened Elemental Damage with Attacks Support",
+            "tradeRequest": {
+                "query": {
+                    "status": {
+                        "option": "online"
+                    },
+                    "type": "Awakened Elemental Damage with Attacks Support",
+                    "stats": [
+                        {
+                            "type": "and",
+                            "filters": [],
+                            "disabled": false
+                        }
+                    ],
+                    "filters": {
+                        "misc_filters": {
+                            "filters": {
+                                "gem_level": {
+                                    "min": 5,
+                                    "max": 5
+                                },
+                                "corrupted": {
+                                    "option": "false"
+                                }
+                            },
+                            "disabled": false
+                        }
+                    }
+                },
+                "sort": {
+                    "price": "asc"
+                }
+            },
+            "url": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Damage%20with%20Attacks%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}"
+        },
+        "uuid": "1e5f573b-7a6e-11ee-8dd9-8b3b0aa6fe2b"
+    }
+]
