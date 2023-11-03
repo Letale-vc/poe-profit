@@ -1,19 +1,19 @@
 [
     {
-        "requestUuid": "1e5f3010-7a6e-11ee-8dd9-8b3b0aa6fe2b",
+        "requestUuid": "6340ac60-7a71-11ee-a5e7-0fad00f381f7",
         "itemBuying": {
             "maxStackSize": 1,
             "name": "Awakened Added Chaos Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Chaos%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 153,
+            "totalInTrade": 149,
             "price": {
                 "oneItem": {
                     "divine": 0.03,
-                    "chaos": 6
+                    "chaos": 8
                 },
                 "fullStackSize": {
                     "divine": 0.03,
-                    "chaos": 6
+                    "chaos": 8
                 }
             }
         },
@@ -21,7 +21,7 @@
             "maxStackSize": 1,
             "name": "Awakened Added Chaos Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Chaos%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 43,
+            "totalInTrade": 41,
             "price": {
                 "oneItem": {
                     "divine": 0.25,
@@ -34,25 +34,25 @@
             }
         },
         "profitInDivine": 0.22,
-        "profitInChaos": 54,
+        "profitInChaos": 52,
         "profitPerTradeInDivine": 0.22,
-        "profitPerTradeInChaos": 54
+        "profitPerTradeInChaos": 52
     },
     {
-        "requestUuid": "1e5f3011-7a6e-11ee-8dd9-8b3b0aa6fe2b",
+        "requestUuid": "6340ac61-7a71-11ee-a5e7-0fad00f381f7",
         "itemBuying": {
             "maxStackSize": 1,
             "name": "Awakened Added Cold Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Cold%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 98,
+            "totalInTrade": 97,
             "price": {
                 "oneItem": {
-                    "divine": 0.07,
-                    "chaos": 18
+                    "divine": 0.08,
+                    "chaos": 20
                 },
                 "fullStackSize": {
-                    "divine": 0.07,
-                    "chaos": 18
+                    "divine": 0.08,
+                    "chaos": 20
                 }
             }
         },
@@ -72,18 +72,18 @@
                 }
             }
         },
-        "profitInDivine": 0.53,
-        "profitInChaos": 125,
-        "profitPerTradeInDivine": 0.53,
-        "profitPerTradeInChaos": 125
+        "profitInDivine": 0.52,
+        "profitInChaos": 123,
+        "profitPerTradeInDivine": 0.52,
+        "profitPerTradeInChaos": 123
     },
     {
-        "requestUuid": "1e5f3012-7a6e-11ee-8dd9-8b3b0aa6fe2b",
+        "requestUuid": "6340ac62-7a71-11ee-a5e7-0fad00f381f7",
         "itemBuying": {
             "maxStackSize": 1,
             "name": "Awakened Added Fire Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Fire%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 168,
+            "totalInTrade": 155,
             "price": {
                 "oneItem": {
                     "divine": 0.02,
@@ -99,30 +99,30 @@
             "maxStackSize": 1,
             "name": "Awakened Added Fire Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Fire%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 37,
+            "totalInTrade": 35,
             "price": {
                 "oneItem": {
-                    "divine": 0.32,
-                    "chaos": 75
+                    "divine": 0.3,
+                    "chaos": 70
                 },
                 "fullStackSize": {
-                    "divine": 0.32,
-                    "chaos": 75
+                    "divine": 0.3,
+                    "chaos": 70
                 }
             }
         },
-        "profitInDivine": 0.3,
-        "profitInChaos": 70,
-        "profitPerTradeInDivine": 0.3,
-        "profitPerTradeInChaos": 70
+        "profitInDivine": 0.28,
+        "profitInChaos": 65,
+        "profitPerTradeInDivine": 0.28,
+        "profitPerTradeInChaos": 65
     },
     {
-        "requestUuid": "1e5f3013-7a6e-11ee-8dd9-8b3b0aa6fe2b",
+        "requestUuid": "6340ac63-7a71-11ee-a5e7-0fad00f381f7",
         "itemBuying": {
             "maxStackSize": 1,
             "name": "Awakened Added Lightning Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Lightning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 96,
+            "totalInTrade": 87,
             "price": {
                 "oneItem": {
                     "divine": 0.04,
@@ -138,38 +138,38 @@
             "maxStackSize": 1,
             "name": "Awakened Added Lightning Damage Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Added%20Lightning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 25,
+            "totalInTrade": 20,
             "price": {
                 "oneItem": {
-                    "divine": 0.42,
-                    "chaos": 100
+                    "divine": 0.61,
+                    "chaos": 145
                 },
                 "fullStackSize": {
-                    "divine": 0.42,
-                    "chaos": 100
+                    "divine": 0.61,
+                    "chaos": 145
                 }
             }
         },
-        "profitInDivine": 0.38,
-        "profitInChaos": 90,
-        "profitPerTradeInDivine": 0.38,
-        "profitPerTradeInChaos": 90
+        "profitInDivine": 0.57,
+        "profitInChaos": 135,
+        "profitPerTradeInDivine": 0.57,
+        "profitPerTradeInChaos": 135
     },
     {
-        "requestUuid": "1e5f3014-7a6e-11ee-8dd9-8b3b0aa6fe2b",
+        "requestUuid": "6340ac64-7a71-11ee-a5e7-0fad00f381f7",
         "itemBuying": {
             "maxStackSize": 1,
             "name": "Awakened Ancestral Call Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Ancestral%20Call%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 25,
+            "totalInTrade": 21,
             "price": {
                 "oneItem": {
-                    "divine": 0.09,
-                    "chaos": 22
+                    "divine": 0.17,
+                    "chaos": 40
                 },
                 "fullStackSize": {
-                    "divine": 0.09,
-                    "chaos": 22
+                    "divine": 0.17,
+                    "chaos": 40
                 }
             }
         },
@@ -177,7 +177,7 @@
             "maxStackSize": 1,
             "name": "Awakened Ancestral Call Support",
             "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Ancestral%20Call%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 16,
+            "totalInTrade": 8,
             "price": {
                 "oneItem": {
                     "divine": 1,
@@ -186,1098 +186,6 @@
                 "fullStackSize": {
                     "divine": 1,
                     "chaos": 236
-                }
-            }
-        },
-        "profitInDivine": 0.91,
-        "profitInChaos": 214,
-        "profitPerTradeInDivine": 0.91,
-        "profitPerTradeInChaos": 214
-    },
-    {
-        "requestUuid": "1e5f3015-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Arrow Nova Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Arrow%20Nova%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 26,
-            "price": {
-                "oneItem": {
-                    "divine": 0.31,
-                    "chaos": 72
-                },
-                "fullStackSize": {
-                    "divine": 0.31,
-                    "chaos": 72
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Arrow Nova Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Arrow%20Nova%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 18,
-            "price": {
-                "oneItem": {
-                    "divine": 2.15,
-                    "chaos": 507
-                },
-                "fullStackSize": {
-                    "divine": 2.15,
-                    "chaos": 507
-                }
-            }
-        },
-        "profitInDivine": 1.84,
-        "profitInChaos": 435,
-        "profitPerTradeInDivine": 1.84,
-        "profitPerTradeInChaos": 435
-    },
-    {
-        "requestUuid": "1e5f3016-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Blasphemy Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Blasphemy%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 43,
-            "price": {
-                "oneItem": {
-                    "divine": 0.14,
-                    "chaos": 33
-                },
-                "fullStackSize": {
-                    "divine": 0.14,
-                    "chaos": 33
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Blasphemy Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Blasphemy%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 18,
-            "price": {
-                "oneItem": {
-                    "divine": 1.35,
-                    "chaos": 319
-                },
-                "fullStackSize": {
-                    "divine": 1.35,
-                    "chaos": 319
-                }
-            }
-        },
-        "profitInDivine": 1.21,
-        "profitInChaos": 286,
-        "profitPerTradeInDivine": 1.21,
-        "profitPerTradeInChaos": 286
-    },
-    {
-        "requestUuid": "1e5f3017-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Brutality Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Brutality%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 115,
-            "price": {
-                "oneItem": {
-                    "divine": 0.08,
-                    "chaos": 20
-                },
-                "fullStackSize": {
-                    "divine": 0.08,
-                    "chaos": 20
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Brutality Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Brutality%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 31,
-            "price": {
-                "oneItem": {
-                    "divine": 0.51,
-                    "chaos": 120
-                },
-                "fullStackSize": {
-                    "divine": 0.51,
-                    "chaos": 120
-                }
-            }
-        },
-        "profitInDivine": 0.43,
-        "profitInChaos": 100,
-        "profitPerTradeInDivine": 0.43,
-        "profitPerTradeInChaos": 100
-    },
-    {
-        "requestUuid": "1e5f3018-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Burning Damage Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Burning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 97,
-            "price": {
-                "oneItem": {
-                    "divine": 0.08,
-                    "chaos": 20
-                },
-                "fullStackSize": {
-                    "divine": 0.08,
-                    "chaos": 20
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Burning Damage Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Burning%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 21,
-            "price": {
-                "oneItem": {
-                    "divine": 0.97,
-                    "chaos": 228
-                },
-                "fullStackSize": {
-                    "divine": 0.97,
-                    "chaos": 228
-                }
-            }
-        },
-        "profitInDivine": 0.89,
-        "profitInChaos": 208,
-        "profitPerTradeInDivine": 0.89,
-        "profitPerTradeInChaos": 208
-    },
-    {
-        "requestUuid": "1e5f3019-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Cast On Critical Strike Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20On%20Critical%20Strike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 36,
-            "price": {
-                "oneItem": {
-                    "divine": 0.38,
-                    "chaos": 89
-                },
-                "fullStackSize": {
-                    "divine": 0.38,
-                    "chaos": 89
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Cast On Critical Strike Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20On%20Critical%20Strike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 6,
-            "price": {
-                "oneItem": {
-                    "divine": 2.73,
-                    "chaos": 643
-                },
-                "fullStackSize": {
-                    "divine": 2.73,
-                    "chaos": 643
-                }
-            }
-        },
-        "profitInDivine": 2.35,
-        "profitInChaos": 554,
-        "profitPerTradeInDivine": 2.35,
-        "profitPerTradeInChaos": 554
-    },
-    {
-        "requestUuid": "1e5f5720-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Cast While Channelling Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20While%20Channelling%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 46,
-            "price": {
-                "oneItem": {
-                    "divine": 0.09,
-                    "chaos": 21
-                },
-                "fullStackSize": {
-                    "divine": 0.09,
-                    "chaos": 21
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Cast While Channelling Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cast%20While%20Channelling%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 2,
-            "price": {
-                "oneItem": {
-                    "divine": 2.1,
-                    "chaos": 496
-                },
-                "fullStackSize": {
-                    "divine": 2.1,
-                    "chaos": 496
-                }
-            }
-        },
-        "profitInDivine": 2.01,
-        "profitInChaos": 475,
-        "profitPerTradeInDivine": 2.01,
-        "profitPerTradeInChaos": 475
-    },
-    {
-        "requestUuid": "1e5f5721-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Chain Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Chain%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 31,
-            "price": {
-                "oneItem": {
-                    "divine": 0.93,
-                    "chaos": 218
-                },
-                "fullStackSize": {
-                    "divine": 0.93,
-                    "chaos": 218
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Chain Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Chain%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 7,
-            "price": {
-                "oneItem": {
-                    "divine": 2.43,
-                    "chaos": 572
-                },
-                "fullStackSize": {
-                    "divine": 2.43,
-                    "chaos": 572
-                }
-            }
-        },
-        "profitInDivine": 1.5,
-        "profitInChaos": 354,
-        "profitPerTradeInDivine": 1.5,
-        "profitPerTradeInChaos": 354
-    },
-    {
-        "requestUuid": "1e5f5722-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Cold Penetration Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cold%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 119,
-            "price": {
-                "oneItem": {
-                    "divine": 0.04,
-                    "chaos": 9
-                },
-                "fullStackSize": {
-                    "divine": 0.04,
-                    "chaos": 9
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Cold Penetration Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Cold%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 39,
-            "price": {
-                "oneItem": {
-                    "divine": 0.59,
-                    "chaos": 138
-                },
-                "fullStackSize": {
-                    "divine": 0.59,
-                    "chaos": 138
-                }
-            }
-        },
-        "profitInDivine": 0.55,
-        "profitInChaos": 129,
-        "profitPerTradeInDivine": 0.55,
-        "profitPerTradeInChaos": 129
-    },
-    {
-        "requestUuid": "1e5f5723-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Controlled Destruction Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Controlled%20Destruction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 158,
-            "price": {
-                "oneItem": {
-                    "divine": 0.03,
-                    "chaos": 8
-                },
-                "fullStackSize": {
-                    "divine": 0.03,
-                    "chaos": 8
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Controlled Destruction Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Controlled%20Destruction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 33,
-            "price": {
-                "oneItem": {
-                    "divine": 0.37,
-                    "chaos": 87
-                },
-                "fullStackSize": {
-                    "divine": 0.37,
-                    "chaos": 87
-                }
-            }
-        },
-        "profitInDivine": 0.34,
-        "profitInChaos": 79,
-        "profitPerTradeInDivine": 0.34,
-        "profitPerTradeInChaos": 79
-    },
-    {
-        "requestUuid": "1e5f5724-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Hextouch Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Hextouch%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 48,
-            "price": {
-                "oneItem": {
-                    "divine": 0.07,
-                    "chaos": 17
-                },
-                "fullStackSize": {
-                    "divine": 0.07,
-                    "chaos": 17
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Hextouch Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Hextouch%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 6,
-            "price": {
-                "oneItem": {
-                    "divine": 1.06,
-                    "chaos": 251
-                },
-                "fullStackSize": {
-                    "divine": 1.06,
-                    "chaos": 251
-                }
-            }
-        },
-        "profitInDivine": 0.99,
-        "profitInChaos": 234,
-        "profitPerTradeInDivine": 0.99,
-        "profitPerTradeInChaos": 234
-    },
-    {
-        "requestUuid": "1e5f5725-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Deadly Ailments Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Deadly%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 122,
-            "price": {
-                "oneItem": {
-                    "divine": 0.06,
-                    "chaos": 15
-                },
-                "fullStackSize": {
-                    "divine": 0.06,
-                    "chaos": 15
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Deadly Ailments Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Deadly%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 33,
-            "price": {
-                "oneItem": {
-                    "divine": 0.42,
-                    "chaos": 99
-                },
-                "fullStackSize": {
-                    "divine": 0.42,
-                    "chaos": 99
-                }
-            }
-        },
-        "profitInDivine": 0.36,
-        "profitInChaos": 84,
-        "profitPerTradeInDivine": 0.36,
-        "profitPerTradeInChaos": 84
-    },
-    {
-        "requestUuid": "1e5f5726-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Elemental Focus Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Focus%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 60,
-            "price": {
-                "oneItem": {
-                    "divine": 0.55,
-                    "chaos": 130
-                },
-                "fullStackSize": {
-                    "divine": 0.55,
-                    "chaos": 130
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Elemental Focus Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Focus%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 53,
-            "price": {
-                "oneItem": {
-                    "divine": 1.18,
-                    "chaos": 277
-                },
-                "fullStackSize": {
-                    "divine": 1.18,
-                    "chaos": 277
-                }
-            }
-        },
-        "profitInDivine": 0.63,
-        "profitInChaos": 147,
-        "profitPerTradeInDivine": 0.63,
-        "profitPerTradeInChaos": 147
-    },
-    {
-        "requestUuid": "1e5f572a-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Fire Penetration Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fire%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 143,
-            "price": {
-                "oneItem": {
-                    "divine": 0.03,
-                    "chaos": 7
-                },
-                "fullStackSize": {
-                    "divine": 0.03,
-                    "chaos": 7
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Fire Penetration Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fire%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 29,
-            "price": {
-                "oneItem": {
-                    "divine": 0.31,
-                    "chaos": 74
-                },
-                "fullStackSize": {
-                    "divine": 0.31,
-                    "chaos": 74
-                }
-            }
-        },
-        "profitInDivine": 0.28,
-        "profitInChaos": 67,
-        "profitPerTradeInDivine": 0.28,
-        "profitPerTradeInChaos": 67
-    },
-    {
-        "requestUuid": "1e5f572b-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Fork Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fork%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 23,
-            "price": {
-                "oneItem": {
-                    "divine": 2.88,
-                    "chaos": 679
-                },
-                "fullStackSize": {
-                    "divine": 2.88,
-                    "chaos": 679
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Fork Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Fork%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 10,
-            "price": {
-                "oneItem": {
-                    "divine": 4,
-                    "chaos": 944
-                },
-                "fullStackSize": {
-                    "divine": 4,
-                    "chaos": 944
-                }
-            }
-        },
-        "profitInDivine": 1.12,
-        "profitInChaos": 265,
-        "profitPerTradeInDivine": 1.12,
-        "profitPerTradeInChaos": 265
-    },
-    {
-        "requestUuid": "1e5f572c-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Generosity Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Generosity%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 36,
-            "price": {
-                "oneItem": {
-                    "divine": 0.3,
-                    "chaos": 71
-                },
-                "fullStackSize": {
-                    "divine": 0.3,
-                    "chaos": 71
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Generosity Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Generosity%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 11,
-            "price": {
-                "oneItem": {
-                    "divine": 2.23,
-                    "chaos": 525
-                },
-                "fullStackSize": {
-                    "divine": 2.23,
-                    "chaos": 525
-                }
-            }
-        },
-        "profitInDivine": 1.93,
-        "profitInChaos": 454,
-        "profitPerTradeInDivine": 1.93,
-        "profitPerTradeInChaos": 454
-    },
-    {
-        "requestUuid": "1e5f572d-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Greater Multiple Projectiles Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Greater%20Multiple%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 2,
-            "price": {
-                "oneItem": {
-                    "divine": 26.5,
-                    "chaos": 6254
-                },
-                "fullStackSize": {
-                    "divine": 26.5,
-                    "chaos": 6254
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Greater Multiple Projectiles Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Greater%20Multiple%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 5,
-            "price": {
-                "oneItem": {
-                    "divine": 28.48,
-                    "chaos": 6720
-                },
-                "fullStackSize": {
-                    "divine": 28.48,
-                    "chaos": 6720
-                }
-            }
-        },
-        "profitInDivine": 1.98,
-        "profitInChaos": 466,
-        "profitPerTradeInDivine": 1.98,
-        "profitPerTradeInChaos": 466
-    },
-    {
-        "requestUuid": "1e5f572e-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Increased Area of Effect Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Increased%20Area%20of%20Effect%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 33,
-            "price": {
-                "oneItem": {
-                    "divine": 1.3,
-                    "chaos": 307
-                },
-                "fullStackSize": {
-                    "divine": 1.3,
-                    "chaos": 307
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Increased Area of Effect Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Increased%20Area%20of%20Effect%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 11,
-            "price": {
-                "oneItem": {
-                    "divine": 3,
-                    "chaos": 708
-                },
-                "fullStackSize": {
-                    "divine": 3,
-                    "chaos": 708
-                }
-            }
-        },
-        "profitInDivine": 1.7,
-        "profitInChaos": 401,
-        "profitPerTradeInDivine": 1.7,
-        "profitPerTradeInChaos": 401
-    },
-    {
-        "requestUuid": "1e5f572f-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Lightning Penetration Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Lightning%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 118,
-            "price": {
-                "oneItem": {
-                    "divine": 0.04,
-                    "chaos": 10
-                },
-                "fullStackSize": {
-                    "divine": 0.04,
-                    "chaos": 10
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Lightning Penetration Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Lightning%20Penetration%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 28,
-            "price": {
-                "oneItem": {
-                    "divine": 0.42,
-                    "chaos": 100
-                },
-                "fullStackSize": {
-                    "divine": 0.42,
-                    "chaos": 100
-                }
-            }
-        },
-        "profitInDivine": 0.38,
-        "profitInChaos": 90,
-        "profitPerTradeInDivine": 0.38,
-        "profitPerTradeInChaos": 90
-    },
-    {
-        "requestUuid": "1e5f5730-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Melee Physical Damage Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Physical%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 82,
-            "price": {
-                "oneItem": {
-                    "divine": 0.08,
-                    "chaos": 20
-                },
-                "fullStackSize": {
-                    "divine": 0.08,
-                    "chaos": 20
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Melee Physical Damage Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Physical%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 18,
-            "price": {
-                "oneItem": {
-                    "divine": 0.61,
-                    "chaos": 145
-                },
-                "fullStackSize": {
-                    "divine": 0.61,
-                    "chaos": 145
-                }
-            }
-        },
-        "profitInDivine": 0.53,
-        "profitInChaos": 125,
-        "profitPerTradeInDivine": 0.53,
-        "profitPerTradeInChaos": 125
-    },
-    {
-        "requestUuid": "1e5f5731-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Melee Splash Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Splash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 173,
-            "price": {
-                "oneItem": {
-                    "divine": 0.03,
-                    "chaos": 8
-                },
-                "fullStackSize": {
-                    "divine": 0.03,
-                    "chaos": 8
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Melee Splash Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Melee%20Splash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 40,
-            "price": {
-                "oneItem": {
-                    "divine": 0.3,
-                    "chaos": 70
-                },
-                "fullStackSize": {
-                    "divine": 0.3,
-                    "chaos": 70
-                }
-            }
-        },
-        "profitInDivine": 0.27,
-        "profitInChaos": 62,
-        "profitPerTradeInDivine": 0.27,
-        "profitPerTradeInChaos": 62
-    },
-    {
-        "requestUuid": "1e5f5732-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Minion Damage Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Minion%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 81,
-            "price": {
-                "oneItem": {
-                    "divine": 0.08,
-                    "chaos": 20
-                },
-                "fullStackSize": {
-                    "divine": 0.08,
-                    "chaos": 20
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Minion Damage Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Minion%20Damage%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 40,
-            "price": {
-                "oneItem": {
-                    "divine": 0.75,
-                    "chaos": 178
-                },
-                "fullStackSize": {
-                    "divine": 0.75,
-                    "chaos": 178
-                }
-            }
-        },
-        "profitInDivine": 0.67,
-        "profitInChaos": 158,
-        "profitPerTradeInDivine": 0.67,
-        "profitPerTradeInChaos": 158
-    },
-    {
-        "requestUuid": "1e5f5733-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Multistrike Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Multistrike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 8,
-            "price": {
-                "oneItem": {
-                    "divine": 51,
-                    "chaos": 12036
-                },
-                "fullStackSize": {
-                    "divine": 51,
-                    "chaos": 12036
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Multistrike Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Multistrike%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 6,
-            "price": {
-                "oneItem": {
-                    "divine": 57.4,
-                    "chaos": 13546
-                },
-                "fullStackSize": {
-                    "divine": 57.4,
-                    "chaos": 13546
-                }
-            }
-        },
-        "profitInDivine": 6.4,
-        "profitInChaos": 1510,
-        "profitPerTradeInDivine": 6.4,
-        "profitPerTradeInChaos": 1510
-    },
-    {
-        "requestUuid": "1e5f5734-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Spell Cascade Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Cascade%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 8,
-            "price": {
-                "oneItem": {
-                    "divine": 15,
-                    "chaos": 3540
-                },
-                "fullStackSize": {
-                    "divine": 15,
-                    "chaos": 3540
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Spell Cascade Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Cascade%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 5,
-            "price": {
-                "oneItem": {
-                    "divine": 19.25,
-                    "chaos": 4543
-                },
-                "fullStackSize": {
-                    "divine": 19.25,
-                    "chaos": 4543
-                }
-            }
-        },
-        "profitInDivine": 4.25,
-        "profitInChaos": 1003,
-        "profitPerTradeInDivine": 4.25,
-        "profitPerTradeInChaos": 1003
-    },
-    {
-        "requestUuid": "1e5f5735-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Spell Echo Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Echo%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 15,
-            "price": {
-                "oneItem": {
-                    "divine": 13.45,
-                    "chaos": 3174
-                },
-                "fullStackSize": {
-                    "divine": 13.45,
-                    "chaos": 3174
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Spell Echo Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Spell%20Echo%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 8,
-            "price": {
-                "oneItem": {
-                    "divine": 15.73,
-                    "chaos": 3711
-                },
-                "fullStackSize": {
-                    "divine": 15.73,
-                    "chaos": 3711
-                }
-            }
-        },
-        "profitInDivine": 2.28,
-        "profitInChaos": 537,
-        "profitPerTradeInDivine": 2.28,
-        "profitPerTradeInChaos": 537
-    },
-    {
-        "requestUuid": "1e5f5736-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Swift Affliction Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Swift%20Affliction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 47,
-            "price": {
-                "oneItem": {
-                    "divine": 0.14,
-                    "chaos": 34
-                },
-                "fullStackSize": {
-                    "divine": 0.14,
-                    "chaos": 34
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Swift Affliction Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Swift%20Affliction%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 23,
-            "price": {
-                "oneItem": {
-                    "divine": 1.38,
-                    "chaos": 325
-                },
-                "fullStackSize": {
-                    "divine": 1.38,
-                    "chaos": 325
-                }
-            }
-        },
-        "profitInDivine": 1.24,
-        "profitInChaos": 291,
-        "profitPerTradeInDivine": 1.24,
-        "profitPerTradeInChaos": 291
-    },
-    {
-        "requestUuid": "1e5f5737-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Unbound Ailments Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unbound%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 61,
-            "price": {
-                "oneItem": {
-                    "divine": 0.21,
-                    "chaos": 50
-                },
-                "fullStackSize": {
-                    "divine": 0.21,
-                    "chaos": 50
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Unbound Ailments Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unbound%20Ailments%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 30,
-            "price": {
-                "oneItem": {
-                    "divine": 1.48,
-                    "chaos": 348
-                },
-                "fullStackSize": {
-                    "divine": 1.48,
-                    "chaos": 348
-                }
-            }
-        },
-        "profitInDivine": 1.27,
-        "profitInChaos": 298,
-        "profitPerTradeInDivine": 1.27,
-        "profitPerTradeInChaos": 298
-    },
-    {
-        "requestUuid": "1e5f5738-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Unleash Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unleash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 12,
-            "price": {
-                "oneItem": {
-                    "divine": 4.3,
-                    "chaos": 1015
-                },
-                "fullStackSize": {
-                    "divine": 4.3,
-                    "chaos": 1015
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Unleash Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Unleash%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 17,
-            "price": {
-                "oneItem": {
-                    "divine": 6.5,
-                    "chaos": 1534
-                },
-                "fullStackSize": {
-                    "divine": 6.5,
-                    "chaos": 1534
-                }
-            }
-        },
-        "profitInDivine": 2.2,
-        "profitInChaos": 519,
-        "profitPerTradeInDivine": 2.2,
-        "profitPerTradeInChaos": 519
-    },
-    {
-        "requestUuid": "1e5f5739-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Vicious Projectiles Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Vicious%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 76,
-            "price": {
-                "oneItem": {
-                    "divine": 0.12,
-                    "chaos": 29
-                },
-                "fullStackSize": {
-                    "divine": 0.12,
-                    "chaos": 29
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Vicious Projectiles Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Vicious%20Projectiles%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 36,
-            "price": {
-                "oneItem": {
-                    "divine": 0.95,
-                    "chaos": 225
-                },
-                "fullStackSize": {
-                    "divine": 0.95,
-                    "chaos": 225
                 }
             }
         },
@@ -1285,83 +193,5 @@
         "profitInChaos": 196,
         "profitPerTradeInDivine": 0.83,
         "profitPerTradeInChaos": 196
-    },
-    {
-        "requestUuid": "1e5f573a-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Void Manipulation Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Void%20Manipulation%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 56,
-            "price": {
-                "oneItem": {
-                    "divine": 0.33,
-                    "chaos": 79
-                },
-                "fullStackSize": {
-                    "divine": 0.33,
-                    "chaos": 79
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Void Manipulation Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Void%20Manipulation%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 40,
-            "price": {
-                "oneItem": {
-                    "divine": 1.08,
-                    "chaos": 254
-                },
-                "fullStackSize": {
-                    "divine": 1.08,
-                    "chaos": 254
-                }
-            }
-        },
-        "profitInDivine": 0.75,
-        "profitInChaos": 175,
-        "profitPerTradeInDivine": 0.75,
-        "profitPerTradeInChaos": 175
-    },
-    {
-        "requestUuid": "1e5f573b-7a6e-11ee-8dd9-8b3b0aa6fe2b",
-        "itemBuying": {
-            "maxStackSize": 1,
-            "name": "Awakened Elemental Damage with Attacks Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Damage%20with%20Attacks%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:null,%22max%22:1},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 93,
-            "price": {
-                "oneItem": {
-                    "divine": 1.6,
-                    "chaos": 378
-                },
-                "fullStackSize": {
-                    "divine": 1.6,
-                    "chaos": 378
-                }
-            }
-        },
-        "itemSelling": {
-            "maxStackSize": 1,
-            "name": "Awakened Elemental Damage with Attacks Support",
-            "poeTradeLink": "https://www.pathofexile.com/trade/search/Ancestor?q={%22query%22:{%22status%22:{%22option%22:%22online%22},%22type%22:%22Awakened%20Elemental%20Damage%20with%20Attacks%20Support%22,%22stats%22:[{%22type%22:%22and%22,%22filters%22:[],%22disabled%22:false}],%22filters%22:{%22misc_filters%22:{%22filters%22:{%22gem_level%22:{%22min%22:5,%22max%22:5},%22corrupted%22:{%22option%22:%22false%22}},%22disabled%22:false}}},%22sort%22:{%22price%22:%22asc%22}}",
-            "totalInTrade": 33,
-            "price": {
-                "oneItem": {
-                    "divine": 2.45,
-                    "chaos": 578
-                },
-                "fullStackSize": {
-                    "divine": 2.45,
-                    "chaos": 578
-                }
-            }
-        },
-        "profitInDivine": 0.85,
-        "profitInChaos": 200,
-        "profitPerTradeInDivine": 0.85,
-        "profitPerTradeInChaos": 200
     }
 ]
