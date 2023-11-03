@@ -8,10 +8,9 @@ import { type NextPage } from 'next';
 import { api } from '~/utils/api';
 import { env } from '~/env.mjs';
 import { type DataNamesType, TYPE_DATA_NAMES } from '~/helpers/constants';
+import { type PropsMain } from '~/pages';
 
-const adminAddress = true;
-
-export const Main: NextPage = () => {
+export const Main: NextPage<PropsMain> = ({ adminAddress }) => {
   const [value, setValue] = useState<keyof typeof TYPE_DATA_NAMES>(
     TYPE_DATA_NAMES.flipData,
   );
@@ -22,13 +21,6 @@ export const Main: NextPage = () => {
   ) => {
     setValue(newValue);
   };
-
-  // useEffect(() => {
-  //   const interval = setInterval(refetch, 5000);
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, [refetch]);
 
   const lastUpdate = data?.lastUpdate
     ? new Date(data.lastUpdate).toLocaleString()
