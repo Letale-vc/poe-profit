@@ -56,12 +56,9 @@ export const Main: NextPage<PropsMain> = ({ adminAddress }) => {
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <TabList onChange={handleChangeTab} aria-label="Table profit info">
+              <Tab label="Flip  profit " value={TYPE_DATA_NAMES.flipData} />
               <Tab
-                label="Flip Table profit info"
-                value={TYPE_DATA_NAMES.flipData}
-              />
-              <Tab
-                label="ExpGem Table profit info"
+                label="ExpGem  profit "
                 value={TYPE_DATA_NAMES.expGemsData}
               />
             </TabList>

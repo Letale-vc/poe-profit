@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dep": "npm install && npm run build && npm run start && curl http://localhost:3000",
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",

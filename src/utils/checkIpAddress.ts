@@ -8,9 +8,12 @@ export const checkIpAddress = (
   },
 ): boolean => {
   const ipAddress = req.headers['x-real-ip'] ?? req.socket.remoteAddress;
-  console.log(
-    `IP Address: ${ipAddress?.toString()} trying to get close section`,
-  );
+  console.log(req.headers['x-real-ip']);
+  console.log(req.socket.remoteAddress);
+  console.log(req.headers);
+  // console.log(
+  //   `IP Address: ${ipAddress?.toString()} trying to get close section`,
+  // );
   let findAdminAddress = false;
   if (typeof ipAddress === 'string') {
     const ipv4Address = ipAddress.replace('::ffff:', '');
