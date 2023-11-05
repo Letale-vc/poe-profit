@@ -9,9 +9,14 @@ import { ApError } from '../../Error/PoeFlipError';
 import { type PoeTradeFetch, type RequestBodyType } from 'poe-trade-fetch';
 import { type ObjectRequestType } from './Types/ObjectRequestType';
 import { type SearchStateType } from 'poe-trade-fetch/Types/PageStates';
+import { type SettingsFileManager } from '../SettingsFileManager';
 
 export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
-  constructor(fileNames: FileNamesType, readonly poeApi: PoeTradeFetch) {
+  constructor(
+    fileNames: FileNamesType,
+    readonly poeApi: PoeTradeFetch,
+    readonly settings: SettingsFileManager,
+  ) {
     super(fileNames);
   }
 
@@ -19,7 +24,12 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
     return await this.loadFile();
   }
 
+  private async getPoesessid() {
+    await this.settings.updateCash();
+    return this.settings.settingsCash.poesessid;
+  }
   async update(updateRequest: UpdateRequestType) {
+    const poesessid = await this.getPoesessid();
     const requestData = await this.getAll();
     let updateStatus = false;
     const updateRequestData: RequestObject[] = [];
@@ -28,10 +38,12 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
         updateStatus = true;
         const buyingPage = await this.poeApi.getTradePage(
           updateRequest.itemBuying,
+          poesessid,
         );
         const buyingRequestBody = this.createSearchRequestBody(buyingPage);
         const sellingPage = await this.poeApi.getTradePage(
           updateRequest.itemSelling,
+          poesessid,
         );
         const sellingRequestBody = this.createSearchRequestBody(sellingPage);
         const request = new RequestObject(
@@ -53,10 +65,15 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
 
   async add(newRequest: NewRequestType) {
     try {
-      const buyingPage = await this.poeApi.getTradePage(newRequest.itemBuying);
+      const poesessid = await this.getPoesessid();
+      const buyingPage = await this.poeApi.getTradePage(
+        newRequest.itemBuying,
+        poesessid,
+      );
       const buyingRequestBody = this.createSearchRequestBody(buyingPage);
       const sellingPage = await this.poeApi.getTradePage(
         newRequest.itemSelling,
+        poesessid,
       );
       const sellingRequestBody = this.createSearchRequestBody(sellingPage);
       const request = new RequestObject(

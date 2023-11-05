@@ -50,13 +50,7 @@ export class App {
         requestManager = new FlipRequestManager(this.poeApi);
       }
       this.dataUpdaters.push(
-        new FileDataUpdate(
-          dataManager,
-          requestManager,
-          this.searchItems,
-          this.settings,
-          val,
-        ),
+        new FileDataUpdate(dataManager, requestManager, this.searchItems, val),
       );
     });
   }
@@ -75,9 +69,7 @@ export class App {
     }
     await this.settings.init();
     await this.settings.updateCash();
-    await this.poeApi.update({
-      POESESSID: await this.settings.getPoesessid(),
-    });
+    await this.poeApi.update();
     for (const updater of this.dataUpdaters) {
       await updater.init();
     }
