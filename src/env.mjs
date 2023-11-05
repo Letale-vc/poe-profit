@@ -8,6 +8,7 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(['development', 'test', 'production']),
+    PIN: z.string(),
   },
 
   /**
@@ -16,7 +17,6 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
-    NEXT_PUBLIC_MY_IP_ADDRESS: z.string().ip(),
     NEXT_PUBLIC_NODE_ENV: z.enum(['development', 'test', 'production']),
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
   },
@@ -28,7 +28,7 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
-    NEXT_PUBLIC_MY_IP_ADDRESS: process.env.NEXT_PUBLIC_MY_IP_ADDRESS,
+    PIN: process.env.PIN,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

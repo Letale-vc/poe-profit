@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dep": "npm install && npm run build && npm run start && curl http://localhost:3000",
+    "dep": "npm ci --omit=dev && npm run build && npm run start",
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@types/eslint": "^8.44.6",
     "@types/jest": "^29.5.7",
-    "@types/node": "^18.18.8",
+    "@types/node": "18.18.8",
     "@types/react": "^18.2.34",
     "@types/react-dom": "^18.2.14",
     "@types/uuid": "^9.0.6",

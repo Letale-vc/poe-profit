@@ -18,10 +18,14 @@ import { type SettingsType } from '~/server/MyApp/FileManagers';
 import { api } from '~/utils/api';
 
 export const Settings: NextPage = () => {
-  const { data } = api.settings.get.useQuery();
+  const [pin, setPin] = useState<string>('');
+  const [forbidden, setForbidden] = useState<boolean>(false);
+  const { data, refetch } = api.settings.get.useQuery({ pin });
+
   const { mutateAsync } = api.settings.updateSettings.useMutation({
     onSuccess: () => {
       setSnackbar({ children: 'Settings saved', severity: 'success' });
+      void refetch;
     },
     onError: () => {
       setSnackbar({
@@ -35,9 +39,9 @@ export const Settings: NextPage = () => {
     expGemUpdate: false,
     poesessid: '',
   });
-
   useEffect(() => {
     if (data) {
+      setForbidden(true);
       setSettings(data);
     }
   }, [data]);
@@ -47,6 +51,13 @@ export const Settings: NextPage = () => {
     'children' | 'severity'
   > | null>(null);
   const handleCloseSnackbar = () => setSnackbar(null);
+
+  const handlePinChange = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    setPin(event.target.value);
+    await refetch();
+  };
 
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSettings((prevSettings) => {
@@ -65,65 +76,84 @@ export const Settings: NextPage = () => {
     });
   };
 
-  const handleSubmit = async (_: React.FormEvent<HTMLFormElement>) => {
-    await mutateAsync(settings);
+  const handleSubmit = async () => {
+    await mutateAsync({ pin, settings });
   };
 
   return (
-    <Box m={4}>
-      <Box display="flex" alignItems="center" justifyContent={'space-between'}>
-        <Button component={Link} href="/">
-          go to main
-        </Button>
-        {env.NEXT_PUBLIC_NODE_ENV === 'development' && (
-          <Button component={Link} href="/changeRequest">
-            change queries
-          </Button>
-        )}
-      </Box>
-      <Box mt={4} maxWidth={450}>
-        <form onSubmit={handleSubmit}>
-          <FormGroup>
-            <FormLabel component="legend">Settings</FormLabel>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={settings?.flipUpdate || false}
-                  onChange={handleSwitchChange}
-                  name="flipUpdate"
-                />
-              }
-              label="flipUpdate"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={settings?.expGemUpdate || false}
-                  onChange={handleSwitchChange}
-                  name="expGemUpdate"
-                />
-              }
-              label="expGemUpdate"
-            />
-
-            <TextField
-              value={settings?.poesessid || ''}
-              onChange={handleTextChange}
-              id="poesessid"
-              name="poesessid"
-              label="Poesessid"
-              variant="outlined"
-            />
-            <Button
-              sx={{ mt: 4, maxWidth: 100, alignSelf: 'center' }}
-              type="submit"
-              variant="contained"
-              color="primary"
+    <>
+      <Box m={4}>
+        {!forbidden ? (
+          <TextField
+            value={pin}
+            onChange={handlePinChange}
+            type="number"
+            id="PIN"
+            name="PIN"
+            label="PIN"
+            variant="outlined"
+          />
+        ) : (
+          <>
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent={'space-between'}
             >
-              Save
-            </Button>
-          </FormGroup>
-        </form>
+              <Button component={Link} href="/">
+                go to main
+              </Button>
+              {env.NEXT_PUBLIC_NODE_ENV === 'development' && (
+                <Button component={Link} href="/changeRequest">
+                  change queries
+                </Button>
+              )}
+            </Box>
+            <Box mt={4} maxWidth={450}>
+              <FormGroup>
+                <FormLabel component="legend">Settings</FormLabel>
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={settings?.flipUpdate || false}
+                      onChange={handleSwitchChange}
+                      name="flipUpdate"
+                    />
+                  }
+                  label="flipUpdate"
+                />
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={settings?.expGemUpdate || false}
+                      onChange={handleSwitchChange}
+                      name="expGemUpdate"
+                    />
+                  }
+                  label="expGemUpdate"
+                />
+
+                <TextField
+                  value={settings?.poesessid || ''}
+                  onChange={handleTextChange}
+                  id="poesessid"
+                  name="poesessid"
+                  label="Poesessid"
+                  variant="outlined"
+                />
+                <Button
+                  sx={{ mt: 4, maxWidth: 100, alignSelf: 'center' }}
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  onClick={handleSubmit}
+                >
+                  Save
+                </Button>
+              </FormGroup>
+            </Box>
+          </>
+        )}
       </Box>
       {!!snackbar && (
         <Snackbar
@@ -138,6 +168,6 @@ export const Settings: NextPage = () => {
           <Alert {...snackbar} onClose={handleCloseSnackbar} />
         </Snackbar>
       )}
-    </Box>
+    </>
   );
 };
