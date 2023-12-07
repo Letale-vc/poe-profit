@@ -25,6 +25,10 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
     return await this.loadFile();
   }
 
+  private async getPoesessid() {
+    await this.settings.updateCash();
+    return this.settings.settingsCash.poesessid;
+  }
   async update(updateRequest: UpdateRequestType) {
     if (this.poesessid === '') {
       this.poesessid = await this.settings.getPoesessid();

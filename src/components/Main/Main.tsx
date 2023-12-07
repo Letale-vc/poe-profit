@@ -8,9 +8,8 @@ import { type NextPage } from 'next';
 import { api } from '~/utils/api';
 import { env } from '~/env.mjs';
 import { type DataNamesType, TYPE_DATA_NAMES } from '~/helpers/constants';
-import { type PropsMain } from '~/pages';
 
-export const Main: NextPage<PropsMain> = ({ adminAddress }) => {
+export const Main: NextPage = () => {
   const [value, setValue] = useState<keyof typeof TYPE_DATA_NAMES>(
     TYPE_DATA_NAMES.flipData,
   );
@@ -38,17 +37,13 @@ export const Main: NextPage<PropsMain> = ({ adminAddress }) => {
         <Box marginLeft={2} flexGrow={1}>
           <p suppressHydrationWarning>{`Last update: ${lastUpdate}`}</p>
         </Box>
-        {adminAddress && (
-          <>
-            <Button component={Link} href="/settings">
-              settings
-            </Button>
-            {env.NEXT_PUBLIC_NODE_ENV === 'development' && (
-              <Button component={Link} href="/changeRequest">
-                change queries
-              </Button>
-            )}
-          </>
+        <Button component={Link} href="/settings">
+          settings
+        </Button>
+        {env.NEXT_PUBLIC_NODE_ENV === 'development' && (
+          <Button component={Link} href="/changeRequest">
+            change queries
+          </Button>
         )}
       </Box>
 

@@ -50,13 +50,7 @@ export class App {
         requestManager = new FlipRequestManager(this.poeApi);
       }
       this.dataUpdaters.push(
-        new FileDataUpdate(
-          dataManager,
-          requestManager,
-          this.searchItems,
-          this.settings,
-          val,
-        ),
+        new FileDataUpdate(dataManager, requestManager, this.searchItems, val),
       );
     });
   }

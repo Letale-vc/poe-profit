@@ -7,12 +7,10 @@
  * need to use are documented accordingly near the end.
  */
 
-import { TRPCError, initTRPC } from '@trpc/server';
+import { initTRPC } from '@trpc/server';
 import { type CreateNextContextOptions } from '@trpc/server/adapters/next';
-import { createNodeHTTPContentTypeHandler } from '@trpc/server/dist/adapters/node-http/internals/contentType';
 import superjson from 'superjson';
 import { ZodError } from 'zod';
-import { checkIpAddress } from '~/utils/checkIpAddress';
 // import('../MyApp');
 /**
  * 1. CONTEXT
@@ -34,8 +32,8 @@ type CreateContextOptions = Record<string, never>;
  *
  * @see https://create.t3.gg/en/usage/trpc#-serverapitrpcts
  */
-const createInnerTRPCContext = (_opts: CreateNextContextOptions) => {
-  return _opts;
+const createInnerTRPCContext = (_opts: CreateContextOptions) => {
+  return {};
 };
 
 /**
@@ -45,7 +43,7 @@ const createInnerTRPCContext = (_opts: CreateNextContextOptions) => {
  * @see https://trpc.io/docs/context
  */
 export const createTRPCContext = (_opts: CreateNextContextOptions) => {
-  return createInnerTRPCContext(_opts);
+  return createInnerTRPCContext({});
 };
 
 /**
@@ -82,16 +80,8 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
  *
  * @see https://trpc.io/docs/router
  */
-export const middleware = t.middleware;
 export const createTRPCRouter = t.router;
 
-const isAdmin = middleware(async (opts) => {
-  const { ctx } = opts;
-  if (!checkIpAddress(ctx.req)) {
-    throw new TRPCError({ code: 'FORBIDDEN' });
-  }
-  return opts.next(opts);
-});
 /**
  * Public (unauthenticated) procedure
  *
@@ -100,5 +90,3 @@ const isAdmin = middleware(async (opts) => {
  * are logged in.
  */
 export const publicProcedure = t.procedure;
-
-export const forbiddenProcedure = publicProcedure.use(isAdmin);

@@ -5,7 +5,6 @@ import {
   type DataManager,
   type PoeRequestManager,
   type RequestObject,
-  type SettingsFileManager,
 } from '../FileManagers';
 import { ObjectWithProfit } from '../ObjectWithProfit';
 import { type SearchItems } from '../SearchItems';
@@ -18,7 +17,6 @@ export class FileDataUpdate {
     readonly fileDataManager: DataManager,
     readonly requestManager: PoeRequestManager,
     private readonly searchItems: SearchItems,
-    readonly settings: SettingsFileManager,
     readonly key: (typeof UPDATE_FILES_NAMES)[number],
   ) {
     this.cashFileData = [];
@@ -42,12 +40,6 @@ export class FileDataUpdate {
     }
 
     try {
-      await this.settings.updateCash();
-      if (!!this.settings.settingsCash.poesessid) {
-        await this.searchItems.poeApi.update({
-          POESESSID: this.settings.settingsCash.poesessid,
-        });
-      }
       this.cashFileData = await this.fileDataManager.getData();
     } catch (err) {
       throw new ApError(err);
