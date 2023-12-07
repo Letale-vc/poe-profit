@@ -24,7 +24,7 @@ describe('PoeRequestManager', () => {
     getSettings: () => ({
       expGemUpdate: true,
       flipUpdate: true,
-      poesessid: true,
+      poesessid: '',
     }),
     getPoesessid: () => '1111',
   } as unknown as SettingsFileManager;

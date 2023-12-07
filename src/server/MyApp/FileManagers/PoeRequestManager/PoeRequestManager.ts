@@ -9,9 +9,15 @@ import { ApError } from '../../Error/PoeFlipError';
 import { type PoeTradeFetch, type RequestBodyType } from 'poe-trade-fetch';
 import { type ObjectRequestType } from './Types/ObjectRequestType';
 import { type SearchStateType } from 'poe-trade-fetch/Types/PageStates';
+import { type SettingsFileManager } from '../SettingsFileManager';
 
 export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
-  constructor(fileNames: FileNamesType, readonly poeApi: PoeTradeFetch) {
+  private poesessid = '';
+  constructor(
+    fileNames: FileNamesType,
+    readonly poeApi: PoeTradeFetch,
+    readonly settings: SettingsFileManager,
+  ) {
     super(fileNames);
   }
 
@@ -20,6 +26,12 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
   }
 
   async update(updateRequest: UpdateRequestType) {
+    if (this.poesessid === '') {
+      this.poesessid = await this.settings.getPoesessid();
+      if (this.poesessid === '') {
+        throw 'Poesessid is empty';
+      }
+    }
     const requestData = await this.getAll();
     let updateStatus = false;
     const updateRequestData: RequestObject[] = [];
@@ -28,10 +40,12 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
         updateStatus = true;
         const buyingPage = await this.poeApi.getTradePage(
           updateRequest.itemBuying,
+          this.poesessid,
         );
         const buyingRequestBody = this.createSearchRequestBody(buyingPage);
         const sellingPage = await this.poeApi.getTradePage(
           updateRequest.itemSelling,
+          this.poesessid,
         );
         const sellingRequestBody = this.createSearchRequestBody(sellingPage);
         const request = new RequestObject(
@@ -52,11 +66,21 @@ export class PoeRequestManager extends WorkingWithFile<ObjectRequestType[]> {
   }
 
   async add(newRequest: NewRequestType) {
+    if (this.poesessid === '') {
+      this.poesessid = await this.settings.getPoesessid();
+      if (this.poesessid === '') {
+        throw 'Poesessid is empty';
+      }
+    }
     try {
-      const buyingPage = await this.poeApi.getTradePage(newRequest.itemBuying);
+      const buyingPage = await this.poeApi.getTradePage(
+        newRequest.itemBuying,
+        this.poesessid,
+      );
       const buyingRequestBody = this.createSearchRequestBody(buyingPage);
       const sellingPage = await this.poeApi.getTradePage(
         newRequest.itemSelling,
+        this.poesessid,
       );
       const sellingRequestBody = this.createSearchRequestBody(sellingPage);
       const request = new RequestObject(

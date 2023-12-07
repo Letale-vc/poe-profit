@@ -75,9 +75,7 @@ export class App {
     }
     await this.settings.init();
     await this.settings.updateCash();
-    await this.poeApi.update({
-      POESESSID: await this.settings.getPoesessid(),
-    });
+    await this.poeApi.update();
     for (const updater of this.dataUpdaters) {
       await updater.init();
     }
@@ -90,8 +88,9 @@ export class App {
     this.changeCode(0);
 
     while (this.updateCode === 0) {
-      await this.settings.updateCash();
       try {
+        await this.settings.updateCash();
+        await this.poeApi.update();
         if (
           !this.settings.settingsCash.flipUpdate &&
           !this.settings.settingsCash.expGemUpdate
@@ -99,7 +98,7 @@ export class App {
           this.restart(1);
           break;
         }
-        await this.updateCurrencyAndPrice();
+        await this.updateCurrencyPrice();
         for (const updater of this.dataUpdaters) {
           if (this.canUpdateNow(updater)) {
             logger.info(`[Flip app]: ${updater.key} START update`);
@@ -152,7 +151,7 @@ export class App {
     }, time);
   }
 
-  private async updateCurrencyAndPrice() {
+  private async updateCurrencyPrice() {
     await this.currency.update();
     this.itemPriceCalculation.update(this.currency.currencyPrice);
   }
