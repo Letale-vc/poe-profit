@@ -8,6 +8,7 @@ import {
 } from '../FileManagers';
 import { ObjectWithProfit } from '../ObjectWithProfit';
 import { type SearchItems } from '../SearchItems';
+import { logger } from '../Logger/LoggerPino';
 
 export class FileDataUpdate {
   cashFileData: ObjectProfitDataType[];
@@ -62,6 +63,7 @@ export class FileDataUpdate {
           itemSellingItemFromTrade,
           val,
         );
+        logger.info('Flip app: New Profit:', newObject);
         await this.saveOrUpdateDataInFIle(newObject, val.uuid);
       } catch (err) {
         if (err instanceof Error) {

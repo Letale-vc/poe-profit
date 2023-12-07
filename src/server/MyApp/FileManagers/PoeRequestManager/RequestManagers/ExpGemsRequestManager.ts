@@ -3,10 +3,11 @@ import { PoeRequestManager } from '../PoeRequestManager';
 import { type ObjectRequestType } from '../Types/ObjectRequestType';
 import * as uuid from 'uuid';
 import { type PoeTradeFetch, type RequestBodyType } from 'poe-trade-fetch';
+import { type SettingsFileManager } from '../../SettingsFileManager';
 
 export class ExpGemsRequestManager extends PoeRequestManager {
-  constructor(poeApi: PoeTradeFetch) {
-    super(FILE_NAMES.EXP_GEMS_REQUESTS, poeApi);
+  constructor(poeApi: PoeTradeFetch, settings: SettingsFileManager) {
+    super(FILE_NAMES.EXP_GEMS_REQUESTS, poeApi, settings);
   }
 
   async initFile(): Promise<void> {

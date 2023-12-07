@@ -5,6 +5,7 @@ import {
   type PoeSecondResultType,
   type RequestBodyType,
 } from 'poe-trade-fetch';
+import { logger } from '../Logger/LoggerPino';
 
 export class SearchItems {
   constructor(readonly poeApi: PoeTradeFetch) {
@@ -22,6 +23,7 @@ export class SearchItems {
     const { id, result, total } = firstResponse;
 
     if (total === 0) {
+      logger.error('Flip app: Request skip');
       throw new Error('1');
     }
 

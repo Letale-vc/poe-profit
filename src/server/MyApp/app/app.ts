@@ -45,9 +45,9 @@ export class App {
       const dataManager = new DataManager(val);
       let requestManager: PoeRequestManager;
       if (val === FILE_NAMES.EXP_GEMS_DATA) {
-        requestManager = new ExpGemsRequestManager(this.poeApi);
+        requestManager = new ExpGemsRequestManager(this.poeApi, this.settings);
       } else {
-        requestManager = new FlipRequestManager(this.poeApi);
+        requestManager = new FlipRequestManager(this.poeApi, this.settings);
       }
       this.dataUpdaters.push(
         new FileDataUpdate(dataManager, requestManager, this.searchItems, val),
@@ -70,6 +70,7 @@ export class App {
     await this.settings.init();
     await this.settings.updateCash();
     await this.poeApi.update();
+    logger.info(`[Flip app]: POE API: leagueName: ${this.poeApi.leagueName}`);
     for (const updater of this.dataUpdaters) {
       await updater.init();
     }
@@ -102,6 +103,7 @@ export class App {
         }
       } catch (err) {
         logger.warn('[Flip app]: stop process update data.');
+        logger.error(err);
         if (err instanceof Error) {
           if (err.message === 'Rate limit exceeded') {
             this.changeCode(3);
