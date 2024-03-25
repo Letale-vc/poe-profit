@@ -117,8 +117,12 @@ export class DivinationFlipDataUpdater extends Updater {
             // TODO: only update old data
             if (itemBuyRes === undefined || itemBuyRes.total === 0) return undefined;
             const price = ItemPriceCalculation.calculatePrice(itemBuyRes.result, 1);
+            const tradeLink = new URL(
+                `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}`,
+            );
+            tradeLink.searchParams.append("q", JSON.stringify(itemBuyingQuery));
             return {
-                tradeLink: `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}?q=${JSON.stringify(itemBuyingQuery)}`,
+                tradeLink: tradeLink.toString(),
                 icon: profitReqObj.divination.icon,
                 name: itemBuyRes.result[0].item.baseType,
                 stackSize: profitReqObj.divination.stackSize ?? 1,
@@ -214,8 +218,12 @@ export class DivinationFlipDataUpdater extends Updater {
                 res,
                 sellingPriceMultiplier,
             );
+            const tradeLink = new URL(
+                `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}`,
+            );
+            tradeLink.searchParams.append("q", JSON.stringify(req));
             return {
-                tradeLink: `https://www.pathofexile.com/trade/exchange/${this.poeApi.leagueName}?q=${JSON.stringify(req)}`,
+                tradeLink: tradeLink.toString(),
                 icon: profitReqObj.itemTake.icon,
                 name: profitReqObj.itemTake.name,
                 stackSize: 1,

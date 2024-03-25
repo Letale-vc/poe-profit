@@ -3,7 +3,7 @@
     "scripts": {
         "build:css": "tailwindcss build src/input.css -o public/styles.css",
         "lint": "eslint .",
-        "start:dev": "node --loader ts-node/esm ./src/index.ts"
+        "dev": "node --loader ts-node/esm ./src/index.ts"
     },
     "type": "module",
     "dependencies": {

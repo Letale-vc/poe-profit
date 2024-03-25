@@ -61,8 +61,12 @@ export class AwakenedGemsExpUpdater extends Updater {
 
     #createGemItemObject(req: RequestBodyType, res: ItemSearchResultType): GemItemType {
         const price = ItemPriceCalculation.calculatePrice(res.result);
+        const tradeLink = new URL(
+            `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}`,
+        );
+        tradeLink.searchParams.append("q", JSON.stringify(req));
         return {
-            tradeLink: `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}/q=${JSON.stringify(req)}`,
+            tradeLink: tradeLink.toString(),
             icon: res.result[0].item.icon,
             name: res.result[0].item.baseType,
             listings: res.total,
