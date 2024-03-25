@@ -14,10 +14,14 @@ export function Main() {
     const handleChangeTab = (_: React.SyntheticEvent, newValue: string) => {
         setTab(newValue);
     };
-    console.log(data, tab, keys);
     useEffect(() => {
         if (!data && !tab) {
-            fetch("http://127.0.0.1:3000/api/data")
+            fetch(
+                `${
+                    import.meta.env.VITE_SERVER_ADDRESS ??
+                    "http//localhost:3000"
+                }/api/data`,
+            )
                 .then((res) => res.json())
                 .then((data) => {
                     setData(data);

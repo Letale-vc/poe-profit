@@ -91,7 +91,8 @@ export class PoeProfitApp {
                 await this.#loadPlugins(filePath);
             } else if (filePath.endsWith("index.js") || filePath.endsWith("index.ts")) {
                 // Dynamically import the module
-                const PluginModule = (await import(filePath)) as {
+                const filePathUrl = new URL(`file://${filePath}`);
+                const PluginModule = (await import(filePathUrl.toString())) as {
                     default: new (..._: unknown[]) => Updater;
                 };
                 const pluginInstance = new PluginModule.default(

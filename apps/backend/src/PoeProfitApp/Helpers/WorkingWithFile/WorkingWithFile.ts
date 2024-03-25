@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from "url";
 import logger from "../Logger.js";
 
 export class FileManager<T> {
@@ -10,12 +11,13 @@ export class FileManager<T> {
     constructor(fileName: string, initValue: "object" | "array") {
         this.#fileName = fileName;
         this.#initValue = "object" === initValue ? ({} as T) : ([] as T);
-        const projectRoot = process.cwd();
-        const dataFolder = path.join(projectRoot, "data");
-        if (!fs.existsSync(dataFolder)) {
-            fs.mkdirSync(dataFolder);
+        const dataFolder = path.join(process.cwd(), "data");
+        const dataFolderUrl = fileURLToPath(new URL(`file://${dataFolder}`));
+
+        if (!fs.existsSync(dataFolderUrl)) {
+            fs.mkdirSync(dataFolderUrl);
         }
-        this.#pathFileFolder = path.join(dataFolder, fileName);
+        this.#pathFileFolder = path.join(dataFolderUrl, fileName);
     }
 
     init(initValue = this.#initValue): void {

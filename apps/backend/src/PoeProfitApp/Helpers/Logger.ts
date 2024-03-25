@@ -1,13 +1,16 @@
 import * as fs from "fs";
 import * as path from "path";
 import { pino } from "pino";
+import { fileURLToPath } from "url";
 
-const logDirectory = path.resolve("logs");
-
+const logDirectory = path.join(process.cwd(), "logs");
+const logDirectoryUrl = fileURLToPath(new URL(`file://${logDirectory}`));
+const logFileUrl = fileURLToPath(new URL(`file://${path.join(logDirectory, "poeProfit.log")}`));
+console.log(logDirectoryUrl);
 // перевіряємо, чи існує директорія
-if (!fs.existsSync(logDirectory)) {
+if (!fs.existsSync(logDirectoryUrl)) {
     // якщо директорії не існує, створюємо її
-    fs.mkdirSync(logDirectory);
+    fs.mkdirSync(logDirectoryUrl);
 }
 
 const logger = pino(
@@ -23,7 +26,7 @@ const logger = pino(
         timestamp: pino.stdTimeFunctions.isoTime,
     },
     pino.destination({
-        dest: path.join(logDirectory, "poeProfit.log"),
+        dest: logFileUrl,
         sync: true,
         minLength: 4096,
     }),
