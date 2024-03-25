@@ -1,6 +1,6 @@
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
-import { Box, Button, Link, Tab } from "@mui/material";
+import { Box, Tab } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import { DataType } from "../Types/DataTypes";
@@ -15,18 +15,16 @@ export function Main() {
         setTab(newValue);
     };
     useEffect(() => {
-        if (!data && !tab) {
-            fetch(
-                `${
-                    import.meta.env.VITE_SERVER_ADDRESS ??
-                    "http//localhost:3000"
-                }/api/data`,
-            )
+        if (!data) {
+            fetch(`api/data`)
                 .then((res) => res.json())
                 .then((data) => {
                     setData(data);
                     setKeys(Object.keys(data));
                     setTab(Object.keys(data)[0]);
+                })
+                .catch((err: unknown) => {
+                    console.log(err);
                 });
         }
     }, [data, tab]);
@@ -35,17 +33,6 @@ export function Main() {
 
     return (
         <Box sx={{ width: "100%", height: "100vh", mt: 2 }}>
-            <Box
-                display="flex"
-                justifyContent="flex-start"
-                alignItems="center"
-                mb={2}
-            >
-                <Button component={Link} href="/settings">
-                    settings
-                </Button>
-            </Box>
-
             {data && tab && (
                 <>
                     <TabContext value={tab}>
