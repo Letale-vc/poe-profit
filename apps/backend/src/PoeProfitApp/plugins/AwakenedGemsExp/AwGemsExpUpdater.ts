@@ -55,6 +55,7 @@ export class AwakenedGemsExpUpdater extends Updater {
                 this.#dataManager.update(profit);
             } catch (e) {
                 logger.error(e);
+                throw e;
             }
         }
     }

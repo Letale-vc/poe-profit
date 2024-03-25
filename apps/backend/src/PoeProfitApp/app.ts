@@ -1,3 +1,4 @@
+import { isAxiosError } from "axios";
 import fs from "fs";
 import { dirname, join } from "path";
 import { LEAGUES_NAMES, PoeTradeFetch } from "poe-trade-fetch";
@@ -144,11 +145,25 @@ export class PoeProfitApp {
                 for (const plugin of activePlugins) {
                     logger.info(`${plugin.name} START update`);
                     await plugin.updater.update();
-                    logger.info(`[Flip app]: ${plugin.name} END update`);
+                    logger.info(`${plugin.name} END update`);
                 }
-            } catch (err) {
+            } catch (e) {
                 logger.warn("Stop process update data.");
-                logger.error(err);
+                logger.error(e);
+
+                if (
+                    isAxiosError<{
+                        error: {
+                            code: number;
+                            message: string;
+                        };
+                    }>(e)
+                ) {
+                    if (e.response?.status === 429) {
+                        this.#restart(30);
+                        break;
+                    }
+                }
                 this.#restart(0);
                 break;
             }

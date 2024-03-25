@@ -129,9 +129,9 @@ export class DivinationFlipDataUpdater extends Updater {
                 listings: itemBuyRes.total,
                 ...price,
             };
-        } catch (err) {
-            logger.error(err);
-            throw new Error("Error in getItemBuying");
+        } catch (e) {
+            logger.error(e);
+            throw e;
         }
     }
     #findPriceMultiplier(explicitMods: ItemModifierType[]) {
