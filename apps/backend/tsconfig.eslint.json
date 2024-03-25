@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.js",
+        "./jest.config.ts",
+        "./tailwind.config.js"
+    ]
+}

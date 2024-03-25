@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        {
+            "active": false,
+            "name": "Awakened Gems Exp"
+        },
+        {
+            "active": false,
+            "name": "Divination Flip"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "trailingComma": "all",
+    "printWidth": 100,
+    "tabWidth": 4,
+    "endOfLine": "lf",
+    "arrowParens": "always",
+    "overrides": [
+        {
+            "files": "**/*.hbs",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
+}

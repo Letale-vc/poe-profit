@@ -1,0 +1,737 @@
+{
+    "Awakened Added Chaos Damage Support": {
+        "id": "Awakened Added Chaos Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Chaos Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkQ2hhb3NEYW1hZ2VQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/61d2d11bfb/AddedChaosDamagePlus.png",
+            "name": "Awakened Added Chaos Damage Support",
+            "listings": 45,
+            "chaosValue": 10,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Chaos Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkQ2hhb3NEYW1hZ2VQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/61d2d11bfb/AddedChaosDamagePlus.png",
+            "name": "Awakened Added Chaos Damage Support",
+            "listings": 21,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 125
+    },
+    "Awakened Added Cold Damage Support": {
+        "id": "Awakened Added Cold Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Cold Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkQ29sZERhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8fef150dd7/AddedColdDamagePlus.png",
+            "name": "Awakened Added Cold Damage Support",
+            "listings": 45,
+            "chaosValue": 20,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Cold Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkQ29sZERhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8fef150dd7/AddedColdDamagePlus.png",
+            "name": "Awakened Added Cold Damage Support",
+            "listings": 26,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 115
+    },
+    "Awakened Added Fire Damage Support": {
+        "id": "Awakened Added Fire Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Fire Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkRmlyZURhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1135da118/AddedFireDamagePlus.png",
+            "name": "Awakened Added Fire Damage Support",
+            "listings": 53,
+            "chaosValue": 10,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Fire Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkRmlyZURhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1135da118/AddedFireDamagePlus.png",
+            "name": "Awakened Added Fire Damage Support",
+            "listings": 19,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 125
+    },
+    "Awakened Added Lightning Damage Support": {
+        "id": "Awakened Added Lightning Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Lightning Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkTGlnaHRuaW5nRGFtYWdlUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/12f4edd322/AddedLightningDamagePlus.png",
+            "name": "Awakened Added Lightning Damage Support",
+            "listings": 44,
+            "chaosValue": 60,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Added Lightning Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0FkZGVkTGlnaHRuaW5nRGFtYWdlUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/12f4edd322/AddedLightningDamagePlus.png",
+            "name": "Awakened Added Lightning Damage Support",
+            "listings": 11,
+            "chaosValue": 338,
+            "divineValue": 3
+        },
+        "profitInDivine": 3,
+        "profitInChaos": 278
+    },
+    "Awakened Ancestral Call Support": {
+        "id": "Awakened Ancestral Call Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Ancestral Call Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL01pcmFnZVN0cmlrZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f7a05689d9/MirageStrikePlus.png",
+            "name": "Awakened Ancestral Call Support",
+            "listings": 12,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Ancestral Call Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL01pcmFnZVN0cmlrZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f7a05689d9/MirageStrikePlus.png",
+            "name": "Awakened Ancestral Call Support",
+            "listings": 3,
+            "chaosValue": 270,
+            "divineValue": 2
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 135
+    },
+    "Awakened Arrow Nova Support": {
+        "id": "Awakened Arrow Nova Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Arrow Nova Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0dyZWVuUmFpblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/84da19af8c/GreenRainPlus.png",
+            "name": "Awakened Arrow Nova Support",
+            "listings": 20,
+            "chaosValue": 60,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Arrow Nova Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0dyZWVuUmFpblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/84da19af8c/GreenRainPlus.png",
+            "name": "Awakened Arrow Nova Support",
+            "listings": 1,
+            "chaosValue": 405,
+            "divineValue": 3
+        },
+        "profitInDivine": 3,
+        "profitInChaos": 345
+    },
+    "Awakened Blasphemy Support": {
+        "id": "Awakened Blasphemy Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Blasphemy Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0F1cmlmeVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/fbdc11b158/AurifyPlus.png",
+            "name": "Awakened Blasphemy Support",
+            "listings": 14,
+            "chaosValue": 80,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Blasphemy Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0F1cmlmeVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/fbdc11b158/AurifyPlus.png",
+            "name": "Awakened Blasphemy Support",
+            "listings": 5,
+            "chaosValue": 405,
+            "divineValue": 3
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 325
+    },
+    "Awakened Brutality Support": {
+        "id": "Awakened Brutality Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Brutality Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0JydXRhbGl0eVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/9553670260/BrutalityPlus.png",
+            "name": "Awakened Brutality Support",
+            "listings": 46,
+            "chaosValue": 30,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Brutality Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0JydXRhbGl0eVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/9553670260/BrutalityPlus.png",
+            "name": "Awakened Brutality Support",
+            "listings": 10,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 105
+    },
+    "Awakened Burning Damage Support": {
+        "id": "Awakened Burning Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Burning Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0luY3JlYXNlZEJ1cm5EdXJhdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/021c221c69/IncreasedBurnDurationPlus.png",
+            "name": "Awakened Burning Damage Support",
+            "listings": 51,
+            "chaosValue": 90,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Burning Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0luY3JlYXNlZEJ1cm5EdXJhdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/021c221c69/IncreasedBurnDurationPlus.png",
+            "name": "Awakened Burning Damage Support",
+            "listings": 17,
+            "chaosValue": 270,
+            "divineValue": 2
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 180
+    },
+    "Awakened Cast On Critical Strike Support": {
+        "id": "Awakened Cast On Critical Strike Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast On Critical Strike Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0Nhc3RPbkNyaXRQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/928b624b08/CastOnCritPlus.png",
+            "name": "Awakened Cast On Critical Strike Support",
+            "listings": 7,
+            "chaosValue": 945,
+            "divineValue": 7
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast On Critical Strike Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0Nhc3RPbkNyaXRQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/928b624b08/CastOnCritPlus.png",
+            "name": "Awakened Cast On Critical Strike Support",
+            "listings": 2,
+            "chaosValue": 1890,
+            "divineValue": 14
+        },
+        "profitInDivine": 7,
+        "profitInChaos": 945
+    },
+    "Awakened Cast While Channelling Support": {
+        "id": "Awakened Cast While Channelling Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast While Channelling Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0Nhc3RXaGlsZUNoYW5uZWxpbmdQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b6365df6cb/CastWhileChannelingPlus.png",
+            "name": "Awakened Cast While Channelling Support",
+            "listings": 18,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cast While Channelling Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0Nhc3RXaGlsZUNoYW5uZWxpbmdQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b6365df6cb/CastWhileChannelingPlus.png",
+            "name": "Awakened Cast While Channelling Support",
+            "listings": 7,
+            "chaosValue": 527,
+            "divineValue": 4
+        },
+        "profitInDivine": 3,
+        "profitInChaos": 392
+    },
+    "Awakened Chain Support": {
+        "id": "Awakened Chain Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Chain Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0NoYWluUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b328b4615c/ChainPlus.png",
+            "name": "Awakened Chain Support",
+            "listings": 6,
+            "chaosValue": 540,
+            "divineValue": 4
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Chain Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0NoYWluUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b328b4615c/ChainPlus.png",
+            "name": "Awakened Chain Support",
+            "listings": 4,
+            "chaosValue": 1269,
+            "divineValue": 9
+        },
+        "profitInDivine": 5,
+        "profitInChaos": 729
+    },
+    "Awakened Cold Penetration Support": {
+        "id": "Awakened Cold Penetration Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cold Penetration Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0NvbGRQZW5ldHJhdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/52ac74cbd4/ColdPenetrationPlus.png",
+            "name": "Awakened Cold Penetration Support",
+            "listings": 58,
+            "chaosValue": 20,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Cold Penetration Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0NvbGRQZW5ldHJhdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/52ac74cbd4/ColdPenetrationPlus.png",
+            "name": "Awakened Cold Penetration Support",
+            "listings": 23,
+            "chaosValue": 230,
+            "divineValue": 2
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 210
+    },
+    "Awakened Controlled Destruction Support": {
+        "id": "Awakened Controlled Destruction Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Controlled Destruction Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0NvbnRyb2xsZWREZXN0cnVjdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e545c985d0/ControlledDestructionPlus.png",
+            "name": "Awakened Controlled Destruction Support",
+            "listings": 66,
+            "chaosValue": 10,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Controlled Destruction Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0NvbnRyb2xsZWREZXN0cnVjdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e545c985d0/ControlledDestructionPlus.png",
+            "name": "Awakened Controlled Destruction Support",
+            "listings": 22,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 125
+    },
+    "Awakened Hextouch Support": {
+        "id": "Awakened Hextouch Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Hextouch Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0N1cnNlT25IaXRQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bae0341d74/CurseOnHitPlus.png",
+            "name": "Awakened Hextouch Support",
+            "listings": 16,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Hextouch Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0N1cnNlT25IaXRQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bae0341d74/CurseOnHitPlus.png",
+            "name": "Awakened Hextouch Support",
+            "listings": 2,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 0,
+        "profitInChaos": 0
+    },
+    "Awakened Deadly Ailments Support": {
+        "id": "Awakened Deadly Ailments Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Deadly Ailments Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0RlYWRseUFpbG1lbnRzUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/68c620c3dc/DeadlyAilmentsPlus.png",
+            "name": "Awakened Deadly Ailments Support",
+            "listings": 50,
+            "chaosValue": 80,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Deadly Ailments Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0RlYWRseUFpbG1lbnRzUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/68c620c3dc/DeadlyAilmentsPlus.png",
+            "name": "Awakened Deadly Ailments Support",
+            "listings": 25,
+            "chaosValue": 405,
+            "divineValue": 3
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 325
+    },
+    "Awakened Elemental Focus Support": {
+        "id": "Awakened Elemental Focus Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Focus Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VsZW1lbnRhbEZvY3VzUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a84d493e28/ElementalFocusPlus.png",
+            "name": "Awakened Elemental Focus Support",
+            "listings": 22,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Focus Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VsZW1lbnRhbEZvY3VzUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a84d493e28/ElementalFocusPlus.png",
+            "name": "Awakened Elemental Focus Support",
+            "listings": 17,
+            "chaosValue": 405,
+            "divineValue": 3
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 270
+    },
+    "Awakened Fire Penetration Support": {
+        "id": "Awakened Fire Penetration Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fire Penetration Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0ZpcmVQZW5ldHJhdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b1308cf253/FirePenetrationPlus.png",
+            "name": "Awakened Fire Penetration Support",
+            "listings": 51,
+            "chaosValue": 20,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fire Penetration Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0ZpcmVQZW5ldHJhdGlvblBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b1308cf253/FirePenetrationPlus.png",
+            "name": "Awakened Fire Penetration Support",
+            "listings": 19,
+            "chaosValue": 203,
+            "divineValue": 2
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 183
+    },
+    "Awakened Fork Support": {
+        "id": "Awakened Fork Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fork Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0ZvcmtQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/664ffa6acd/ForkPlus.png",
+            "name": "Awakened Fork Support",
+            "listings": 7,
+            "chaosValue": 4050,
+            "divineValue": 30
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Fork Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0ZvcmtQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/664ffa6acd/ForkPlus.png",
+            "name": "Awakened Fork Support",
+            "listings": 6,
+            "chaosValue": 8100,
+            "divineValue": 60
+        },
+        "profitInDivine": 30,
+        "profitInChaos": 4050
+    },
+    "Awakened Generosity Support": {
+        "id": "Awakened Generosity Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Generosity Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0dlbmVyb3NpdHlQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/14d887c794/GenerosityPlus.png",
+            "name": "Awakened Generosity Support",
+            "listings": 12,
+            "chaosValue": 203,
+            "divineValue": 2
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Generosity Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0dlbmVyb3NpdHlQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/14d887c794/GenerosityPlus.png",
+            "name": "Awakened Generosity Support",
+            "listings": 3,
+            "chaosValue": 810,
+            "divineValue": 6
+        },
+        "profitInDivine": 4,
+        "profitInChaos": 607
+    },
+    "Awakened Greater Multiple Projectiles Support": {
+        "id": "Awakened Greater Multiple Projectiles Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Greater Multiple Projectiles Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0dyZWF0ZXJNdWx0aXBsZVByb2plY3RpbGVzUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/720eb18ad1/GreaterMultipleProjectilesPlus.png",
+            "name": "Awakened Greater Multiple Projectiles Support",
+            "listings": 3,
+            "chaosValue": 10125,
+            "divineValue": 75
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Greater Multiple Projectiles Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0dyZWF0ZXJNdWx0aXBsZVByb2plY3RpbGVzUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/720eb18ad1/GreaterMultipleProjectilesPlus.png",
+            "name": "Awakened Greater Multiple Projectiles Support",
+            "listings": 4,
+            "chaosValue": 10395,
+            "divineValue": 77
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 270
+    },
+    "Awakened Increased Area of Effect Support": {
+        "id": "Awakened Increased Area of Effect Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Increased Area of Effect Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0luY3JlYXNlZEFPRVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/360e9e4ed5/IncreasedAOEPlus.png",
+            "name": "Awakened Increased Area of Effect Support",
+            "listings": 6,
+            "chaosValue": 1620,
+            "divineValue": 12
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Increased Area of Effect Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0luY3JlYXNlZEFPRVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/360e9e4ed5/IncreasedAOEPlus.png",
+            "name": "Awakened Increased Area of Effect Support",
+            "listings": 4,
+            "chaosValue": 6750,
+            "divineValue": 50
+        },
+        "profitInDivine": 38,
+        "profitInChaos": 5130
+    },
+    "Awakened Lightning Penetration Support": {
+        "id": "Awakened Lightning Penetration Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Lightning Penetration Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0xpZ2h0bmluZ1BlbmV0cmF0aW9uUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/163f40e5e5/LightningPenetrationPlus.png",
+            "name": "Awakened Lightning Penetration Support",
+            "listings": 54,
+            "chaosValue": 70,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Lightning Penetration Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0xpZ2h0bmluZ1BlbmV0cmF0aW9uUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/163f40e5e5/LightningPenetrationPlus.png",
+            "name": "Awakened Lightning Penetration Support",
+            "listings": 9,
+            "chaosValue": 405,
+            "divineValue": 3
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 335
+    },
+    "Awakened Melee Physical Damage Support": {
+        "id": "Awakened Melee Physical Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Physical Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0luY3JlYXNlZFBoeXNjaWFsRGFtYWdlUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b5d08a6777/IncreasedPhyscialDamagePlus.png",
+            "name": "Awakened Melee Physical Damage Support",
+            "listings": 51,
+            "chaosValue": 35,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Physical Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0luY3JlYXNlZFBoeXNjaWFsRGFtYWdlUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b5d08a6777/IncreasedPhyscialDamagePlus.png",
+            "name": "Awakened Melee Physical Damage Support",
+            "listings": 33,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 100
+    },
+    "Awakened Melee Splash Support": {
+        "id": "Awakened Melee Splash Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Splash Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1NwbGFzaFBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8c6dd76bf4/SplashPlus.png",
+            "name": "Awakened Melee Splash Support",
+            "listings": 60,
+            "chaosValue": 15,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Melee Splash Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1NwbGFzaFBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8c6dd76bf4/SplashPlus.png",
+            "name": "Awakened Melee Splash Support",
+            "listings": 22,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 120
+    },
+    "Awakened Minion Damage Support": {
+        "id": "Awakened Minion Damage Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Minion Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL01pbmlvbkRhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/5a905affec/MinionDamagePlus.png",
+            "name": "Awakened Minion Damage Support",
+            "listings": 56,
+            "chaosValue": 30,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Minion Damage Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL01pbmlvbkRhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/5a905affec/MinionDamagePlus.png",
+            "name": "Awakened Minion Damage Support",
+            "listings": 21,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 105
+    },
+    "Awakened Multistrike Support": {
+        "id": "Awakened Multistrike Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Multistrike Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL011bHRpcGxlQXR0YWNrc1BsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c32ddc2121/MultipleAttacksPlus.png",
+            "name": "Awakened Multistrike Support",
+            "listings": 2,
+            "chaosValue": 17550,
+            "divineValue": 130
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Multistrike Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL011bHRpcGxlQXR0YWNrc1BsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c32ddc2121/MultipleAttacksPlus.png",
+            "name": "Awakened Multistrike Support",
+            "listings": 5,
+            "chaosValue": 21600,
+            "divineValue": 160
+        },
+        "profitInDivine": 30,
+        "profitInChaos": 4050
+    },
+    "Awakened Spell Echo Support": {
+        "id": "Awakened Spell Echo Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Echo Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VjaG9QbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9cccabda03/EchoPlus.png",
+            "name": "Awakened Spell Echo Support",
+            "listings": 2,
+            "chaosValue": 1485,
+            "divineValue": 11
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Echo Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VjaG9QbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9cccabda03/EchoPlus.png",
+            "name": "Awakened Spell Echo Support",
+            "listings": 3,
+            "chaosValue": 74925,
+            "divineValue": 555
+        },
+        "profitInDivine": 544,
+        "profitInChaos": 73440
+    },
+    "Awakened Swift Affliction Support": {
+        "id": "Awakened Swift Affliction Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Swift Affliction Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1N1cHBvcnRSYXBpZERlY2F5UGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/275f8da8d1/SupportRapidDecayPlus.png",
+            "name": "Awakened Swift Affliction Support",
+            "listings": 63,
+            "chaosValue": 40,
+            "divineValue": 0
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Swift Affliction Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1N1cHBvcnRSYXBpZERlY2F5UGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/275f8da8d1/SupportRapidDecayPlus.png",
+            "name": "Awakened Swift Affliction Support",
+            "listings": 17,
+            "chaosValue": 270,
+            "divineValue": 2
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 230
+    },
+    "Awakened Unbound Ailments Support": {
+        "id": "Awakened Unbound Ailments Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unbound Ailments Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1VuYm91bmRBaWxtZW50UGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/41b8082cb4/UnboundAilmentPlus.png",
+            "name": "Awakened Unbound Ailments Support",
+            "listings": 17,
+            "chaosValue": 230,
+            "divineValue": 2
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unbound Ailments Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1VuYm91bmRBaWxtZW50UGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/41b8082cb4/UnboundAilmentPlus.png",
+            "name": "Awakened Unbound Ailments Support",
+            "listings": 13,
+            "chaosValue": 540,
+            "divineValue": 4
+        },
+        "profitInDivine": 2,
+        "profitInChaos": 310
+    },
+    "Awakened Unleash Support": {
+        "id": "Awakened Unleash Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unleash Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1VubGVhc2hQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/107949fc2b/UnleashPlus.png",
+            "name": "Awakened Unleash Support",
+            "listings": 6,
+            "chaosValue": 1485,
+            "divineValue": 11
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Unleash Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1VubGVhc2hQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/107949fc2b/UnleashPlus.png",
+            "name": "Awakened Unleash Support",
+            "listings": 1,
+            "chaosValue": 3375,
+            "divineValue": 25
+        },
+        "profitInDivine": 14,
+        "profitInChaos": 1890
+    },
+    "Awakened Vicious Projectiles Support": {
+        "id": "Awakened Vicious Projectiles Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Vicious Projectiles Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1JhbmdlZFBoeXNpY2FsQXR0YWNrRGFtYWdlUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/982ca84dbe/RangedPhysicalAttackDamagePlus.png",
+            "name": "Awakened Vicious Projectiles Support",
+            "listings": 39,
+            "chaosValue": 75,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Vicious Projectiles Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1JhbmdlZFBoeXNpY2FsQXR0YWNrRGFtYWdlUGx1cyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/982ca84dbe/RangedPhysicalAttackDamagePlus.png",
+            "name": "Awakened Vicious Projectiles Support",
+            "listings": 20,
+            "chaosValue": 270,
+            "divineValue": 2
+        },
+        "profitInDivine": 1,
+        "profitInChaos": 195
+    },
+    "Awakened Void Manipulation Support": {
+        "id": "Awakened Void Manipulation Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Void Manipulation Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1ZvaWRNYW5pcHVsYXRpb25QbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9223d42a35/VoidManipulationPlus.png",
+            "name": "Awakened Void Manipulation Support",
+            "listings": 41,
+            "chaosValue": 135,
+            "divineValue": 1
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Void Manipulation Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1ZvaWRNYW5pcHVsYXRpb25QbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/9223d42a35/VoidManipulationPlus.png",
+            "name": "Awakened Void Manipulation Support",
+            "listings": 10,
+            "chaosValue": 540,
+            "divineValue": 4
+        },
+        "profitInDivine": 3,
+        "profitInChaos": 405
+    },
+    "Awakened Elemental Damage with Attacks Support": {
+        "id": "Awakened Elemental Damage with Attacks Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Damage with Attacks Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1dlYXBvbkVsZW1lbnRhbERhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2d6aa43759/WeaponElementalDamagePlus.png",
+            "name": "Awakened Elemental Damage with Attacks Support",
+            "listings": 22,
+            "chaosValue": 540,
+            "divineValue": 4
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Elemental Damage with Attacks Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1dlYXBvbkVsZW1lbnRhbERhbWFnZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2d6aa43759/WeaponElementalDamagePlus.png",
+            "name": "Awakened Elemental Damage with Attacks Support",
+            "listings": 7,
+            "chaosValue": 878,
+            "divineValue": 7
+        },
+        "profitInDivine": 3,
+        "profitInChaos": 338
+    },
+    "Awakened Spell Cascade Support": {
+        "id": "Awakened Spell Cascade Support",
+        "itemBuying": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Cascade Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":1,\"max\":1},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1NwZWxsQ2FzY2FkZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7a316ceb5c/SpellCascadePlus.png",
+            "name": "Awakened Spell Cascade Support",
+            "listings": 2,
+            "chaosValue": 1350,
+            "divineValue": 10
+        },
+        "itemSelling": {
+            "tradeLink": "https://www.pathofexile.com/trade/search/Affliction/q={\"query\":{\"status\":{\"option\":\"online\"},\"type\":\"Awakened Spell Cascade Support\",\"filters\":{\"trade_filters\":{\"disabled\":false,\"filters\":{\"price\":{\"option\":\"chaos_divine\"}}},\"misc_filters\":{\"disabled\":false,\"filters\":{\"gem_level\":{\"min\":5,\"max\":5},\"corrupted\":{\"option\":\"false\"}}},\"type_filters\":{\"filters\":{\"category\":{\"option\":\"gem.supportgemplus\"}}}}},\"sort\":{\"price\":\"asc\"}}",
+            "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL1NwZWxsQ2FzY2FkZVBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7a316ceb5c/SpellCascadePlus.png",
+            "name": "Awakened Spell Cascade Support",
+            "listings": 2,
+            "chaosValue": 4050,
+            "divineValue": 30
+        },
+        "profitInDivine": 20,
+        "profitInChaos": 2700
+    }
+}
