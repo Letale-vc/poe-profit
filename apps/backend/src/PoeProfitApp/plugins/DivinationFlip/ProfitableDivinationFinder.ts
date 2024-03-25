@@ -3,10 +3,7 @@ import {
     CURRENCY_OVERVIEW_TYPE_CATEGORY,
     ITEM_OVERVIEW_TYPE_CATEGORY,
 } from "../../NinjaData/NinjaApi.js";
-import type {
-    FindItemInNinjaType,
-    NinjaData,
-} from "../../NinjaData/NinjaData.js";
+import type { FindItemInNinjaType, NinjaData } from "../../NinjaData/NinjaData.js";
 import type { ItemNinjaType } from "../../NinjaData/types/NinjaResponseTypes.js";
 import type { OverviewCategory } from "../../NinjaData/types/helpers.js";
 
@@ -32,9 +29,7 @@ export class ProfitableCardFinder {
         for (const value of data) {
             if (!value.explicitModifiers[0].text) continue;
 
-            const effect_parse = this.parseExplicitText(
-                value.explicitModifiers[0].text,
-            );
+            const effect_parse = this.parseExplicitText(value.explicitModifiers[0].text);
 
             if (effect_parse === undefined) continue;
             const effectItem = this.#ninjaData.findItem(
@@ -64,10 +59,8 @@ export class ProfitableCardFinder {
                     typeCategories: value,
                     explicitItemName: name,
                     priceMultiplier: parseInt(text.match(/\d+x/i)?.[0] ?? "1"),
-                    levelGem:
-                        parseInt(
-                            text.match(/Level \d+/i)?.[0]?.split(" ")[1] ?? "",
-                        ) || undefined,
+                    gemLevel:
+                        parseInt(text.match(/Level \d+/)?.[0]?.split(" ")[1] ?? "") || undefined,
                     corrupted: !!text.match(/corrupted/),
                     awakenedGem: !!text.match(/awakened/),
                 };
@@ -82,8 +75,17 @@ export class ProfitableCardFinder {
         if (firstMatch) {
             name = firstMatch[0]?.match(/{\d*x?\s?(.*)}/)?.[1];
         }
-        if (!name) return undefined;
-        if (EXCEPTIONAL_GEMS.includes(name)) return `${name} Support`;
+        if (name) {
+            name = this.#parseGemName(name);
+        }
+        return name;
+    }
+    #parseGemName(name: string): string {
+        for (const gem of EXCEPTIONAL_GEMS) {
+            if (name.includes(gem)) {
+                return `${gem} Support`;
+            }
+        }
         return name;
     }
 }
@@ -98,7 +100,7 @@ interface EffectType {
     typeCategories: OverviewCategory[];
     priceMultiplier: number;
     explicitItemName: string;
-    levelGem?: number;
+    gemLevel?: number;
     corrupted: boolean;
     awakenedGem: boolean;
 }

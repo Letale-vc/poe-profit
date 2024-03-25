@@ -178,12 +178,12 @@ export class DivinationFlipDataUpdater extends Updater {
             ? {}
             : { corrupted: { option: "false" } };
         const gemLevel =
-            profitReqObj.effectInfo.levelGem === undefined
+            profitReqObj.effectInfo.gemLevel === undefined
                 ? {}
                 : {
                       gem_level: {
-                          min: profitReqObj.effectInfo.levelGem,
-                          max: profitReqObj.effectInfo.levelGem,
+                          min: profitReqObj.effectInfo.gemLevel,
+                          max: profitReqObj.effectInfo.gemLevel,
                       },
                   };
 

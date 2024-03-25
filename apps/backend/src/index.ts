@@ -53,7 +53,9 @@ server.get("/", async (_request, reply) => {
         title: "Poe Profit",
     });
 });
-
+server.get("/api/divinePrice", async (_request, reply) => {
+    await reply.send({ divinePrice: CurrencyPriceFinder.currencyPrice.divine });
+});
 server.get("/api/data", async (_request, reply) => {
     await reply.send(poeProfitApp.getAllProfitData());
 });
