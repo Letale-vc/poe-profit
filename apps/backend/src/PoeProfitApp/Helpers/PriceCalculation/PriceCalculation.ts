@@ -18,23 +18,17 @@ export class ItemPriceCalculation {
         itemsArray: PoeSecondResultType[],
         priceMultiplier = 1,
     ): { chaosValue: number; divineValue: number } {
-        const chaosValue =
-            this.#calculatePriceInChaos(itemsArray) * priceMultiplier;
-        const divineValue =
-            chaosValue / CurrencyPriceFinder.currencyPrice.divine;
+        const chaosValue = this.#calculatePriceInChaos(itemsArray) * priceMultiplier;
+        const divineValue = chaosValue / CurrencyPriceFinder.currencyPrice.divine;
         return {
             chaosValue: _.round(chaosValue),
-            divineValue: _.round(divineValue),
+            divineValue: _.round(divineValue, 2),
         };
     }
 
-    static calculateExchangePrice(
-        exchangeRes: ExchangeResponseType,
-        priceMultiplier = 1,
-    ) {
+    static calculateExchangePrice(exchangeRes: ExchangeResponseType, priceMultiplier = 1) {
         const resultToArray = Object.values(exchangeRes.result);
-        const currency = resultToArray[0].listing.offers[0].exchange
-            .currency as CurrencyType;
+        const currency = resultToArray[0].listing.offers[0].exchange.currency as CurrencyType;
         const limitTakeListing =
             currency === "chaos"
                 ? exchangeRes.total < 10
@@ -53,16 +47,12 @@ export class ItemPriceCalculation {
                 return (exchangeAmount / itemAmount + acc) / howMuchToDivide;
             }, 0) * priceMultiplier;
         const chaosValue =
-            currency === "chaos"
-                ? price
-                : price * CurrencyPriceFinder.currencyPrice[currency];
+            currency === "chaos" ? price : price * CurrencyPriceFinder.currencyPrice[currency];
         const divineValue =
-            currency === "chaos"
-                ? price / CurrencyPriceFinder.currencyPrice.divine
-                : price;
+            currency === "chaos" ? price / CurrencyPriceFinder.currencyPrice.divine : price;
         return {
             chaosValue: _.round(chaosValue),
-            divineValue: _.round(divineValue),
+            divineValue: _.round(divineValue, 2),
         };
     }
 
@@ -76,10 +66,7 @@ export class ItemPriceCalculation {
         currencyName: CurrencyType,
     ): number => {
         const howMuchToDivide = oldPrice === 0 ? 1 : 2;
-        const convertInChaos = this.#turnAnyPriceIntoChaos(
-            currentValueListingPrice,
-            currencyName,
-        );
+        const convertInChaos = this.#turnAnyPriceIntoChaos(currentValueListingPrice, currencyName);
         const newPrice = (oldPrice + convertInChaos) / howMuchToDivide;
 
         return newPrice;
@@ -88,8 +75,7 @@ export class ItemPriceCalculation {
     static #calculatePriceInChaos(itemsArray: PoeSecondResultType[]): number {
         const resultValue = itemsArray.reduce(
             (previousValue, currentValue) => {
-                const currentValueListingPrice =
-                    currentValue.listing.price.amount;
+                const currentValueListingPrice = currentValue.listing.price.amount;
 
                 const currency = currentValue.listing.price.currency;
 
@@ -104,10 +90,7 @@ export class ItemPriceCalculation {
                 );
 
                 if (previousValue.price !== 0) {
-                    const diffCheck = this.#differenceChecked(
-                        previousValue.startPrice,
-                        newPrice,
-                    );
+                    const diffCheck = this.#differenceChecked(previousValue.startPrice, newPrice);
                     if (diffCheck) {
                         return previousValue;
                     }
@@ -123,14 +106,10 @@ export class ItemPriceCalculation {
         return resultValue.price;
     }
 
-    static #differenceChecked = (
-        startPrice: number,
-        newPrice: number,
-    ): boolean => {
+    static #differenceChecked = (startPrice: number, newPrice: number): boolean => {
         const differenceToChaos = 10;
         const differenceInPercent = (newPrice / startPrice) * 100 - 100;
-        const doesItExistBigDifferencePrice =
-            differenceInPercent > differenceToChaos;
+        const doesItExistBigDifferencePrice = differenceInPercent > differenceToChaos;
 
         return doesItExistBigDifferencePrice;
     };

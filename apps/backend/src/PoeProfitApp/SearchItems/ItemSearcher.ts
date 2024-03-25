@@ -1,9 +1,6 @@
-import { isAxiosError } from "axios";
-import type {
-    PoeSecondResultType,
-    PoeTradeFetch,
-    RequestBodyType,
-} from "poe-trade-fetch";
+import { isAxiosError, type AxiosRequestConfig } from "axios";
+import { HttpsProxyAgent } from "https-proxy-agent";
+import type { PoeSecondResultType, PoeTradeFetch, RequestBodyType } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
 import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
 import logger from "../Helpers/Logger.js";
@@ -15,10 +12,19 @@ export interface ItemSearchResultType {
 }
 
 export class ItemSearcher {
+    static #axiosOptions: AxiosRequestConfig = {};
+    static #agent: HttpsProxyAgent<string> | undefined;
     #poeApi;
-
+    #proxy: string | undefined;
     constructor(poeApi: PoeTradeFetch) {
         this.#poeApi = poeApi;
+        this.#proxy = process.env.PROXY ?? undefined;
+        if (this.#proxy && ItemSearcher.#agent === undefined) {
+            logger.info(`Set proxy: ${this.#proxy}`);
+            ItemSearcher.#agent = new HttpsProxyAgent(`http://${this.#proxy}`);
+            ItemSearcher.#axiosOptions = { httpsAgent: ItemSearcher.#agent };
+            logger.info(`Set proxy agent: ${this.#proxy}`);
+        }
     }
 
     async fetchItemData(
@@ -27,15 +33,17 @@ export class ItemSearcher {
         take = 3,
     ): Promise<ItemSearchResultType | undefined> {
         try {
-            const firstResponse = await this.#poeApi.firsRequest(requestQuery);
+            const firstResponse = await this.#poeApi.firsRequest(
+                requestQuery,
+                ItemSearcher.#axiosOptions,
+            );
             const { id, result, total } = firstResponse;
 
             if (total === 0) return { result: [], id, total };
 
             // const howManyItemsToSkipInTheList =
             //     this.howManyItemsToSkipInTheList(total);
-            const howManyItemsToSkip =
-                total > skip || total > skip * 2 + take ? skip : 0;
+            const howManyItemsToSkip = total > skip || total > skip * 2 + take ? skip : 0;
             const howMuchToTakeFromTheResult = take + skip;
             const totalTakeResultArray = result.slice(
                 howManyItemsToSkip,
@@ -44,6 +52,7 @@ export class ItemSearcher {
             const secondResponse = await this.#poeApi.secondRequest(
                 totalTakeResultArray,
                 id,
+                ItemSearcher.#axiosOptions,
             );
             return { result: secondResponse.result, id, total };
         } catch (e) {

@@ -12,7 +12,7 @@ services:
         working_dir: /app
         volumes:
             - ./apps/frontend:/app
-        command: ["sh", "-c", "npm ci && npm run build"]
+        command: npm run build
     nginx:
         image: nginx
         ports:
