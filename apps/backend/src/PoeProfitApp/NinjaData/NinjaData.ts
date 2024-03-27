@@ -6,21 +6,14 @@ import type {
     ItemNinjaResponseType,
     ItemNinjaType,
 } from "./types/NinjaResponseTypes.js";
-import type {
-    NinjaAllDataType,
-    NinjaDataAnyItemsType,
-    OverviewCategory,
-} from "./types/helpers.js";
+import type { NinjaAllDataType, NinjaDataAnyItemsType, OverviewCategory } from "./types/helpers.js";
 
 export class NinjaData {
     #ninjaApi: NinjaApi;
 
     #fileManager;
 
-    constructor(
-        ninjaApi: NinjaApi,
-        fileManager: FileManager<NinjaAllDataType>,
-    ) {
+    constructor(ninjaApi: NinjaApi, fileManager: FileManager<NinjaAllDataType>) {
         this.#ninjaApi = ninjaApi;
         this.#fileManager = fileManager;
     }
@@ -28,9 +21,7 @@ export class NinjaData {
     init(): void {
         this.#fileManager.init();
     }
-    getKeyData<T extends OverviewCategory>(
-        key: T,
-    ): NinjaDataAnyItemsType<T> | undefined {
+    getKeyData<T extends OverviewCategory>(key: T): NinjaDataAnyItemsType<T> | undefined {
         const data = this.#fileManager.loadFile();
         return data[key];
     }
@@ -102,7 +93,7 @@ export class NinjaData {
                 return item.currencyTypeName === itemName;
             }
             if ("name" in item) {
-                return item.name === itemName;
+                return item.name === itemName && item.detailsId.split("-").includes("relic");
             }
             return false;
         });
@@ -122,10 +113,7 @@ export class NinjaData {
         return undefined;
     }
 
-    findItem(
-        itemName: string,
-        categories?: OverviewCategory[],
-    ): FindItemInNinjaType | undefined {
+    findItem(itemName: string, categories?: OverviewCategory[]): FindItemInNinjaType | undefined {
         if (categories !== undefined) {
             return this.#findItemIfHaveCategory(itemName, categories);
         }
