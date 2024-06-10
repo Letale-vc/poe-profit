@@ -6,7 +6,7 @@ import fastifyView from "@fastify/view";
 import Fastify from "fastify";
 import Handlebars from "handlebars";
 import path from "path";
-import CurrencyPriceFinder from "./PoeProfitApp/Currency/CurrencyPriceFinder.js";
+import CurrencyPriceFinder from "./PoeProfitApp/currency/currencyPriceFinder.js";
 import { PoeProfitApp } from "./PoeProfitApp/app.js";
 
 const poeProfitApp = new PoeProfitApp();

@@ -1,19 +1,10 @@
 import _ from "lodash";
 import type { PoeSecondResultType } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
-import { type CurrencyType } from "../../Currency/CurrencyNames.js";
-import CurrencyPriceFinder from "../../Currency/CurrencyPriceFinder.js";
+import { type CurrencyTypes } from "../../currency/currencyNames.js";
+import CurrencyPriceFinder from "../../currency/currencyPriceFinder.js";
 
-export class ItemPriceCalculation {
-    static #instance: ItemPriceCalculation;
-
-    constructor() {
-        if (ItemPriceCalculation.#instance) {
-            return ItemPriceCalculation.#instance;
-        }
-
-        ItemPriceCalculation.#instance = this;
-    }
+export class PriceCalculation {
     static calculatePrice(
         itemsArray: PoeSecondResultType[],
         priceMultiplier = 1,
@@ -28,15 +19,15 @@ export class ItemPriceCalculation {
 
     static calculateExchangePrice(exchangeRes: ExchangeResponseType, priceMultiplier = 1) {
         const resultToArray = Object.values(exchangeRes.result);
-        const currency = resultToArray[0].listing.offers[0].exchange.currency as CurrencyType;
+        const currency = resultToArray[0].listing.offers[0].exchange.currency as CurrencyTypes;
         const limitTakeListing =
             currency === "chaos"
                 ? exchangeRes.total < 10
                     ? exchangeRes.total - 1
                     : 10
                 : exchangeRes.total < 3
-                  ? exchangeRes.total - 1
-                  : 3;
+                    ? exchangeRes.total - 1
+                    : 3;
         const skip = currency === "chaos" ? (exchangeRes.total < 3 ? 0 : 3) : 0;
 
         const price =
@@ -56,14 +47,14 @@ export class ItemPriceCalculation {
         };
     }
 
-    static #turnAnyPriceIntoChaos = (value: number, currency: CurrencyType) => {
+    static #turnAnyPriceIntoChaos = (value: number, currency: CurrencyTypes) => {
         return value * CurrencyPriceFinder.currencyPrice[currency];
     };
 
     static #countPriceInChaos = (
         oldPrice: number,
         currentValueListingPrice: number,
-        currencyName: CurrencyType,
+        currencyName: CurrencyTypes,
     ): number => {
         const howMuchToDivide = oldPrice === 0 ? 1 : 2;
         const convertInChaos = this.#turnAnyPriceIntoChaos(currentValueListingPrice, currencyName);
@@ -86,7 +77,7 @@ export class ItemPriceCalculation {
                 const newPrice = this.#countPriceInChaos(
                     previousValue.price,
                     currentValueListingPrice,
-                    currency as CurrencyType,
+                    currency as CurrencyTypes,
                 );
 
                 if (previousValue.price !== 0) {

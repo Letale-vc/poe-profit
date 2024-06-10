@@ -1,18 +1,18 @@
-import logger from "../../Helpers/Logger.js";
+import logger from "../../Helpers/logger.js";
 import {
-    CURRENCY_OVERVIEW_TYPE_CATEGORY,
-    ITEM_OVERVIEW_TYPE_CATEGORY,
-} from "../../NinjaData/NinjaApi.js";
-import type { FindItemInNinjaType, NinjaData } from "../../NinjaData/NinjaData.js";
-import type { ItemNinjaType } from "../../NinjaData/types/NinjaResponseTypes.js";
-import type { OverviewCategory } from "../../NinjaData/types/helpers.js";
+    CURRENCY_CATEGORY,
+    ITEM_CATEGORY,
+} from "../../poeNinja/poeNinjaApi.js";
+import type { FindItemInNinjaType, PoeNinjaData } from "../../poeNinja/poeNinjaData.js";
+import type { ItemNinjaType } from "../../poeNinja/types/PoeNinjaResponseTypes.js";
+import type { CategoryType } from "../../poeNinja/types/HelpersTypes.js";
 
 export class ProfitableCardFinder {
     divinationProfitList: ProfitDivCardType[];
 
-    #ninjaData: NinjaData;
+    #ninjaData: PoeNinjaData;
 
-    constructor(ninjaData: NinjaData) {
+    constructor(ninjaData: PoeNinjaData) {
         this.#ninjaData = ninjaData;
         this.divinationProfitList = [];
     }
@@ -20,7 +20,7 @@ export class ProfitableCardFinder {
     filterDivination(): ProfitDivCardType[] {
         logger.info("Search profitable divination cards");
         const data = this.#ninjaData
-            .getKeyData(ITEM_OVERVIEW_TYPE_CATEGORY.DIVINATION_CARDS)
+            .getKeyData(ITEM_CATEGORY.DIVINATION_CARDS)
             ?.lines.filter((item) => item.chaosValue > 10);
         if (!data || data.length === 0) return [];
 
@@ -97,7 +97,7 @@ export interface ProfitDivCardType {
     effectInfo: EffectType;
 }
 interface EffectType {
-    typeCategories: OverviewCategory[];
+    typeCategories: CategoryType[];
     priceMultiplier: number;
     explicitItemName: string;
     gemLevel?: number;
@@ -108,16 +108,16 @@ interface EffectType {
 const EXCEPTIONAL_GEMS = ["Empower", "Enlighten", "Enhance"];
 
 const REGEX_REWARD = {
-    divination: [ITEM_OVERVIEW_TYPE_CATEGORY.DIVINATION_CARDS],
+    divination: [ITEM_CATEGORY.DIVINATION_CARDS],
     unique: [
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_ARMOURS,
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_ACCESSORIES,
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_FLASKS,
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_JEWELS,
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_MAPS,
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_WEAPONS,
-        ITEM_OVERVIEW_TYPE_CATEGORY.UNIQUE_RELICS,
+        ITEM_CATEGORY.UNIQUE_ARMOURS,
+        ITEM_CATEGORY.UNIQUE_ACCESSORIES,
+        ITEM_CATEGORY.UNIQUE_FLASKS,
+        ITEM_CATEGORY.UNIQUE_JEWELS,
+        ITEM_CATEGORY.UNIQUE_MAPS,
+        ITEM_CATEGORY.UNIQUE_WEAPONS,
+        ITEM_CATEGORY.UNIQUE_RELICS,
     ],
-    gemItem: [ITEM_OVERVIEW_TYPE_CATEGORY.SKILL_GEMS],
-    currencyItem: [CURRENCY_OVERVIEW_TYPE_CATEGORY.CURRENCY],
+    gemItem: [ITEM_CATEGORY.SKILL_GEMS],
+    currencyItem: [CURRENCY_CATEGORY.CURRENCY],
 };

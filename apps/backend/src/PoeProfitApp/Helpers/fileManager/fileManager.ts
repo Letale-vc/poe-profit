@@ -1,29 +1,27 @@
 import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import logger from "../Logger.js";
+import logger from "../logger.js";
 
 export class FileManager<T> {
     #fileName: string;
     #pathFileFolder: string;
-    #initValue: T;
 
-    constructor(fileName: string, initValue: "object" | "array") {
+    constructor(fileName: string) {
         this.#fileName = fileName;
-        this.#initValue = "object" === initValue ? ({} as T) : ([] as T);
         const dataFolder = path.join(process.cwd(), "data");
         const dataFolderUrl = fileURLToPath(new URL(`file://${dataFolder}`));
 
         if (!fs.existsSync(dataFolderUrl)) {
             fs.mkdirSync(dataFolderUrl);
         }
-        this.#pathFileFolder = path.join(dataFolderUrl, fileName);
+        this.#pathFileFolder = path.join(dataFolderUrl, this.#fileName);
     }
 
-    init(initValue = this.#initValue): void {
+    init(initValue: T): void {
         if (!this.fileExist()) {
             this.saveFile(initValue);
-            logger.info(`Init file:${this.#pathFileFolder}`);
+            logger.debug(`Init file:${this.#pathFileFolder}`);
         }
     }
 
@@ -33,7 +31,7 @@ export class FileManager<T> {
             const fileParse = JSON.parse(contents.toString()) as T;
             return fileParse;
         } catch (e) {
-            logger.error(`Error loading file: ${this.#pathFileFolder}`);
+            logger.error(`Cannot loading file: ${this.#pathFileFolder}`);
             throw e;
         }
     }
@@ -51,7 +49,7 @@ export class FileManager<T> {
         const stringifyData = JSON.stringify(data, null, 4);
         fs.writeFileSync(this.#pathFileFolder, stringifyData);
 
-        logger.info(`Save file:${this.#pathFileFolder}`);
+        logger.debug(`Save file:${this.#pathFileFolder}`);
     }
 
     fileInfo(): fs.Stats {

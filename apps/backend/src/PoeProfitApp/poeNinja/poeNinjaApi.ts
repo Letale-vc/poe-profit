@@ -1,15 +1,12 @@
 import axios, { type AxiosInstance } from "axios";
 import type {
-    CurrencyNinjaResponseType,
-    ItemNinjaResponseType,
-} from "./types/NinjaResponseTypes.js";
-import type {
-    CurrencyOverviewTypeCategory,
-    ItemOverviewTypeCategory,
-    NinjaAllDataType,
-} from "./types/helpers.js";
+    PoeNinjaCurrencyResponseType,
+    PoeNinjaItemResponseType,
+} from "./types/PoeNinjaResponseTypes.js";
+import type { CurrencyCategoryType, ItemCategoryType, PoeNinjaDataType } from "./types/HelpersTypes.js";
 
-export default class NinjaApi {
+
+export class PoeNinjaApi {
     #baseURL = new URL("https://poe.ninja/api");
 
     #axiosInstance: AxiosInstance;
@@ -20,9 +17,9 @@ export default class NinjaApi {
         });
     }
 
-    async getAllNinjaItemsData(leagueName: string): Promise<NinjaAllDataType> {
+    async getAllNinjaData(leagueName: string): Promise<PoeNinjaDataType> {
         const currencyPromises = Object.values(
-            CURRENCY_OVERVIEW_TYPE_CATEGORY,
+            CURRENCY_CATEGORY,
         ).map(async (category) => {
             const response = await this.#getCurrencyOverview(
                 leagueName,
@@ -31,7 +28,7 @@ export default class NinjaApi {
 
             return { [category]: response };
         });
-        const itemPromises = Object.values(ITEM_OVERVIEW_TYPE_CATEGORY).map(
+        const itemPromises = Object.values(ITEM_CATEGORY).map(
             async (category) => {
                 const response = await this.#getItemOverview(
                     leagueName,
@@ -43,15 +40,8 @@ export default class NinjaApi {
         const currencyResponses = (await Promise.allSettled(currencyPromises))
             .filter((x) => x.status === "fulfilled")
             .map(
-                (x) =>
-                    (
-                        x as PromiseFulfilledResult<
-                            Record<
-                                CurrencyOverviewTypeCategory,
-                                CurrencyNinjaResponseType
-                            >
-                        >
-                    ).value,
+                (x) => (x as PromiseFulfilledResult<Record<
+                    CurrencyCategoryType, PoeNinjaCurrencyResponseType>>).value,
             );
 
         const itemResponses = (await Promise.allSettled(itemPromises))
@@ -61,8 +51,8 @@ export default class NinjaApi {
                     (
                         x as PromiseFulfilledResult<
                             Record<
-                                ItemOverviewTypeCategory,
-                                ItemNinjaResponseType
+                                ItemCategoryType,
+                                PoeNinjaItemResponseType
                             >
                         >
                     ).value,
@@ -71,11 +61,11 @@ export default class NinjaApi {
         const CurrencyCategory = Object.assign(
             {},
             ...currencyResponses,
-        ) as Record<CurrencyOverviewTypeCategory, CurrencyNinjaResponseType>;
+        ) as Record<CurrencyCategoryType, PoeNinjaCurrencyResponseType>;
 
         const ItemCategory = Object.assign({}, ...itemResponses) as Record<
-            ItemOverviewTypeCategory,
-            ItemNinjaResponseType
+            ItemCategoryType,
+            PoeNinjaItemResponseType
         >;
         const ninjaData = { ...CurrencyCategory, ...ItemCategory };
 
@@ -84,19 +74,19 @@ export default class NinjaApi {
 
     async #getCurrencyOverview(
         leagueName: string,
-        typeCategory: CurrencyOverviewTypeCategory,
-    ): Promise<CurrencyNinjaResponseType> {
+        typeCategory: CurrencyCategoryType,
+    ): Promise<PoeNinjaCurrencyResponseType> {
         const path = `data/currencyoverview?league=${leagueName}&type=${typeCategory}`;
-        return (await this.#axiosInstance.get<CurrencyNinjaResponseType>(path))
+        return (await this.#axiosInstance.get<PoeNinjaCurrencyResponseType>(path))
             .data;
     }
 
     async #getItemOverview(
         leagueName: string,
-        typeCategory: ItemOverviewTypeCategory,
-    ): Promise<ItemNinjaResponseType> {
+        typeCategory: ItemCategoryType,
+    ): Promise<PoeNinjaItemResponseType> {
         const path = `data/itemoverview?league=${leagueName}&type=${typeCategory}`;
-        return (await this.#axiosInstance.get<ItemNinjaResponseType>(path))
+        return (await this.#axiosInstance.get<PoeNinjaItemResponseType>(path))
             .data;
     }
 }
@@ -112,12 +102,12 @@ export default class NinjaApi {
 //     return Object.values(ITEM_OVERVIEW_TYPE_CATEGORY).includes(key);
 // }
 
-export const CURRENCY_OVERVIEW_TYPE_CATEGORY = {
+export const CURRENCY_CATEGORY = {
     CURRENCY: "Currency",
     FRAGMENTS: "Fragments",
 } as const;
 
-export const ITEM_OVERVIEW_TYPE_CATEGORY = {
+export const ITEM_CATEGORY = {
     // TATTOOS: "Tattoo",
     OMENS: "Omen",
     DIVINATION_CARDS: "DivinationCard",
@@ -149,7 +139,7 @@ export const ITEM_OVERVIEW_TYPE_CATEGORY = {
     // VIALS: "Vial",
 } as const;
 
-export const OVERVIEW_CATEGORY = [
-    ...Object.values(CURRENCY_OVERVIEW_TYPE_CATEGORY),
-    ...Object.values(ITEM_OVERVIEW_TYPE_CATEGORY),
+export const ALL_CATEGORY = [
+    ...Object.values(CURRENCY_CATEGORY),
+    ...Object.values(ITEM_CATEGORY),
 ] as const;

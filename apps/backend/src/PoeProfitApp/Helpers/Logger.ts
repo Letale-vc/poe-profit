@@ -3,33 +3,50 @@ import * as path from "path";
 import { pino } from "pino";
 import { fileURLToPath } from "url";
 
-const logDirectory = path.join(process.cwd(), "logs");
-const logDirectoryUrl = fileURLToPath(new URL(`file://${logDirectory}`));
-const logFileUrl = fileURLToPath(new URL(`file://${path.join(logDirectory, "poeProfit.log")}`));
-console.log(logDirectoryUrl);
-// перевіряємо, чи існує директорія
-if (!fs.existsSync(logDirectoryUrl)) {
-    // якщо директорії не існує, створюємо її
-    fs.mkdirSync(logDirectoryUrl);
+
+class Logger {
+    #logDirectory = path.join(process.cwd(), "logs");
+    #logDirectoryUrl = fileURLToPath(new URL(`file://${this.#logDirectory}`));
+    #logFileUrl = fileURLToPath(new URL(`file://${path.join(this.#logDirectory, "poeProfit.log")}`));
+    #logger: pino.Logger
+
+    constructor() {
+        if (!fs.existsSync(this.#logDirectoryUrl)) {
+            fs.mkdirSync(this.#logDirectoryUrl);
+        }
+        this.#logger = pino(
+            {
+                level: process.env.PINO_LOG_LEVEL ?? "error",
+                transport: {
+                    target: "pino-pretty",
+                    options: {
+                        colorize: true,
+                        messageFormat: "[Poe Profit]: {time} - {level}: {msg}",
+                    },
+                },
+                timestamp: pino.stdTimeFunctions.isoTime,
+            },
+            pino.destination({
+                dest: this.#logFileUrl,
+                sync: true,
+                minLength: 4096,
+            }),
+        );
+    }
+    info(message: string) {
+        this.#logger.info(message);
+    }
+
+    error(message: string) {
+        this.#logger.error(message);
+    }
+    debug(message: string) {
+        this.#logger.debug(message);
+    }
+
+    warn(message: string) {
+        this.#logger.warn(message);
+    }
 }
 
-const logger = pino(
-    {
-        level: process.env.PINO_LOG_LEVEL ?? "info",
-        transport: {
-            target: "pino-pretty",
-            options: {
-                colorize: true,
-                messageFormat: "[Poe Profit]: {time} - {level}: {msg}",
-            },
-        },
-        timestamp: pino.stdTimeFunctions.isoTime,
-    },
-    pino.destination({
-        dest: logFileUrl,
-        sync: true,
-        minLength: 4096,
-    }),
-);
-
-export default logger;
+export default new Logger();

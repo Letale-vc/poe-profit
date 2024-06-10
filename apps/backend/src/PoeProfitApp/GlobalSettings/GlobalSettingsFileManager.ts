@@ -1,40 +1,41 @@
-import { FileManager } from "../Helpers/WorkingWithFile/WorkingWithFile.js";
-import { FILE_NAMES } from "../Helpers/WorkingWithFile/constants.js";
-import type { GlobalSettingsType } from "./Types/GlobalSettingsType.js";
+import { FileManager } from "../Helpers/fileManager/fileManager.js";
+import type { SettingsType } from "./types/GlobalSettingsType.js";
 
-export class GlobalSettingsFileManager extends FileManager<GlobalSettingsType> {
-    static #instance: GlobalSettingsFileManager;
+export const SETTINGS_FILE_NAME = "settings.json";
+const INIT_SETTINGS = { plugins: [] };
+export class GlobalSettings {
+    static #instance: GlobalSettings;
+    #fileManager: FileManager<SettingsType>;
+    settingsCash: SettingsType | undefined;
 
-    settingsCash: GlobalSettingsType | undefined;
     constructor() {
-        super(FILE_NAMES.SETTINGS, "object");
+        this.#fileManager = new FileManager<SettingsType>(SETTINGS_FILE_NAME)
     }
 
-    static getInstance(): GlobalSettingsFileManager {
-        if (!GlobalSettingsFileManager.#instance) {
-            GlobalSettingsFileManager.#instance =
-                new GlobalSettingsFileManager();
+    static getInstance(): GlobalSettings {
+        if (!GlobalSettings.#instance) {
+            GlobalSettings.#instance =
+                new GlobalSettings();
         }
-        return GlobalSettingsFileManager.#instance;
+        return GlobalSettings.#instance;
     }
 
     init(): void {
-        if (!this.fileExist()) {
-            this.saveFile({
-                plugins: [],
-            });
-        }
+        this.#fileManager.init(INIT_SETTINGS)
         if (this.settingsCash === undefined) {
-            this.settingsCash = this.loadFile();
+            this.settingsCash = this.#fileManager.loadFile();
         }
     }
 
-    getSettings(): GlobalSettingsType {
-        return this.loadFile();
+    getSettings(): SettingsType {
+        if (this.settingsCash === undefined) {
+            this.settingsCash = this.#fileManager.loadFile();
+        }
+        return this.settingsCash;
     }
 
-    mutate(newSettings: GlobalSettingsType): void {
-        this.saveFile(newSettings);
+    mutate(newSettings: SettingsType): void {
+        this.#fileManager.saveFile(newSettings);
         this.settingsCash = newSettings;
     }
 }

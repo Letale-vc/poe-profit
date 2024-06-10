@@ -1,4 +1,4 @@
-import { round } from "./Utils.js";
+import { round } from "./utils.js";
 
 describe("round", () => {
     it("should round a number to the specified decimal places", () => {

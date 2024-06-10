@@ -3,13 +3,13 @@ import fs from "fs";
 import { dirname, join } from "path";
 import { LEAGUES_NAMES, PoeTradeFetch } from "poe-trade-fetch";
 import { fileURLToPath } from "url";
-import CurrencyPriceFinder from "./Currency/CurrencyPriceFinder.js";
-import { GlobalSettingsFileManager } from "./GlobalSettings/GlobalSettingsFileManager.js";
-import logger from "./Helpers/Logger.js";
-import { FileManager } from "./Helpers/WorkingWithFile/WorkingWithFile.js";
-import NinjaApi from "./NinjaData/NinjaApi.js";
-import { NinjaData } from "./NinjaData/NinjaData.js";
-import type Updater from "./Updater/Updater.js";
+import CurrencyPriceFinder from "./currency/currencyPriceFinder.js";
+import { GlobalSettings } from "./globalSettings/globalSettingsFileManager.js";
+import logger from "./Helpers/logger.js";
+import { FileManager } from "./Helpers/fileManager/fileManager.js";
+import { PoeNinjaApi } from "./poeNinja/poeNinjaApi.js";
+import { PoeNinjaData } from "./poeNinja/poeNinjaData.js";
+import type { Updater } from "./updater/updater.js";
 
 export interface Plugin {
     active: boolean;
@@ -27,26 +27,26 @@ export class PoeProfitApp {
 
     #updateCode = 0;
 
-    #ninjaData: NinjaData;
+    #ninjaData: PoeNinjaData;
 
     currency: CurrencyPriceFinder;
 
-    globalSettings: GlobalSettingsFileManager;
+    globalSettings: GlobalSettings;
 
     #changeCode(code: number) {
         this.#updateCode = code;
     }
 
     constructor() {
-        this.globalSettings = GlobalSettingsFileManager.getInstance();
+        this.globalSettings = GlobalSettings.getInstance();
         this.#poeApi = PoeTradeFetch.getInstance({
             userAgent: "poeProfitApp",
             leagueName: LEAGUES_NAMES.Current,
             realm: "pc",
         });
         this.currency = new CurrencyPriceFinder(this.#poeApi);
-        this.#ninjaData = new NinjaData(
-            new NinjaApi(),
+        this.#ninjaData = new PoeNinjaData(
+            new PoeNinjaApi(),
             new FileManager("ninjaData.json", "object"),
         );
     }

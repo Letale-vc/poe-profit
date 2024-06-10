@@ -1,12 +1,12 @@
 import { type PoeTradeFetch } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
 import { type TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
-import logger from "../Helpers/Logger.js";
-import { round } from "../Helpers/Utils.js";
-import { CURRENCY, type CurrencyType } from "./CurrencyNames.js";
+import logger from "../Helpers/logger.js";
+import { round } from "../Helpers/utils.js";
+import { CURRENCY, type CurrencyTypes } from "./currencyNames.js";
 
 export default class CurrencyPriceFinder {
-    static currencyPrice: Record<CurrencyType, number>;
+    static currencyPrice: Record<CurrencyTypes, number>;
 
     #lastUpdateTime;
 
@@ -24,16 +24,16 @@ export default class CurrencyPriceFinder {
                 acc[val] = 1;
                 return acc;
             },
-            {} as Record<CurrencyType, number>,
+            {} as Record<CurrencyTypes, number>,
         );
     }
 
     async #searchCurrencyInTrade(): Promise<
-        Record<CurrencyType, ExchangeResponseType>
+        Record<CurrencyTypes, ExchangeResponseType>
     > {
         try {
             const searchCurrencyResults = {} as Record<
-                CurrencyType,
+                CurrencyTypes,
                 ExchangeResponseType
             >;
 
@@ -71,7 +71,7 @@ export default class CurrencyPriceFinder {
             if (elementValue?.listing.offers[0]) {
                 return round(
                     elementValue?.listing.offers[0].exchange.amount /
-                        elementValue?.listing.offers[0].item.amount,
+                    elementValue?.listing.offers[0].item.amount,
                     0,
                 );
             }

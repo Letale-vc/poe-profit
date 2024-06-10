@@ -9,14 +9,14 @@ export interface ISearchItemsPoeApi {
     leagueName: string;
 
     firsRequest: (
-        requestQuery: RequestBodyType,
+        _requestQuery: RequestBodyType,
     ) => Promise<PoeFirstResponseType>;
     httpRequest: {
-        getWaitTime: (key: RateLimitKeys) => number;
-        delay: (time?: number) => Promise<void>;
+        getWaitTime: (_key: RateLimitKeys) => number;
+        delay: (_time?: number) => Promise<void>;
     };
     secondRequest: (
-        arrayIds: string[],
-        queryId: string,
+        _arrayIds: string[],
+        _queryId: string,
     ) => Promise<PoeSecondResponseType>;
 }

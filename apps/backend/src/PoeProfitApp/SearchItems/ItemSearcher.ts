@@ -3,7 +3,7 @@ import { HttpsProxyAgent } from "https-proxy-agent";
 import type { PoeSecondResultType, PoeTradeFetch, RequestBodyType } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
 import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
-import logger from "../Helpers/Logger.js";
+import logger from "../Helpers/logger.js";
 
 export interface ItemSearchResultType {
     result: PoeSecondResultType[];

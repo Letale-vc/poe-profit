@@ -1,4 +1,4 @@
-import type { FileManager } from "../../Helpers/WorkingWithFile/WorkingWithFile.js";
+import type { FileManager } from "../../Helpers/fileManager/fileManager.js";
 import type { DivProfitObject } from "./types/HelpersType.js";
 
 export class DataManager {

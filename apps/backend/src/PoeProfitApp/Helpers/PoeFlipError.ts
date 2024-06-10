@@ -1,4 +1,4 @@
-import logger from "./Logger.js";
+import logger from "./logger.js";
 
 export default class AppError extends Error {
     originalError?: Error;

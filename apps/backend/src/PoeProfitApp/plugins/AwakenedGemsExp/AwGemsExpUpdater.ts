@@ -1,10 +1,10 @@
 import _ from "lodash";
 import type { RequestBodyType } from "poe-trade-fetch";
-import logger from "../../Helpers/Logger.js";
-import { ItemPriceCalculation } from "../../Helpers/PriceCalculation/PriceCalculation.js";
-import { FileManager } from "../../Helpers/WorkingWithFile/WorkingWithFile.js";
-import { ItemSearcher, type ItemSearchResultType } from "../../SearchItems/ItemSearcher.js";
-import Updater, { type UpdaterArgType } from "../../Updater/Updater.js";
+import logger from "../../Helpers/logger.js";
+import { PriceCalculation } from "../../Helpers/priceCalculation/priceCalculation.js";
+import { FileManager } from "../../Helpers/fileManager/fileManager.js";
+import { ItemSearcher, type ItemSearchResultType } from "../../searchItems/ItemSearcher.js";
+import Updater, { type UpdaterArgType } from "../../updater/updater.js";
 import { DataManager } from "./DataManager.js";
 import type { GemItemType, GemsExpProfit, RequestGemList } from "./Types/HelpersTypes.js";
 
@@ -61,7 +61,7 @@ export class AwakenedGemsExpUpdater extends Updater {
     }
 
     #createGemItemObject(req: RequestBodyType, res: ItemSearchResultType): GemItemType {
-        const price = ItemPriceCalculation.calculatePrice(res.result);
+        const price = PriceCalculation.calculatePrice(res.result);
         const tradeLink = new URL(
             `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}`,
         );

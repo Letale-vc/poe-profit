@@ -35,7 +35,7 @@ export interface CurrencyDetailType {
     tradeId?: string;
 }
 
-export interface CurrencyNinjaResponseType {
+export interface PoeNinjaCurrencyResponseType {
     lines: CurrencyNinjaType[];
     currencyDetails: CurrencyDetailType[];
 }
@@ -68,6 +68,6 @@ export interface ItemNinjaType {
     tradeInfo: unknown[];
     listingCount: number;
 }
-export interface ItemNinjaResponseType {
+export interface PoeNinjaItemResponseType {
     lines: ItemNinjaType[];
 }

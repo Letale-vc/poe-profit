@@ -1,7 +1,7 @@
 import { type Stats } from "fs";
 import * as fsPromises from "fs/promises";
 import path from "path";
-import { FileManager } from "./WorkingWithFile.js";
+import { FileManager } from "./fileManager.js";
 
 jest.mock("fs/promises");
 jest.mock("fs");
@@ -15,7 +15,7 @@ describe("WorkingWithFile", () => {
         await fsPromises.unlink(originalFilePath); // Видаляємо тестовий файл
         jest.clearAllMocks();
     });
-    const workingWithFile = new FileManager("test.json", "object");
+    const workingWithFile = new FileManager("test.json");
 
     describe("loadFile", () => {
         it("should load file and parse its contents", async () => {

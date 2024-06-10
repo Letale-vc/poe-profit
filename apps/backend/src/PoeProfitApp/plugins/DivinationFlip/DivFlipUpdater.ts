@@ -1,12 +1,12 @@
 import _ from "lodash";
 import type { RequestBodyType } from "poe-trade-fetch";
 import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
-import logger from "../../Helpers/Logger.js";
-import { ItemPriceCalculation } from "../../Helpers/PriceCalculation/PriceCalculation.js";
-import { FileManager } from "../../Helpers/WorkingWithFile/WorkingWithFile.js";
-import type { ItemModifierType } from "../../NinjaData/types/NinjaResponseTypes.js";
-import { ItemSearcher } from "../../SearchItems/ItemSearcher.js";
-import Updater, { type UpdaterArgType } from "../../Updater/Updater.js";
+import logger from "../../Helpers/logger.js";
+import { PriceCalculation } from "../../Helpers/priceCalculation/priceCalculation.js";
+import { FileManager } from "../../Helpers/fileManager/fileManager.js";
+import type { ItemModifierType } from "../../poeNinja/types/PoeNinjaResponseTypes.js";
+import { ItemSearcher } from "../../searchItems/ItemSearcher.js";
+import Updater, { type UpdaterArgType } from "../../updater/updater.js";
 import { DataManager } from "./DataManager.js";
 import {
     ProfitableCardFinder,
@@ -116,7 +116,7 @@ export class DivinationFlipDataUpdater extends Updater {
             const itemBuyRes = await this.#itemSearcher.fetchItemData(itemBuyingQuery, 2, 3);
             // TODO: only update old data
             if (itemBuyRes === undefined || itemBuyRes.total === 0) return undefined;
-            const price = ItemPriceCalculation.calculatePrice(itemBuyRes.result, 1);
+            const price = PriceCalculation.calculatePrice(itemBuyRes.result, 1);
             const tradeLink = new URL(
                 `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}`,
             );
@@ -181,11 +181,11 @@ export class DivinationFlipDataUpdater extends Updater {
             profitReqObj.effectInfo.gemLevel === undefined
                 ? {}
                 : {
-                      gem_level: {
-                          min: profitReqObj.effectInfo.gemLevel,
-                          max: profitReqObj.effectInfo.gemLevel,
-                      },
-                  };
+                    gem_level: {
+                        min: profitReqObj.effectInfo.gemLevel,
+                        max: profitReqObj.effectInfo.gemLevel,
+                    },
+                };
 
         const req: RequestBodyType = {
             query: {
@@ -214,7 +214,7 @@ export class DivinationFlipDataUpdater extends Updater {
             const req = this.#createItemSellingQuery<TradeExchangeRequestType>(profitReqObj);
             const res = await this.#itemSearcher.fetchExchangeData(req);
             if (res === undefined || res.total === 0) return undefined;
-            const itemSellPrice = ItemPriceCalculation.calculateExchangePrice(
+            const itemSellPrice = PriceCalculation.calculateExchangePrice(
                 res,
                 sellingPriceMultiplier,
             );
@@ -235,7 +235,7 @@ export class DivinationFlipDataUpdater extends Updater {
 
             const res = await this.#itemSearcher.fetchItemData(req, 2, 3);
             if (res === undefined || res.total === 0) return undefined;
-            const itemSellPrice = ItemPriceCalculation.calculatePrice(
+            const itemSellPrice = PriceCalculation.calculatePrice(
                 res.result,
                 sellingPriceMultiplier,
             );
