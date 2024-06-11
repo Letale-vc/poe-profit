@@ -1,4 +1,4 @@
-import { FileManager } from "../Helpers/fileManager/fileManager.js";
+import { FileManager } from "../helpers/fileManager/fileManager.js";
 import type { SettingsType } from "./types/GlobalSettingsType.js";
 
 export const SETTINGS_FILE_NAME = "settings.json";

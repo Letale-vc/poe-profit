@@ -15,6 +15,7 @@ export class PoeNinjaApi {
         this.#axiosInstance = axios.create({
             baseURL: this.#baseURL.toString(),
         });
+        
     }
 
     async getAllNinjaData(leagueName: string): Promise<PoeNinjaDataType> {

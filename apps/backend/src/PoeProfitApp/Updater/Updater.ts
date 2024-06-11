@@ -1,6 +1,6 @@
 import { PoeTradeFetch } from "poe-trade-fetch";
-import type { GlobalSettingsType } from "../globalSettings/index.js";
 import type { PoeNinjaData } from "../poeNinja/poeNinjaData.js";
+import type { SettingsType } from "../globalSettings/types/GlobalSettingsType.js";
 
 export abstract class Updater {
     globalSettings;
@@ -9,7 +9,7 @@ export abstract class Updater {
     abstract name: string;
 
     constructor(
-        globalSettings: GlobalSettingsType,
+        globalSettings: SettingsType,
         poeApi: PoeTradeFetch,
         ninjaData: PoeNinjaData,
     ) {
@@ -26,4 +26,4 @@ export abstract class Updater {
     abstract update(): Promise<void>;
 }
 
-export type UpdaterArgType = [GlobalSettingsType, PoeTradeFetch, PoeNinjaData];
+export type UpdaterArgType = [SettingsType, PoeTradeFetch, PoeNinjaData];

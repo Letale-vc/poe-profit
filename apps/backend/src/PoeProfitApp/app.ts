@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 import CurrencyPriceFinder from "./currency/currencyPriceFinder.js";
 import { GlobalSettings } from "./globalSettings/globalSettingsFileManager.js";
 import logger from "./Helpers/logger.js";
-import { FileManager } from "./Helpers/fileManager/fileManager.js";
+import { FileManager } from "./helpers/fileManager/fileManager.js";
 import { PoeNinjaApi } from "./poeNinja/poeNinjaApi.js";
 import { PoeNinjaData } from "./poeNinja/poeNinjaData.js";
 import type { Updater } from "./updater/updater.js";
@@ -38,6 +38,7 @@ export class PoeProfitApp {
     }
 
     constructor() {
+
         this.globalSettings = GlobalSettings.getInstance();
         this.#poeApi = PoeTradeFetch.getInstance({
             userAgent: "poeProfitApp",
@@ -47,7 +48,7 @@ export class PoeProfitApp {
         this.currency = new CurrencyPriceFinder(this.#poeApi);
         this.#ninjaData = new PoeNinjaData(
             new PoeNinjaApi(),
-            new FileManager("ninjaData.json", "object"),
+            new FileManager("ninjaData.json"),
         );
     }
 
