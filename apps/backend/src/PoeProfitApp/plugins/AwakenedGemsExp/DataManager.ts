@@ -1,5 +1,5 @@
-import type { FileManager } from "../../Helpers/fileManager/fileManager.js";
-import type { GemsExpProfit } from "./Types/HelpersTypes.js";
+import type { FileManager } from "../../helpers/fileManager/fileManager.js";
+import type { GemsExpProfit } from "./types/HelpersTypes.js";
 
 export class DataManager {
     #fileManager;

@@ -1,8 +1,8 @@
-import { type PoeTradeFetch } from "poe-trade-fetch";
+import type { PoeTradeFetch } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
-import { type TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
-import logger from "../Helpers/logger.js";
-import { round } from "../Helpers/utils.js";
+import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
+import logger from "../helpers/logger.js";
+import { round } from "../helpers/utils.js";
 import { CURRENCY, type CurrencyTypes } from "./currencyNames.js";
 
 export default class CurrencyPriceFinder {
@@ -71,7 +71,7 @@ export default class CurrencyPriceFinder {
             if (elementValue?.listing.offers[0]) {
                 return round(
                     elementValue?.listing.offers[0].exchange.amount /
-                    elementValue?.listing.offers[0].item.amount,
+                        elementValue?.listing.offers[0].item.amount,
                     0,
                 );
             }

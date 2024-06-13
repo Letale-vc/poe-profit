@@ -8,7 +8,6 @@
 //         divine: 10,
 //     };
 
-
 //     beforeEach(() => {
 //         CurrencyPriceFinder.currencyPrice = currencyPriceInChaos;
 //     });

@@ -1,5 +1,5 @@
-import { type PoeTradeFetch } from "poe-trade-fetch";
-import { ItemSearcher } from "./ItemSearcher.js";
+import type { PoeTradeFetch } from "poe-trade-fetch";
+import { ItemSearcher } from "./itemSearcher.js";
 
 jest.mock("../helpers/utils", () => ({
     delay: jest.fn().mockResolvedValue(10),
@@ -77,7 +77,7 @@ describe("SearchItems", () => {
             );
 
             await expect(
-                searchItems.fetchItemData(requestQuery),
+                searchItems.fetchItemDetails(requestQuery),
             ).rejects.toThrowError("1");
             expect(void mockPoeApi.firsRequest).toHaveBeenCalledWith(
                 requestQuery,
@@ -140,7 +140,7 @@ describe("SearchItems", () => {
                 secondResponse,
             );
 
-            const result = await searchItems.fetchItemData(requestQuery);
+            const result = await searchItems.fetchItemDetails(requestQuery);
             expect(result).toEqual({
                 result: "exampleResult",
                 id: "exampleId",

@@ -1,18 +1,25 @@
-import { FileManager } from "../Helpers/fileManager/fileManager.js";
-import { PoeNinjaApi, ALL_CATEGORY } from "./poeNinjaApi.js";
+import type { FileManager } from "../helpers/fileManager/fileManager.js";
+import { type PoeNinjaApi, ALL_CATEGORY } from "./poeNinjaApi.js";
 import type {
     PoeNinjaCurrencyResponseType,
     CurrencyNinjaType,
     PoeNinjaItemResponseType,
     ItemNinjaType,
 } from "./types/PoeNinjaResponseTypes.js";
-import type { PoeNinjaDataType, CategoryDataType, CategoryType } from "./types/HelpersTypes.js";
+import type {
+    PoeNinjaDataType,
+    CategoryDataType,
+    CategoryType,
+} from "./types/HelpersTypes.js";
 
 export class PoeNinjaData {
     #ninjaApi: PoeNinjaApi;
     #fileManager: FileManager<PoeNinjaDataType>;
 
-    constructor(ninjaApi: PoeNinjaApi, fileManager: FileManager<PoeNinjaDataType>) {
+    constructor(
+        ninjaApi: PoeNinjaApi,
+        fileManager: FileManager<PoeNinjaDataType>,
+    ) {
         this.#ninjaApi = ninjaApi;
         this.#fileManager = fileManager;
     }
@@ -20,7 +27,9 @@ export class PoeNinjaData {
     init(): void {
         this.#fileManager.init({} as PoeNinjaDataType);
     }
-    getKeyData<T extends CategoryType>(key: T): CategoryDataType<T> | undefined {
+    getKeyData<T extends CategoryType>(
+        key: T,
+    ): CategoryDataType<T> | undefined {
         const data = this.#fileManager.loadFile();
         return data[key];
     }
@@ -92,7 +101,10 @@ export class PoeNinjaData {
                 return item.currencyTypeName === itemName;
             }
             if ("name" in item) {
-                return item.name === itemName && !item.detailsId.split("-").includes("relic");
+                return (
+                    item.name === itemName &&
+                    !item.detailsId.split("-").includes("relic")
+                );
             }
             return false;
         });
@@ -112,7 +124,10 @@ export class PoeNinjaData {
         return undefined;
     }
 
-    findItem(itemName: string, categories?: CategoryType[]): FindItemInNinjaType | undefined {
+    findItem(
+        itemName: string,
+        categories?: CategoryType[],
+    ): FindItemInNinjaType | undefined {
         if (categories !== undefined) {
             return this.#findItemIfHaveCategory(itemName, categories);
         }

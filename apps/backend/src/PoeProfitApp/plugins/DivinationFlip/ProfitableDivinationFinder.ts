@@ -1,11 +1,14 @@
-import logger from "../../Helpers/logger.js";
+import logger from "../../helpers/logger.js";
 import {
     CURRENCY_CATEGORY,
     ITEM_CATEGORY,
 } from "../../poeNinja/poeNinjaApi.js";
-import type { FindItemInNinjaType, PoeNinjaData } from "../../poeNinja/poeNinjaData.js";
-import type { ItemNinjaType } from "../../poeNinja/types/PoeNinjaResponseTypes.js";
+import type {
+    FindItemInNinjaType,
+    PoeNinjaData,
+} from "../../poeNinja/poeNinjaData.js";
 import type { CategoryType } from "../../poeNinja/types/HelpersTypes.js";
+import type { ItemNinjaType } from "../../poeNinja/types/PoeNinjaResponseTypes.js";
 
 export class ProfitableCardFinder {
     divinationProfitList: ProfitDivCardType[];
@@ -29,7 +32,9 @@ export class ProfitableCardFinder {
         for (const value of data) {
             if (!value.explicitModifiers[0].text) continue;
 
-            const effect_parse = this.parseExplicitText(value.explicitModifiers[0].text);
+            const effect_parse = this.parseExplicitText(
+                value.explicitModifiers[0].text,
+            );
 
             if (effect_parse === undefined) continue;
             const effectItem = this.#ninjaData.findItem(
@@ -58,9 +63,13 @@ export class ProfitableCardFinder {
                 return {
                     typeCategories: value,
                     explicitItemName: name,
-                    priceMultiplier: parseInt(text.match(/\d+x/i)?.[0] ?? "1"),
+                    priceMultiplier: Number.parseInt(
+                        text.match(/\d+x/i)?.[0] ?? "1",
+                    ),
                     gemLevel:
-                        parseInt(text.match(/Level \d+/)?.[0]?.split(" ")[1] ?? "") || undefined,
+                        Number.parseInt(
+                            text.match(/Level \d+/)?.[0]?.split(" ")[1] ?? "",
+                        ) || undefined,
                     corrupted: !!text.match(/corrupted/),
                     awakenedGem: !!text.match(/awakened/),
                 };

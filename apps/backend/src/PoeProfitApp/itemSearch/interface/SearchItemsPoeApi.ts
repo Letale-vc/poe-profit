@@ -1,8 +1,8 @@
-import {
-    type PoeFirstResponseType,
-    type PoeSecondResponseType,
-    type RateLimitKeys,
-    type RequestBodyType,
+import type {
+    PoeFirstResponseType,
+    PoeSecondResponseType,
+    RateLimitKeys,
+    RequestBodyType,
 } from "poe-trade-fetch";
 
 export interface ISearchItemsPoeApi {

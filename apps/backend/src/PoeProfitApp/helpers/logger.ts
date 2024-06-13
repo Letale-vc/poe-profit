@@ -1,14 +1,15 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { fileURLToPath } from "node:url";
 import { pino } from "pino";
-import { fileURLToPath } from "url";
-
 
 class Logger {
     #logDirectory = path.join(process.cwd(), "logs");
     #logDirectoryUrl = fileURLToPath(new URL(`file://${this.#logDirectory}`));
-    #logFileUrl = fileURLToPath(new URL(`file://${path.join(this.#logDirectory, "poeProfit.log")}`));
-    #logger: pino.Logger
+    #logFileUrl = fileURLToPath(
+        new URL(`file://${path.join(this.#logDirectory, "poeProfit.log")}`),
+    );
+    #logger: pino.Logger;
 
     constructor() {
         if (!fs.existsSync(this.#logDirectoryUrl)) {

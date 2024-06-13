@@ -2,7 +2,6 @@ import logger from "./logger.js";
 
 export default class AppError extends Error {
     originalError?: Error;
-    // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
     constructor(message = AppError.UNKNOWN, originalError?: Error | unknown) {
         super();
         this.name = this.constructor.name;

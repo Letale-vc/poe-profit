@@ -1,71 +1,88 @@
 import _ from "lodash";
 import type { RequestBodyType } from "poe-trade-fetch";
-import logger from "../../Helpers/logger.js";
-import { PriceCalculation } from "../../Helpers/priceCalculation/priceCalculation.js";
-import { FileManager } from "../../Helpers/fileManager/fileManager.js";
-import { ItemSearcher, type ItemSearchResultType } from "../../searchItems/ItemSearcher.js";
-import Updater, { type UpdaterArgType } from "../../updater/updater.js";
-import { DataManager } from "./DataManager.js";
-import type { GemItemType, GemsExpProfit, RequestGemList } from "./Types/HelpersTypes.js";
+import { PoeTradeFetchError } from "poe-trade-fetch/poeTradeFetchError";
+import { FileManager } from "../../helpers/fileManager/fileManager.js";
+import logger from "../../helpers/logger.js";
+import { calculatePrice } from "../../helpers/priceCalculation/priceCalculation.js";
+import { STATUS_CODE } from "../../helpers/utils.js";
+import {
+    type ItemSearchResult,
+    ItemSearcher,
+} from "../../itemSearch/itemSearcher.js";
+import { Updater } from "../../updater.js";
+import { DataManager } from "./dataManager.js";
+import type {
+    GemItemType,
+    GemsExpProfit,
+    RequestGemList,
+} from "./types/HelpersTypes.js";
 
-export class AwakenedGemsExpUpdater extends Updater {
+export const AWAKENED_GEMS_EXP_DATA_FILE_NAME = "AwakenedGemsExp.json";
+export default class AwakenedGemsExpUpdater extends Updater {
     #fileManager;
     #dataManager;
     #itemSearcher;
     name;
-    constructor(...arg: UpdaterArgType) {
-        super(...arg);
+    constructor() {
+        super();
         this.#fileManager = new FileManager<Record<string, GemsExpProfit>>(
-            "AwakenedGemsExp.json",
-            "object",
+            AWAKENED_GEMS_EXP_DATA_FILE_NAME,
         );
         this.#dataManager = new DataManager(this.#fileManager);
-        this.#itemSearcher = new ItemSearcher(this.poeApi);
+        this.#itemSearcher = new ItemSearcher(this.poeTradeFetch);
         this.name = "Awakened Gems Exp";
     }
 
     init() {
-        this.#fileManager.init();
+        this.#fileManager.init({});
     }
 
     getAllData(): Record<string, GemsExpProfit> {
         return this.#dataManager.getData();
     }
-    async update(): Promise<void> {
+    async update(): Promise<STATUS_CODE> {
         const gemsList = await this.#getAwakenedListGems();
-        if (gemsList === undefined) return;
+        if (gemsList === undefined) return STATUS_CODE.OK;
         const requestList = this.#createRequestList(gemsList);
         for (const el of requestList) {
             try {
-                const buying = await this.#itemSearcher.fetchItemData(el.itemBuying);
+                const buying = await this.#itemSearcher.fetchItemDetails(
+                    el.itemBuying,
+                );
                 if (buying === undefined) continue;
                 // TODO: update this if have in data
                 if (buying.total === 0) {
-                    logger.info(`No buying offers for ${el.gem}`);
+                    logger.debug(`No buying offers for ${el.gem}`);
                     continue;
                 }
-                const selling = await this.#itemSearcher.fetchItemData(el.itemSelling);
+                const selling = await this.#itemSearcher.fetchItemDetails(
+                    el.itemSelling,
+                );
                 if (selling === undefined) continue;
                 // TODO: update this if have in data
                 if (selling.total === 0) {
-                    logger.info(`No selling offers for ${el.gem}`);
+                    logger.debug(`No selling offers for ${el.gem}`);
                     continue;
                 }
                 const profit = this.#createProfitObject(el, buying, selling);
                 this.#dataManager.update(profit);
-            } catch (e) {
-                logger.error(e);
-                throw e;
+            } catch (error) {
+                if (error instanceof PoeTradeFetchError) {
+                    return STATUS_CODE.TRADE_LIMIT;
+                }
+                return STATUS_CODE.UNKNOWN_ERROR;
             }
         }
+        return STATUS_CODE.OK;
     }
 
-    #createGemItemObject(req: RequestBodyType, res: ItemSearchResultType): GemItemType {
-        const price = PriceCalculation.calculatePrice(res.result);
-        const tradeLink = new URL(
-            `https://www.pathofexile.com/trade/search/${this.poeApi.leagueName}`,
-        );
-        tradeLink.searchParams.append("q", JSON.stringify(req));
+    #createGemItemObject(
+        req: RequestBodyType,
+        res: ItemSearchResult,
+    ): GemItemType {
+        const price = calculatePrice(res.result);
+        const tradeLink = this.itemSearcher.getTradeLink(req);
+
         return {
             tradeLink: tradeLink.toString(),
             icon: res.result[0].item.icon,
@@ -77,11 +94,14 @@ export class AwakenedGemsExpUpdater extends Updater {
 
     #createProfitObject(
         reqGem: RequestGemList,
-        buying: ItemSearchResultType,
-        selling: ItemSearchResultType,
+        buying: ItemSearchResult,
+        selling: ItemSearchResult,
     ): GemsExpProfit {
         const gemBuying = this.#createGemItemObject(reqGem.itemBuying, buying);
-        const gemSelling = this.#createGemItemObject(reqGem.itemSelling, selling);
+        const gemSelling = this.#createGemItemObject(
+            reqGem.itemSelling,
+            selling,
+        );
 
         return {
             id: reqGem.gem,
@@ -142,22 +162,17 @@ export class AwakenedGemsExpUpdater extends Updater {
         };
     }
     async #getAwakenedListGems(): Promise<string[] | undefined> {
-        try {
-            const res = await this.poeApi.getTradeDataItems();
-            const gems = res.result
-                .find((el) => el.id === "gems")
-                ?.entries.filter(
-                    (el) =>
-                        el.type.includes("Awakened") &&
-                        !el.type.includes("Empower") &&
-                        !el.type.includes("Enlighten") &&
-                        !el.type.includes("Enhance"),
-                )
-                .map((el) => el.type);
-            return gems;
-        } catch (e) {
-            logger.error(e);
-            return undefined;
-        }
+        const res = await this.poeTradeFetch.getTradeDataItems();
+        const gems = res.result
+            .find((el) => el.id === "gems")
+            ?.entries.filter(
+                (el) =>
+                    el.type.includes("Awakened") &&
+                    !el.type.includes("Empower") &&
+                    !el.type.includes("Enlighten") &&
+                    !el.type.includes("Enhance"),
+            )
+            .map((el) => el.type);
+        return gems;
     }
 }

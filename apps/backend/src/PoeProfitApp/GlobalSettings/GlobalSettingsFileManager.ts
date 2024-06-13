@@ -9,19 +9,18 @@ export class GlobalSettings {
     settingsCash: SettingsType | undefined;
 
     constructor() {
-        this.#fileManager = new FileManager<SettingsType>(SETTINGS_FILE_NAME)
+        this.#fileManager = new FileManager<SettingsType>(SETTINGS_FILE_NAME);
     }
 
     static getInstance(): GlobalSettings {
         if (!GlobalSettings.#instance) {
-            GlobalSettings.#instance =
-                new GlobalSettings();
+            GlobalSettings.#instance = new GlobalSettings();
         }
         return GlobalSettings.#instance;
     }
 
     init(): void {
-        this.#fileManager.init(INIT_SETTINGS)
+        this.#fileManager.init(INIT_SETTINGS);
         if (this.settingsCash === undefined) {
             this.settingsCash = this.#fileManager.loadFile();
         }

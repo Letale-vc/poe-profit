@@ -3,8 +3,11 @@ import type {
     PoeNinjaCurrencyResponseType,
     PoeNinjaItemResponseType,
 } from "./types/PoeNinjaResponseTypes.js";
-import type { CurrencyCategoryType, ItemCategoryType, PoeNinjaDataType } from "./types/HelpersTypes.js";
-
+import type {
+    CurrencyCategoryType,
+    ItemCategoryType,
+    PoeNinjaDataType,
+} from "./types/HelpersTypes.js";
 
 export class PoeNinjaApi {
     #baseURL = new URL("https://poe.ninja/api");
@@ -15,20 +18,19 @@ export class PoeNinjaApi {
         this.#axiosInstance = axios.create({
             baseURL: this.#baseURL.toString(),
         });
-        
     }
 
     async getAllNinjaData(leagueName: string): Promise<PoeNinjaDataType> {
-        const currencyPromises = Object.values(
-            CURRENCY_CATEGORY,
-        ).map(async (category) => {
-            const response = await this.#getCurrencyOverview(
-                leagueName,
-                category,
-            );
+        const currencyPromises = Object.values(CURRENCY_CATEGORY).map(
+            async (category) => {
+                const response = await this.#getCurrencyOverview(
+                    leagueName,
+                    category,
+                );
 
-            return { [category]: response };
-        });
+                return { [category]: response };
+            },
+        );
         const itemPromises = Object.values(ITEM_CATEGORY).map(
             async (category) => {
                 const response = await this.#getItemOverview(
@@ -41,8 +43,15 @@ export class PoeNinjaApi {
         const currencyResponses = (await Promise.allSettled(currencyPromises))
             .filter((x) => x.status === "fulfilled")
             .map(
-                (x) => (x as PromiseFulfilledResult<Record<
-                    CurrencyCategoryType, PoeNinjaCurrencyResponseType>>).value,
+                (x) =>
+                    (
+                        x as PromiseFulfilledResult<
+                            Record<
+                                CurrencyCategoryType,
+                                PoeNinjaCurrencyResponseType
+                            >
+                        >
+                    ).value,
             );
 
         const itemResponses = (await Promise.allSettled(itemPromises))
@@ -51,10 +60,7 @@ export class PoeNinjaApi {
                 (x) =>
                     (
                         x as PromiseFulfilledResult<
-                            Record<
-                                ItemCategoryType,
-                                PoeNinjaItemResponseType
-                            >
+                            Record<ItemCategoryType, PoeNinjaItemResponseType>
                         >
                     ).value,
             );
@@ -78,8 +84,9 @@ export class PoeNinjaApi {
         typeCategory: CurrencyCategoryType,
     ): Promise<PoeNinjaCurrencyResponseType> {
         const path = `data/currencyoverview?league=${leagueName}&type=${typeCategory}`;
-        return (await this.#axiosInstance.get<PoeNinjaCurrencyResponseType>(path))
-            .data;
+        return (
+            await this.#axiosInstance.get<PoeNinjaCurrencyResponseType>(path)
+        ).data;
     }
 
     async #getItemOverview(

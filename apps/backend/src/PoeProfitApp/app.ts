@@ -1,15 +1,14 @@
-import { isAxiosError } from "axios";
-import fs from "fs";
-import { dirname, join } from "path";
+import fs from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { LEAGUES_NAMES, PoeTradeFetch } from "poe-trade-fetch";
-import { fileURLToPath } from "url";
 import CurrencyPriceFinder from "./currency/currencyPriceFinder.js";
 import { GlobalSettings } from "./globalSettings/globalSettingsFileManager.js";
-import logger from "./Helpers/logger.js";
 import { FileManager } from "./helpers/fileManager/fileManager.js";
+import logger from "./helpers/logger.js";
 import { PoeNinjaApi } from "./poeNinja/poeNinjaApi.js";
 import { PoeNinjaData } from "./poeNinja/poeNinjaData.js";
-import type { Updater } from "./updater/updater.js";
+import { Updater } from "./updater.js";
 
 export interface Plugin {
     active: boolean;
@@ -23,11 +22,11 @@ export class PoeProfitApp {
 
     #plugins: Plugin[] = [];
 
-    #poeApi: PoeTradeFetch;
+    #poeTradeFetch: PoeTradeFetch;
 
     #updateCode = 0;
 
-    #ninjaData: PoeNinjaData;
+    #poeNinjaData: PoeNinjaData;
 
     currency: CurrencyPriceFinder;
 
@@ -38,15 +37,14 @@ export class PoeProfitApp {
     }
 
     constructor() {
-
         this.globalSettings = GlobalSettings.getInstance();
-        this.#poeApi = PoeTradeFetch.getInstance({
+        this.#poeTradeFetch = PoeTradeFetch.getInstance({
             userAgent: "poeProfitApp",
             leagueName: LEAGUES_NAMES.Current,
             realm: "pc",
         });
-        this.currency = new CurrencyPriceFinder(this.#poeApi);
-        this.#ninjaData = new PoeNinjaData(
+        this.currency = new CurrencyPriceFinder(this.#poeTradeFetch);
+        this.#poeNinjaData = new PoeNinjaData(
             new PoeNinjaApi(),
             new FileManager("ninjaData.json"),
         );
@@ -65,10 +63,15 @@ export class PoeProfitApp {
         if (this.isInitApp) return;
 
         this.globalSettings.init();
+        await this.#poeTradeFetch.updateLeagueName();
+        logger.info(`Current leagueName: ${this.#poeTradeFetch.leagueName}`);
+        this.#poeNinjaData.init();
+        Updater.init(
+            this.globalSettings,
+            this.#poeNinjaData,
+            this.#poeTradeFetch,
+        );
 
-        await this.#poeApi.updateConfig();
-        this.#ninjaData.init();
-        logger.info(`Set leagueName: ${this.#poeApi.leagueName}`);
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = dirname(__filename);
         const pluginDir = join(__dirname, "plugins");
@@ -91,25 +94,26 @@ export class PoeProfitApp {
             if (fs.statSync(filePath).isDirectory()) {
                 // Recursively load plugins in the directory
                 await this.#loadPlugins(filePath);
-            } else if (filePath.endsWith("index.js") || filePath.endsWith("index.ts")) {
+            } else if (
+                filePath.endsWith("updater.js") ||
+                filePath.endsWith("updater.ts")
+            ) {
                 // Dynamically import the module
                 const filePathUrl = new URL(`file://${filePath}`);
                 const PluginModule = (await import(filePathUrl.toString())) as {
-                    default: new (..._: unknown[]) => Updater;
+                    default: new () => Updater;
                 };
-                const pluginInstance = new PluginModule.default(
-                    this.globalSettings,
-                    this.#poeApi,
-                    this.#ninjaData,
-                );
-                const pluginsSettings = this.globalSettings.settingsCash?.plugins?.find(
-                    (el) => el.name === pluginInstance.name,
-                );
+                const pluginInstance = new PluginModule.default();
+                const pluginsSettings =
+                    this.globalSettings.settingsCash?.plugins?.find(
+                        (el) => el.name === pluginInstance.name,
+                    );
                 if (!pluginsSettings) {
-                    this.globalSettings.saveFile({
+                    this.globalSettings.mutate({
                         ...this.globalSettings.settingsCash,
                         plugins: [
-                            ...(this.globalSettings.settingsCash?.plugins ?? []),
+                            ...(this.globalSettings.settingsCash?.plugins ??
+                                []),
                             { active: true, name: pluginInstance.name },
                         ],
                     });
@@ -140,32 +144,23 @@ export class PoeProfitApp {
                 break;
             }
             try {
-                await this.#ninjaData.updateNinjaData(this.#poeApi.leagueName);
-                await this.#poeApi.updateConfig();
+                await this.#poeNinjaData.updateNinjaData(
+                    this.#poeTradeFetch.leagueName,
+                );
+                await this.#poeTradeFetch.updateConfig();
                 await this.#updateCurrencyPrice();
                 for (const plugin of activePlugins) {
                     logger.info(`${plugin.name} START update`);
                     await plugin.updater.update();
                     logger.info(`${plugin.name} END update`);
                 }
-            } catch (e) {
+            } catch (error) {
                 logger.warn("Stop process update data.");
-                logger.error(e);
-
-                if (
-                    isAxiosError<{
-                        error: {
-                            code: number;
-                            message: string;
-                        };
-                    }>(e)
-                ) {
-                    if (e.response?.status === 429) {
-                        this.#restart(30);
-                        break;
-                    }
+                if (error === 3) {
+                    this.#restart(30);
+                } else {
+                    this.#restart(0);
                 }
-                this.#restart(0);
                 break;
             }
         }
