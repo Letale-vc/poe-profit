@@ -1,0 +1,17 @@
+{
+    "tabWidth": 4,
+    "printWidth": 80,
+    "proseWrap": "never",
+    "trailingComma": "all",
+    "singleQuote": false,
+    "semi": true,
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": "**/*.hbs",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
+}

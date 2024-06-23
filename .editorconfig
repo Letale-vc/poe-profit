@@ -1,0 +1,21 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 80
+indent_style = space
+indent_size = 4
+
+# Set quote style
+[*.{js,ts,jsx,tsx}]
+quote_type = double
+
+[*.{md,markdown,js.snap}]
+trim_trailing_whitespace = false
+
+[doc/**/*.md]
+trim_trailing_whitespace = true
