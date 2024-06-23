@@ -1,5 +1,5 @@
 import { PoeTradeFetchError } from "poe-trade-fetch/poeTradeFetchError";
-import logger from "./logger.js";
+import { Logger } from "./logger.js";
 
 export const round = (num: number, decimalPlaces = 0): number => {
     const p = 10 ** decimalPlaces;
@@ -9,14 +9,14 @@ export const round = (num: number, decimalPlaces = 0): number => {
 
 export function handleError(error: unknown): undefined {
     if (error instanceof PoeTradeFetchError) {
-        logger.error(error.message);
+        Logger.error(error.message);
         if (error.poeTradeApiErrorCode === 3) {
             throw error;
         }
     } else if (error instanceof Error) {
-        logger.error(error.message);
+        Logger.error(error.message);
     } else {
-        logger.error("Unknown error.");
+        Logger.error("Unknown error.");
         throw new Error("Unknown error.");
     }
     return undefined;

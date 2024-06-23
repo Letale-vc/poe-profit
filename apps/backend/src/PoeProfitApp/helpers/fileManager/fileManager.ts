@@ -1,38 +1,42 @@
-import * as fs from "node:fs";
-import * as path from "node:path";
-import { fileURLToPath } from "node:url";
-import logger from "../logger.js";
+import fs from "node:fs";
+import fsAsync from "node:fs/promises";
+import path from "node:path";
+import { Logger } from "../logger.js";
 
 export class FileManager<T> {
-    #fileName: string;
-    #pathFileFolder: string;
+    private _fileName: string;
+    private _pathFileFolder: string;
 
     constructor(fileName: string) {
-        this.#fileName = fileName;
+        this._fileName = fileName;
         const dataFolder = path.join(process.cwd(), "data");
-        const dataFolderUrl = fileURLToPath(new URL(`file://${dataFolder}`));
 
-        if (!fs.existsSync(dataFolderUrl)) {
-            fs.mkdirSync(dataFolderUrl);
+        if (!fs.existsSync(dataFolder)) {
+            fs.mkdirSync(dataFolder);
         }
-        this.#pathFileFolder = path.join(dataFolderUrl, this.#fileName);
+        this._pathFileFolder = path.join(dataFolder, this._fileName);
     }
 
-    init(initValue: T): void {
-        if (!this.fileExist()) {
-            this.saveFile(initValue);
-            logger.debug(`Init file:${this.#pathFileFolder}`);
+    async init(initValue: T): Promise<boolean> {
+        if (!fs.existsSync(this._pathFileFolder)) {
+            await this.saveFile(initValue);
         }
+        Logger.debug(`Init FileManager file:${this._pathFileFolder}`);
+        return true;
     }
 
-    loadFile(): T {
+    async loadFile(): Promise<T | undefined> {
         try {
-            const contents = fs.readFileSync(this.#pathFileFolder);
+            const contents = await fsAsync.readFile(this._pathFileFolder);
             const fileParse = JSON.parse(contents.toString()) as T;
             return fileParse;
         } catch (e) {
-            logger.error(`Cannot loading file: ${this.#pathFileFolder}`);
-            throw e;
+            if (e instanceof Error) {
+                Logger.error(`Cannot loading file: ${this._pathFileFolder}`);
+                Logger.error(e.message);
+            }
+
+            return undefined;
         }
     }
     // TODO: maybe I'll do it later
@@ -45,18 +49,13 @@ export class FileManager<T> {
     //     this.#pathFileFolder = newPath;
     // }
 
-    saveFile(data: T): void {
+    async saveFile(data: T): Promise<void> {
         const stringifyData = JSON.stringify(data, null, 4);
-        fs.writeFileSync(this.#pathFileFolder, stringifyData);
-
-        logger.debug(`Save file:${this.#pathFileFolder}`);
+        await fsAsync.writeFile(this._pathFileFolder, stringifyData);
+        Logger.debug(`Save file:${this._pathFileFolder}`);
     }
 
     fileInfo(): fs.Stats {
-        return fs.statSync(this.#pathFileFolder);
-    }
-
-    fileExist(): boolean {
-        return fs.existsSync(this.#pathFileFolder);
+        return fs.statSync(this._pathFileFolder);
     }
 }

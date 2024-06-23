@@ -1,53 +1,66 @@
-import * as fs from "node:fs";
-import * as path from "node:path";
-import { fileURLToPath } from "node:url";
+import path from "node:path";
 import { pino } from "pino";
 
-class Logger {
-    #logDirectory = path.join(process.cwd(), "logs");
-    #logDirectoryUrl = fileURLToPath(new URL(`file://${this.#logDirectory}`));
-    #logFileUrl = fileURLToPath(
-        new URL(`file://${path.join(this.#logDirectory, "poeProfit.log")}`),
+export class Logger {
+    private static readonly logDirectory = path.join(process.cwd(), "logs");
+    // private static readonly logFileUrl = fileURLToPath(
+    //     new URL(`file://${path.join(this.logDirectory, "poeProfit.log")}`),
+    // );
+    private static readonly logFilePath = path.join(
+        Logger.logDirectory,
+        "poeProfit.log",
     );
-    #logger: pino.Logger;
-
-    constructor() {
-        if (!fs.existsSync(this.#logDirectoryUrl)) {
-            fs.mkdirSync(this.#logDirectoryUrl);
-        }
-        this.#logger = pino(
+    private static readonly transport = pino.transport({
+        targets: [
             {
-                level: process.env.PINO_LOG_LEVEL ?? "error",
-                transport: {
-                    target: "pino-pretty",
-                    options: {
-                        colorize: true,
-                        messageFormat: "[Poe Profit]: {time} - {level}: {msg}",
-                    },
+                level: "debug",
+                target: "pino-pretty",
+                options: {
+                    colorize: true,
+                    messageFormat: "{time} - [Poe Profit]: {msg}",
                 },
-                timestamp: pino.stdTimeFunctions.isoTime,
             },
-            pino.destination({
-                dest: this.#logFileUrl,
-                sync: true,
-                minLength: 4096,
-            }),
-        );
-    }
+            {
+                level: "debug",
+                target: "pino/file",
+                options: {
+                    destination: this.logFilePath,
+                    mkdir: true,
+                },
+            },
+        ],
+    });
+    static readonly log = pino(
+        { timestamp: pino.stdTimeFunctions.isoTime, level: "debug" },
+        Logger.transport,
+    );
+
     info(message: string) {
-        this.#logger.info(message);
+        Logger.log.info(message);
     }
 
     error(message: string) {
-        this.#logger.error(message);
+        Logger.log.error(message);
     }
     debug(message: string) {
-        this.#logger.debug(message);
+        Logger.log.debug(message);
     }
 
     warn(message: string) {
-        this.#logger.warn(message);
+        Logger.log.warn(message);
+    }
+    static info(message: string) {
+        Logger.log.info(message);
+    }
+
+    static error(message: string) {
+        Logger.log.error(message);
+    }
+    static debug(message: string) {
+        Logger.log.debug(message);
+    }
+
+    static warn(message: string) {
+        Logger.log.warn(message);
     }
 }
-
-export default new Logger();

@@ -1,44 +1,75 @@
-import type { PoeTradeFetch } from "poe-trade-fetch";
-import type { GlobalSettings } from "./globalSettings/globalSettingsFileManager.js";
-import type { SettingsType } from "./globalSettings/types/GlobalSettingsType.js";
+import { Logger } from "./helpers/logger.js";
 import type { STATUS_CODE } from "./helpers/utils.js";
-import { ItemSearcher } from "./itemSearch/itemSearcher.js";
-import type { PoeNinjaData } from "./poeNinja/poeNinjaData.js";
+import type { IPlugin } from "./interface/IPlugin.js";
+import type { ISettings } from "./interface/ISettings.js";
+import type { PoeDataAggregator } from "./poeDataAggregator.js";
+import type { SettingsContainer } from "./settingsContainer.js";
 
-export abstract class Updater {
-    private static _poeTradeFetch: PoeTradeFetch;
+export abstract class Updater<T extends ISettings = ISettings>
+    implements IPlugin
+{
+    static isPluginClass = true;
+    private static _poeDataAggregator: PoeDataAggregator;
+    private static _settingsContainer: SettingsContainer;
+    public _settings: ISettings;
+    internalName: string;
+    name = "";
 
-    get poeTradeFetch(): PoeTradeFetch {
-        return Updater._poeTradeFetch;
+    get poeDataAggregator() {
+        return Updater._poeDataAggregator;
     }
 
-    private static _globalSettings: GlobalSettings;
-
-    get globalSettings(): SettingsType {
-        return Updater._globalSettings.getSettings();
+    get _settingsContainer() {
+        return Updater._settingsContainer;
     }
 
-    private static _ninjaData: PoeNinjaData;
-    get poeNinjaData(): PoeNinjaData {
-        return Updater._ninjaData;
+    get settings(): T {
+        return this._settings as T;
     }
-    private static _itemSearcher: ItemSearcher;
-    get itemSearcher(): ItemSearcher {
-        return Updater._itemSearcher;
-    }
-    abstract name: string;
+
+    initialized = false;
 
     static init(
-        globalSettings: GlobalSettings,
-        poeNinjaData: PoeNinjaData,
-        poeTradeFetch: PoeTradeFetch,
-    ) {
-        Updater._globalSettings = globalSettings;
-        Updater._ninjaData = poeNinjaData;
-        Updater._poeTradeFetch = poeTradeFetch;
-        Updater._itemSearcher = new ItemSearcher(Updater._poeTradeFetch);
+        poeDataAggregator: PoeDataAggregator,
+        settingsContainer: SettingsContainer,
+    ): void {
+        Updater._poeDataAggregator = poeDataAggregator;
+        Updater._settingsContainer = settingsContainer;
     }
-    init(): Promise<void> | void {}
+
+    constructor(settingsConstructor: { new (): T }) {
+        this._settings = new settingsConstructor();
+        this.internalName = this.constructor.name;
+        this.name = this.internalName;
+    }
+
+    _saveSettings(): void {
+        this._settingsContainer.saveSettings(this);
+    }
+
+    init(): boolean | Promise<boolean> {
+        return true;
+    }
+
+    _loadSettings(): void {
+        const settings = this._settingsContainer.loadSettings(this);
+
+        if (settings === undefined) {
+            return;
+        }
+        this._settings = Object.assign(this._settings, JSON.parse(settings));
+    }
+
+    onLoad(): void {}
+
+    dispose(): void {
+        this.onClose();
+    }
+
+    onClose() {
+        this._saveSettings();
+    }
+    onUnload(): void {}
 
     abstract getAllData(): unknown;
 

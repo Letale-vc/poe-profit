@@ -1,4 +1,4 @@
-import logger from "./logger.js";
+import { Logger } from "./logger.js";
 
 export default class AppError extends Error {
     originalError?: Error;
@@ -13,7 +13,7 @@ export default class AppError extends Error {
         // } else if (error instanceof Error) {
         //   this.message = error.message;
         // }
-        logger.error(`AppError: ${this.message}`);
+        Logger.error(`AppError: ${this.message}`);
         Error.captureStackTrace(this, this.constructor);
     }
     static readonly SKIP_ITEM = "SKIP_ITEM";

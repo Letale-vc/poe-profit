@@ -1,36 +1,69 @@
 import type { FileManager } from "../../helpers/fileManager/fileManager.js";
+import type { IDisposable } from "../../interface/IDisposable.js";
 import type { GemsExpProfit } from "./types/HelpersTypes.js";
 
-export class DataManager {
-    #fileManager;
+export class DataManager implements IDisposable {
+    private _fileManager;
+    private _dataCash: Record<string, GemsExpProfit> | null = null;
+    private _lastUpdateTime: Date | null = null;
     constructor(fileManager: FileManager<Record<string, GemsExpProfit>>) {
-        this.#fileManager = fileManager;
-    }
-    getData() {
-        return this.#fileManager.loadFile();
-    }
-    lastUpdateTime(): Date {
-        return this.#fileManager.fileInfo().mtime;
-    }
-    getDataAndTimeInfo() {
-        const data = this.#fileManager.loadFile();
-        const lastUpdate = this.lastUpdateTime();
-        return { data, lastUpdate };
-    }
-    update(updObj: GemsExpProfit) {
-        const actualData = this.#fileManager.loadFile();
-        actualData[updObj.id] = updObj;
-        this.#fileManager.saveFile(actualData);
-    }
-    add(newObj: GemsExpProfit) {
-        const actualData = this.#fileManager.loadFile();
-        actualData[newObj.id] = newObj;
-        this.#fileManager.saveFile(actualData);
+        this._fileManager = fileManager;
     }
 
-    remove(id: string) {
-        const actualData = this.#fileManager.loadFile();
-        if (id in actualData) delete actualData[id];
-        this.#fileManager.saveFile(actualData);
+    async getData(): Promise<Record<string, GemsExpProfit>> {
+        if (this._dataCash !== null) {
+            return this._dataCash;
+        }
+
+        const fileData = await this._fileManager.loadFile();
+        return fileData !== undefined ? fileData : {};
+    }
+
+    async loadData(): Promise<void> {
+        const fileData = await this._fileManager.loadFile();
+        if (fileData !== undefined) {
+            this._dataCash = fileData;
+        } else {
+            this._dataCash = {};
+        }
+    }
+
+    update(updObj: GemsExpProfit): void {
+        if (this._dataCash === null) {
+            this.loadData();
+        }
+
+        if (this._dataCash !== null) {
+            this._dataCash[updObj.id] = updObj;
+            this._lastUpdateTime = new Date();
+        }
+    }
+    add(newObj: GemsExpProfit) {
+        if (this._dataCash === null) {
+            this.loadData();
+        }
+
+        if (this._dataCash !== null) {
+            this._dataCash[newObj.id] = newObj;
+            this._lastUpdateTime = new Date();
+        }
+    }
+
+    remove(id: string): void {
+        if (this._dataCash === null) {
+            this.loadData();
+        }
+
+        if (this._dataCash !== null && id in this._dataCash) {
+            delete this._dataCash[id];
+            this._lastUpdateTime = new Date();
+        }
+    }
+
+    dispose(): void {
+        if (this._dataCash !== null) {
+            this._fileManager.saveFile(this._dataCash);
+        }
+        this._dataCash = null;
     }
 }

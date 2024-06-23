@@ -1,4 +1,3 @@
-import logger from "../../helpers/logger.js";
 import {
     CURRENCY_CATEGORY,
     ITEM_CATEGORY,
@@ -20,11 +19,11 @@ export class ProfitableCardFinder {
         this.divinationProfitList = [];
     }
 
-    filterDivination(): ProfitDivCardType[] {
-        logger.info("Search profitable divination cards");
-        const data = this.#ninjaData
-            .getKeyData(ITEM_CATEGORY.DIVINATION_CARDS)
-            ?.lines.filter((item) => item.chaosValue > 10);
+    async filterDivination(): Promise<ProfitDivCardType[]> {
+        const data = (
+            await this.#ninjaData.getKeyData(ITEM_CATEGORY.DIVINATION_CARDS)
+        )?.lines.filter((item) => item.chaosValue > 10);
+
         if (!data || data.length === 0) return [];
 
         const profitDiv: ProfitDivCardType[] = [];
@@ -37,7 +36,7 @@ export class ProfitableCardFinder {
             );
 
             if (effect_parse === undefined) continue;
-            const effectItem = this.#ninjaData.findItem(
+            const effectItem = await this.#ninjaData.findItem(
                 effect_parse.explicitItemName,
                 effect_parse.typeCategories,
             );

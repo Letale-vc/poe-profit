@@ -1,8 +1,9 @@
 import type { PoeTradeFetch } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
 import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
-import logger from "../helpers/logger.js";
-import { round } from "../helpers/utils.js";
+import { PoeTradeFetchError } from "poe-trade-fetch/poeTradeFetchError";
+import { Logger } from "../helpers/logger.js";
+import { STATUS_CODE, handleError, round } from "../helpers/utils.js";
 import { CURRENCY, type CurrencyTypes } from "./currencyNames.js";
 
 export default class CurrencyPriceFinder {
@@ -10,10 +11,10 @@ export default class CurrencyPriceFinder {
 
     #lastUpdateTime;
 
-    #poeApi: PoeTradeFetch;
+    #poeTradeFetch: PoeTradeFetch;
 
     constructor(poeApi: PoeTradeFetch) {
-        this.#poeApi = poeApi;
+        this.#poeTradeFetch = poeApi;
 
         this.#lastUpdateTime = new Date();
         this.#lastUpdateTime.setUTCHours(
@@ -29,7 +30,7 @@ export default class CurrencyPriceFinder {
     }
 
     async #searchCurrencyInTrade(): Promise<
-        Record<CurrencyTypes, ExchangeResponseType>
+        Record<CurrencyTypes, ExchangeResponseType> | undefined
     > {
         try {
             const searchCurrencyResults = {} as Record<
@@ -50,13 +51,13 @@ export default class CurrencyPriceFinder {
                     },
                 };
 
-                const result = await this.#poeApi.exchangeRequest(bodyExchange);
+                const result =
+                    await this.#poeTradeFetch.exchangeRequest(bodyExchange);
                 searchCurrencyResults[key] = result;
             }
             return searchCurrencyResults;
         } catch (error) {
-            logger.error(error);
-            throw new Error("Error fetching currency prices");
+            return handleError(error);
         }
     }
 
@@ -79,22 +80,39 @@ export default class CurrencyPriceFinder {
         return 1;
     }
 
-    async update() {
-        const oneHourAhead = new Date(this.#lastUpdateTime);
-        oneHourAhead.setUTCHours(oneHourAhead.getUTCHours() + 1);
-        if (new Date() < oneHourAhead) {
-            logger.info("Currency SKIP update");
-            return;
+    async update(): Promise<STATUS_CODE> {
+        try {
+            const oneHourAhead = new Date(this.#lastUpdateTime);
+            oneHourAhead.setUTCHours(oneHourAhead.getUTCHours() + 1);
+
+            if (new Date() < oneHourAhead) {
+                Logger.info("Currency SKIP update");
+                return STATUS_CODE.OK;
+            }
+
+            Logger.info("Currency START update");
+            const searchCurrencyResult = await this.#searchCurrencyInTrade();
+
+            if (searchCurrencyResult === undefined) {
+                return STATUS_CODE.UNKNOWN_ERROR;
+            }
+
+            for (const key of CURRENCY) {
+                if (!(key in searchCurrencyResult)) continue;
+                const val = searchCurrencyResult[key];
+                CurrencyPriceFinder.currencyPrice[key] =
+                    this.#currencyPriceCalculation(val);
+            }
+
+            this.#lastUpdateTime = new Date();
+            Logger.info("Currency END update");
+
+            return STATUS_CODE.OK;
+        } catch (error) {
+            if (error instanceof PoeTradeFetchError) {
+                return STATUS_CODE.TRADE_LIMIT;
+            }
+            return STATUS_CODE.UNKNOWN_ERROR;
         }
-        logger.info("Currency START update");
-        const searchCurrencyResult = await this.#searchCurrencyInTrade();
-        for (const key of CURRENCY) {
-            if (!(key in searchCurrencyResult)) continue;
-            const val = searchCurrencyResult[key];
-            CurrencyPriceFinder.currencyPrice[key] =
-                this.#currencyPriceCalculation(val);
-        }
-        this.#lastUpdateTime = new Date();
-        logger.info("Currency END update");
     }
 }

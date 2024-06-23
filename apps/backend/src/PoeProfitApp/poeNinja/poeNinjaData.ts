@@ -1,64 +1,66 @@
-import type { FileManager } from "../helpers/fileManager/fileManager.js";
-import { type PoeNinjaApi, ALL_CATEGORY } from "./poeNinjaApi.js";
+import { FileManager } from "../helpers/fileManager/fileManager.js";
+import { ALL_CATEGORY, PoeNinjaApi } from "./poeNinjaApi.js";
 import type {
-    PoeNinjaCurrencyResponseType,
-    CurrencyNinjaType,
-    PoeNinjaItemResponseType,
-    ItemNinjaType,
-} from "./types/PoeNinjaResponseTypes.js";
-import type {
-    PoeNinjaDataType,
     CategoryDataType,
     CategoryType,
+    PoeNinjaDataType,
 } from "./types/HelpersTypes.js";
+import type {
+    CurrencyNinjaType,
+    ItemNinjaType,
+    PoeNinjaCurrencyResponseType,
+    PoeNinjaItemResponseType,
+} from "./types/PoeNinjaResponseTypes.js";
 
 export class PoeNinjaData {
-    #ninjaApi: PoeNinjaApi;
-    #fileManager: FileManager<PoeNinjaDataType>;
+    private static readonly FILE_NAME = "poeNinjaData.json";
+    private readonly _ninjaApi: PoeNinjaApi;
+    private readonly _fileManager: FileManager<PoeNinjaDataType>;
 
-    constructor(
-        ninjaApi: PoeNinjaApi,
-        fileManager: FileManager<PoeNinjaDataType>,
-    ) {
-        this.#ninjaApi = ninjaApi;
-        this.#fileManager = fileManager;
+    constructor() {
+        this._ninjaApi = new PoeNinjaApi();
+        this._fileManager = new FileManager<PoeNinjaDataType>(
+            PoeNinjaData.FILE_NAME,
+        );
+        this._fileManager.init({} as PoeNinjaDataType);
     }
 
-    init(): void {
-        this.#fileManager.init({} as PoeNinjaDataType);
-    }
-    getKeyData<T extends CategoryType>(
+    async getKeyData<T extends CategoryType>(
         key: T,
-    ): CategoryDataType<T> | undefined {
-        const data = this.#fileManager.loadFile();
-        return data[key];
+    ): Promise<CategoryDataType<T> | undefined> {
+        const data = await this._fileManager.loadFile();
+        if (data) {
+            return data[key];
+        }
+        return undefined;
     }
-    getAllData(): PoeNinjaDataType {
-        return this.#fileManager.loadFile();
+    async getAllData(): Promise<PoeNinjaDataType | undefined> {
+        return await this._fileManager.loadFile();
     }
 
-    async updateNinjaData(leagueName: string): Promise<void> {
-        const data = await this.#ninjaApi.getAllNinjaData(leagueName);
-        this.#fileManager.saveFile(data);
+    public async updateData(leagueName: string): Promise<void> {
+        const data = await this._ninjaApi.getAllNinjaData(leagueName);
+        await this._fileManager.saveFile(data);
     }
-    #findItemIfHaveCategory(
+
+    private async _findItemIfHaveCategory(
         itemName: string,
         categories: CategoryType[],
-    ): FindItemInNinjaType | undefined {
+    ): Promise<FindItemInNinjaType | undefined> {
         for (const key of categories) {
-            const items = this.getKeyData(key);
+            const items = await this.getKeyData(key);
             if (!items) continue;
 
-            const item = this.#findItem(items, itemName);
+            const item = this._findItem(items, itemName);
             if (item === undefined) {
                 continue;
             }
-            const res = this.#createFindObject(key, item, items);
+            const res = this._createFindObject(key, item, items);
             return res;
         }
         return undefined;
     }
-    #createFindObject<K extends CategoryType>(
+    private _createFindObject<K extends CategoryType>(
         key: CategoryType,
         item: ItemNinjaType | CurrencyNinjaType,
         items: CategoryDataType<K>,
@@ -92,7 +94,8 @@ export class PoeNinjaData {
         }
         return undefined;
     }
-    #findItem(
+
+    private _findItem(
         items: PoeNinjaCurrencyResponseType | PoeNinjaItemResponseType,
         itemName: string,
     ): ItemNinjaType | CurrencyNinjaType | undefined {
@@ -110,28 +113,30 @@ export class PoeNinjaData {
         });
     }
 
-    #findItemHaveOnlyString(itemName: string): FindItemInNinjaType | undefined {
+    private async _findItemHaveOnlyString(
+        itemName: string,
+    ): Promise<FindItemInNinjaType | undefined> {
         for (const key of ALL_CATEGORY) {
-            const items = this.getKeyData(key);
+            const items = await this.getKeyData(key);
             if (!items) continue;
-            const item = this.#findItem(items, itemName);
+            const item = this._findItem(items, itemName);
             if (item === undefined) {
                 continue;
             }
-            const res = this.#createFindObject(key, item, items);
+            const res = this._createFindObject(key, item, items);
             return res;
         }
         return undefined;
     }
 
-    findItem(
+    async findItem(
         itemName: string,
         categories?: CategoryType[],
-    ): FindItemInNinjaType | undefined {
+    ): Promise<FindItemInNinjaType | undefined> {
         if (categories !== undefined) {
-            return this.#findItemIfHaveCategory(itemName, categories);
+            return this._findItemIfHaveCategory(itemName, categories);
         }
-        return this.#findItemHaveOnlyString(itemName);
+        return this._findItemHaveOnlyString(itemName);
     }
 }
 

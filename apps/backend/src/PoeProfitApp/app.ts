@@ -1,181 +1,224 @@
-import fs from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
-import { LEAGUES_NAMES, PoeTradeFetch } from "poe-trade-fetch";
-import CurrencyPriceFinder from "./currency/currencyPriceFinder.js";
-import { GlobalSettings } from "./globalSettings/globalSettingsFileManager.js";
-import { FileManager } from "./helpers/fileManager/fileManager.js";
-import logger from "./helpers/logger.js";
-import { PoeNinjaApi } from "./poeNinja/poeNinjaApi.js";
-import { PoeNinjaData } from "./poeNinja/poeNinjaData.js";
-import { Updater } from "./updater.js";
+// import fs from "node:fs";
+// import { dirname, join } from "node:path";
+// import { fileURLToPath } from "node:url";
+// import { LEAGUES_NAMES, PoeTradeFetch } from "poe-trade-fetch";
+// import type { CoreSettings } from "./CoreSettings/coreSettings.js";
+// import { GlobalSettings } from "./CoreSettings/coreSettingsFileManager.js";
+// import CurrencyPriceFinder from "./currency/currencyPriceFinder.js";
+// import { FileManager } from "./helpers/fileManager/fileManager.js";
+// import logger from "./helpers/logger.js";
+// import { STATUS_CODE } from "./helpers/utils.js";
+// import { PluginSettings } from "./pluginSettings.js";
+// import { PoeNinjaApi } from "./poeNinja/poeNinjaApi.js";
+// import { PoeNinjaData } from "./poeNinja/poeNinjaData.js";
+// import { Updater } from "./updater.js";
 
-export interface Plugin {
-    active: boolean;
-    name: string;
-    id: number;
-    updater: Updater;
-}
+// export interface Plugin {
+//     active: boolean;
+//     name: string;
+//     id: number;
+//     updater: Updater;
+// }
+// class PluginBridge {
+//     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+//     private methods = new Map<string, (...args: any[]) => any>();
 
-export class PoeProfitApp {
-    isInitApp = false;
+//     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+//     getMethod<T extends (...args: any[]) => any>(name: string): T | null {
+//         const result = this.methods.get(name);
+//         return result as T | null;
+//     } // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+//     saveMethod(name: string, method: (...args: any[]) => any): void {
+//         this.methods.set(name, method);
+//     }
+// }
 
-    #plugins: Plugin[] = [];
+// export class PoeProfitApp {
+//     #settings: CoreSettings;
 
-    #poeTradeFetch: PoeTradeFetch;
+//     ini = false;
 
-    #updateCode = 0;
+//     #plugins: Updater[] = [];
 
-    #poeNinjaData: PoeNinjaData;
+//     #poeTradeFetch: PoeTradeFetch;
 
-    currency: CurrencyPriceFinder;
+//     #updateCode = 0;
 
-    globalSettings: GlobalSettings;
+//     #poeNinjaData: PoeNinjaData;
 
-    #changeCode(code: number) {
-        this.#updateCode = code;
-    }
+//     currency: CurrencyPriceFinder;
 
-    constructor() {
-        this.globalSettings = GlobalSettings.getInstance();
-        this.#poeTradeFetch = PoeTradeFetch.getInstance({
-            userAgent: "poeProfitApp",
-            leagueName: LEAGUES_NAMES.Current,
-            realm: "pc",
-        });
-        this.currency = new CurrencyPriceFinder(this.#poeTradeFetch);
-        this.#poeNinjaData = new PoeNinjaData(
-            new PoeNinjaApi(),
-            new FileManager("ninjaData.json"),
-        );
-    }
+//     globalSettings: GlobalSettings;
 
-    static countInstance = 0;
+//     #changeCode(code: number) {
+//         this.#updateCode = code;
+//     }
 
-    getAllProfitData(): Record<string, unknown> {
-        const data: Record<string, unknown> = {};
-        for (const plugin of this.#plugins) {
-            data[plugin.name] = plugin.updater.getAllData();
-        }
-        return data;
-    }
-    async init(): Promise<void> {
-        if (this.isInitApp) return;
+//     constructor() {
+//         this.globalSettings = new GlobalSettings();
+//         this.#poeTradeFetch = PoeTradeFetch.getInstance({
+//             userAgent: "poeProfitApp",
+//             leagueName: LEAGUES_NAMES.Current,
+//             realm: "pc",
+//             useRateLimitDelay: true,
+//         });
+//         this.currency = new CurrencyPriceFinder(this.#poeTradeFetch);
+//         this.#poeNinjaData = new PoeNinjaData(
+//             new PoeNinjaApi(),
+//             new FileManager("ninjaData.json"),
+//         );
+//     }
 
-        this.globalSettings.init();
-        await this.#poeTradeFetch.updateLeagueName();
-        logger.info(`Current leagueName: ${this.#poeTradeFetch.leagueName}`);
-        this.#poeNinjaData.init();
-        Updater.init(
-            this.globalSettings,
-            this.#poeNinjaData,
-            this.#poeTradeFetch,
-        );
+//     static countInstance = 0;
 
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = dirname(__filename);
-        const pluginDir = join(__dirname, "plugins");
-        await this.#loadPlugins(pluginDir);
+//     getAllProfitData(): Record<string, unknown> {
+//         const data: Record<string, unknown> = {};
+//         for (const plugin of this.#plugins) {
+//             data[plugin.name] = plugin.getAllData();
+//         }
+//         return data;
+//     }
+//     async init(): Promise<void> {
+//         if (this.isInitApp) return;
 
-        await Promise.all(this.#plugins.map((plugin) => plugin.updater.init()));
+//         GlobalSettings.init();
+//         await this.#poeTradeFetch.updateLeagueName();
+//         logger.info(`Current leagueName: ${this.#poeTradeFetch.leagueName}`);
+//         this.#poeNinjaData.init();
+//         Updater.init(
+//             this.globalSettings,
+//             this.#poeNinjaData,
+//             this.#poeTradeFetch,
+//         );
 
-        this.isInitApp = true;
-        logger.info("Initial app success.");
-    }
+//         await this.#newLoadPlugins();
 
-    async #loadPlugins(dir: string): Promise<void> {
-        const files = fs.readdirSync(dir);
-        // Loop over each file
-        for (const [i, file] of files.entries()) {
-            // Get the full path of the file
-            const filePath = join(dir, file);
+//         await Promise.all(this.#plugins.map((plugin) => plugin.init()));
 
-            // Check if the file is a directory
-            if (fs.statSync(filePath).isDirectory()) {
-                // Recursively load plugins in the directory
-                await this.#loadPlugins(filePath);
-            } else if (
-                filePath.endsWith("updater.js") ||
-                filePath.endsWith("updater.ts")
-            ) {
-                // Dynamically import the module
-                const filePathUrl = new URL(`file://${filePath}`);
-                const PluginModule = (await import(filePathUrl.toString())) as {
-                    default: new () => Updater;
-                };
-                const pluginInstance = new PluginModule.default();
-                const pluginsSettings =
-                    this.globalSettings.settingsCash?.plugins?.find(
-                        (el) => el.name === pluginInstance.name,
-                    );
-                if (!pluginsSettings) {
-                    this.globalSettings.mutate({
-                        ...this.globalSettings.settingsCash,
-                        plugins: [
-                            ...(this.globalSettings.settingsCash?.plugins ??
-                                []),
-                            { active: true, name: pluginInstance.name },
-                        ],
-                    });
-                }
-                const active = pluginsSettings?.active ?? true;
+//         this.isInitApp = true;
+//         logger.info("Initial app success.");
+//     }
 
-                this.#plugins.push({
-                    active: active,
-                    id: i,
-                    name: pluginInstance.name,
-                    updater: pluginInstance,
-                });
-                logger.info(`Plugin ${pluginInstance.name} loaded.`);
-            }
-        }
-    }
-    async start(): Promise<void> {
-        if (!this.isInitApp) {
-            await this.init();
-        }
-        this.#changeCode(0);
-        logger.info("Start process update data.");
+//     async #newLoadPlugins(): Promise<void> {
+//         const updaterFileName =
+//             process.env.NODE_ENV === "production" ? "updater.js" : "updater.ts";
+//         const settingsFileName =
+//             process.env.NODE_ENV === "production"
+//                 ? "settings.js"
+//                 : "settings.ts";
+//         const __filename = fileURLToPath(import.meta.url);
+//         const __dirname = dirname(__filename);
+//         const pluginDir = join(__dirname, "plugins");
+//         const files = fs.readdirSync(pluginDir).filter((x) => x !== "default");
 
-        while (this.#updateCode === 0) {
-            const activePlugins = this.#plugins.filter((el) => el.active);
-            if (activePlugins.length === 0) {
-                this.#restart(5);
-                break;
-            }
-            try {
-                await this.#poeNinjaData.updateNinjaData(
-                    this.#poeTradeFetch.leagueName,
-                );
-                await this.#poeTradeFetch.updateConfig();
-                await this.#updateCurrencyPrice();
-                for (const plugin of activePlugins) {
-                    logger.info(`${plugin.name} START update`);
-                    await plugin.updater.update();
-                    logger.info(`${plugin.name} END update`);
-                }
-            } catch (error) {
-                logger.warn("Stop process update data.");
-                if (error === 3) {
-                    this.#restart(30);
-                } else {
-                    this.#restart(0);
-                }
-                break;
-            }
-        }
-    }
+//         for (const file of files) {
+//             const pluginFolder = join(pluginDir, file);
+//             const updaterPath = join(pluginFolder, updaterFileName);
+//             const settingsPath = join(pluginFolder, settingsFileName);
+//             if (fs.statSync(pluginFolder).isDirectory()) {
+//                 if (!fs.existsSync(updaterPath)) {
+//                     continue;
+//                 }
+//                 const updaterPathUrl = new URL(`file://${updaterPath}`);
+//                 const pluginModule = await import(updaterPathUrl.toString());
+//                 let pluginInstance: Updater | undefined;
 
-    #restart(timeInMin = 30): void {
-        this.#changeCode(1);
-        logger.info(`Restart after ${timeInMin} min.`);
-        const time = timeInMin * 60000;
-        setTimeout(() => {
-            void this.start();
-        }, time);
-    }
+//                 for (const someElement of pluginModule.entries()) {
+//                     if (someElement instanceof Updater) {
+//                         const updater =
+//                             someElement as unknown as new () => Updater;
+//                         pluginInstance = new updater();
+//                         break;
+//                     }
+//                 }
 
-    async #updateCurrencyPrice() {
-        await this.currency.update();
-    }
-}
+//                 if (pluginInstance === undefined) {
+//                     continue;
+//                 }
+//                 let pluginSetting: PluginSettings;
+//                 if (fs.existsSync(settingsPath)) {
+//                     const settingsPathUrl = new URL(`file://${settingsPath}`);
+//                     const settingsModule = await import(
+//                         settingsPathUrl.toString()
+//                     );
+//                     for (const someElement of settingsModule.entries()) {
+//                         if (someElement instanceof PluginSettings) {
+//                             const pluginSetting =
+//                                 someElement as unknown as new () => PluginSettings;
+//                             break;
+//                         }
+//                     }
+//                 }
+
+//                 const globalSettings = this.globalSettings.getSettings();
+//                 const oldPluginSettings =
+//                     globalSettings.plugins[pluginInstance.name];
+
+//                 if (oldPluginSettings) {
+//                     Object.assign(pluginSetting, oldPluginSettings);
+//                 }
+
+//                 if (!oldPluginSettings) {
+//                     globalSettings.plugins[pluginInstance.name] =
+//                         pluginInstance.settings;
+//                     this.globalSettings.mutate(globalSettings);
+//                 }
+
+//                 this.#plugins.push(pluginInstance);
+//                 logger.info(`Plugin ${pluginInstance.name} loaded.`);
+//             }
+//         }
+//     }
+
+//     async start(): Promise<void> {
+//         if (!this.isInitApp) {
+//             await this.init();
+//         }
+//         this.#changeCode(0);
+//         logger.info("Start process update data.");
+
+//         while (this.#updateCode === 0) {
+//             const activePlugins = this.#plugins.filter(
+//                 (el) => el.settings.enable,
+//             );
+//             if (activePlugins.length === 0) {
+//                 this.#restart(5);
+//                 break;
+//             }
+
+//             try {
+//                 await this.#poeNinjaData.updateData(
+//                     this.#poeTradeFetch.leagueName,
+//                 );
+//                 await this.#poeTradeFetch.updateConfig();
+//                 const status = await this.currency.update();
+//                 if (status === STATUS_CODE.TRADE_LIMIT) {
+//                     this.#restart(30);
+//                     break;
+//                 }
+//                 for (const plugin of activePlugins) {
+//                     logger.info(`${plugin.name} START update`);
+//                     const status = await plugin.update();
+//                     if (STATUS_CODE.TRADE_LIMIT === status) {
+//                         this.#restart(30);
+//                         break;
+//                     }
+//                     logger.info(`${plugin.name} END update`);
+//                 }
+//             } catch (error) {
+//                 this.#restart(0);
+//                 break;
+//             }
+//         }
+//     }
+
+//     #restart(timeInMin = 30): void {
+//         this.#changeCode(1);
+//         this.isInitApp = false;
+//         logger.info(`Restart after ${timeInMin} min.`);
+//         const time = timeInMin * 60000;
+//         setTimeout(() => {
+//             void this.start();
+//         }, time);
+//     }
+// }

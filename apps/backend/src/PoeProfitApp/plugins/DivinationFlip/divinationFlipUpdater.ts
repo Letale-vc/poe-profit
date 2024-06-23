@@ -3,12 +3,12 @@ import type { RequestBodyType } from "poe-trade-fetch";
 import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchangeRequestBodyType";
 import { PoeTradeFetchError } from "poe-trade-fetch/poeTradeFetchError";
 import { FileManager } from "../../helpers/fileManager/fileManager.js";
-import logger from "../../helpers/logger.js";
 import {
     calculateExchangePrice,
     calculatePrice,
 } from "../../helpers/priceCalculation/priceCalculation.js";
 import { STATUS_CODE } from "../../helpers/utils.js";
+import type { ItemSearcher } from "../../itemSearch/itemSearcher.js";
 import type { ItemModifierType } from "../../poeNinja/types/PoeNinjaResponseTypes.js";
 import { Updater } from "../../updater.js";
 import { DataManager } from "./dataManager.js";
@@ -16,55 +16,62 @@ import {
     type ProfitDivCardType,
     ProfitableCardFinder,
 } from "./profitableDivinationFinder.js";
+import type { DivinationFlipSettings } from "./settings.js";
 import type { DivProfitObject, ItemType } from "./types/HelpersType.js";
 
 export const DIVINATION_FLIP_DATA_FILE_NAME = "DivinationFlipData.json";
-export default class DivinationFlipDataUpdater extends Updater {
-    name;
-    #fileManager: FileManager<Record<string, DivProfitObject>>;
-    dataManager: DataManager;
-    #profitableDivFinder: ProfitableCardFinder;
 
-    constructor() {
-        super();
-        this.#fileManager = new FileManager<Record<string, DivProfitObject>>(
+export default class DivinationFlipUpdater extends Updater<DivinationFlipSettings> {
+    name = "Divination Flip";
+    private _fileManager: FileManager<Record<string, DivProfitObject>>;
+    private _dataManager: DataManager;
+    private _profitableDivFinder: ProfitableCardFinder;
+    private _poeTradeItemSearch: ItemSearcher;
+
+    constructor(settingsConstructor: new () => DivinationFlipSettings) {
+        super(settingsConstructor);
+        this._fileManager = new FileManager<Record<string, DivProfitObject>>(
             DIVINATION_FLIP_DATA_FILE_NAME,
         );
-        this.dataManager = new DataManager(this.#fileManager);
-        this.#profitableDivFinder = new ProfitableCardFinder(this.poeNinjaData);
-        this.name = "Divination Flip";
+        this._dataManager = new DataManager(this._fileManager);
+        this._poeTradeItemSearch = this.poeDataAggregator.poeTradeItemSearch;
+        this._profitableDivFinder = new ProfitableCardFinder(
+            this.poeDataAggregator.poeNinjaData,
+        );
     }
 
-    init() {
-        this.#fileManager.init({});
+    init(): boolean {
+        this._fileManager.init({});
+        return true;
     }
 
-    getAllData(): Record<string, DivProfitObject> {
-        return this.dataManager.getData();
+    async getAllData(): Promise<Record<string, DivProfitObject>> {
+        return this._dataManager.getData();
     }
 
     async update(): Promise<STATUS_CODE> {
-        const divProfitList = this.#profitableDivFinder.filterDivination();
+        const divProfitList =
+            await this._profitableDivFinder.filterDivination();
 
         if (divProfitList.length === 0) return STATUS_CODE.OK;
 
         if (divProfitList !== undefined) {
-            this.#removeObjectWithOutRequest(divProfitList);
+            this._removeObjectWithOutRequest(divProfitList);
         }
 
         for (const val of divProfitList) {
             try {
-                const itemBuying = await this.#getItemBuying(val);
+                const itemBuying = await this._getItemBuying(val);
                 if (itemBuying === undefined) continue;
-                const itemSelling = await this.#getItemSelling(val);
+                const itemSelling = await this._getItemSelling(val);
                 if (itemSelling === undefined) continue;
 
-                const profitObject = this.#calculateProfit(
+                const profitObject = this._calculateProfit(
                     itemBuying,
                     itemSelling,
                     val,
                 );
-                this.dataManager.update(profitObject);
+                this._dataManager.update(profitObject);
             } catch (error) {
                 if (error instanceof PoeTradeFetchError) {
                     return STATUS_CODE.TRADE_LIMIT;
@@ -74,7 +81,7 @@ export default class DivinationFlipDataUpdater extends Updater {
         }
         return STATUS_CODE.OK;
     }
-    #calculateProfit(
+    private _calculateProfit(
         itemBuying: ItemType,
         itemSelling: ItemType,
         profitReqObj: ProfitDivCardType,
@@ -98,7 +105,9 @@ export default class DivinationFlipDataUpdater extends Updater {
             profitPerTradeInDivine: _.round(profitPerTradeInDivine, 2),
         };
     }
-    #createItemBuyingQuery(profitReqObj: ProfitDivCardType): RequestBodyType {
+    private _createItemBuyingQuery(
+        profitReqObj: ProfitDivCardType,
+    ): RequestBodyType {
         const trade_filters = {
             disabled: false,
             filters: {
@@ -123,11 +132,11 @@ export default class DivinationFlipDataUpdater extends Updater {
         };
         return itemBuyingQuery;
     }
-    async #getItemBuying(
+    private async _getItemBuying(
         profitReqObj: ProfitDivCardType,
     ): Promise<ItemType | undefined> {
-        const itemBuyingQuery = this.#createItemBuyingQuery(profitReqObj);
-        const itemBuyRes = await this.itemSearcher.fetchItemDetails(
+        const itemBuyingQuery = this._createItemBuyingQuery(profitReqObj);
+        const itemBuyRes = await this._poeTradeItemSearch.fetchItemDetails(
             itemBuyingQuery,
             2,
             3,
@@ -136,7 +145,8 @@ export default class DivinationFlipDataUpdater extends Updater {
         if (itemBuyRes === undefined || itemBuyRes.total === 0)
             return undefined;
         const price = calculatePrice(itemBuyRes.result, 1);
-        const tradeLink = this.itemSearcher.getTradeLink(itemBuyingQuery);
+        const tradeLink =
+            this._poeTradeItemSearch.getTradeLink(itemBuyingQuery);
         return {
             tradeLink: tradeLink,
             icon: profitReqObj.divination.icon,
@@ -146,7 +156,7 @@ export default class DivinationFlipDataUpdater extends Updater {
             ...price,
         };
     }
-    #findPriceMultiplier(explicitMods: ItemModifierType[]) {
+    private _findPriceMultiplier(explicitMods: ItemModifierType[]) {
         if (explicitMods && explicitMods.length > 0) {
             const str = explicitMods[0].text;
             const match = str?.match(/\d+x/i);
@@ -157,7 +167,8 @@ export default class DivinationFlipDataUpdater extends Updater {
         }
         return 1;
     }
-    #createItemSellingQuery<
+
+    private _createItemSellingQuery<
         T extends TradeExchangeRequestType | RequestBodyType,
     >(profitReqObj: ProfitDivCardType): T {
         if (profitReqObj.itemTake.tradeId !== undefined) {
@@ -218,27 +229,24 @@ export default class DivinationFlipDataUpdater extends Updater {
         };
         return req as T;
     }
-    async #getItemSelling(
+    private async _getItemSelling(
         profitReqObj: ProfitDivCardType,
     ): Promise<undefined | ItemType> {
-        const sellingPriceMultiplier = this.#findPriceMultiplier(
+        const sellingPriceMultiplier = this._findPriceMultiplier(
             profitReqObj.divination.explicitModifiers,
         );
         if (profitReqObj.itemTake.tradeId) {
             const req =
-                this.#createItemSellingQuery<TradeExchangeRequestType>(
+                this._createItemSellingQuery<TradeExchangeRequestType>(
                     profitReqObj,
                 );
-            const res = await this.itemSearcher.fetchExchangeData(req);
+            const res = await this._poeTradeItemSearch.fetchExchangeData(req);
             if (res === undefined || res.total === 0) return undefined;
             const itemSellPrice = calculateExchangePrice(
                 res,
                 sellingPriceMultiplier,
             );
-            const tradeLink = new URL(
-                `https://www.pathofexile.com/trade/search/${this.poeTradeFetch.leagueName}`,
-            );
-            tradeLink.searchParams.append("q", JSON.stringify(req));
+            const tradeLink = this._poeTradeItemSearch.getTradeLink(req);
             return {
                 tradeLink: tradeLink.toString(),
                 icon: profitReqObj.itemTake.icon,
@@ -248,16 +256,16 @@ export default class DivinationFlipDataUpdater extends Updater {
                 ...itemSellPrice,
             };
         }
-        const req = this.#createItemSellingQuery<RequestBodyType>(profitReqObj);
+        const req = this._createItemSellingQuery<RequestBodyType>(profitReqObj);
 
-        const res = await this.itemSearcher.fetchItemDetails(req, 2, 3);
+        const res = await this._poeTradeItemSearch.fetchItemDetails(req, 2, 3);
         if (res === undefined || res.total === 0) return undefined;
         const itemSellPrice = calculatePrice(
             res.result,
             sellingPriceMultiplier,
         );
         return {
-            tradeLink: this.itemSearcher.getTradeLink(req),
+            tradeLink: this._poeTradeItemSearch.getTradeLink(req),
             icon: profitReqObj.itemTake.icon,
             name: profitReqObj.itemTake.name,
             stackSize: profitReqObj.itemTake.stackSize ?? 1,
@@ -266,11 +274,11 @@ export default class DivinationFlipDataUpdater extends Updater {
         };
     }
 
-    #removeObjectWithOutRequest(profitDivList: ProfitDivCardType[]) {
-        const actualData = this.dataManager.getData();
+    private _removeObjectWithOutRequest(profitDivList: ProfitDivCardType[]) {
+        const actualData = this._dataManager.getData();
         for (const el of profitDivList) {
             if (!(el.id in actualData)) {
-                this.dataManager.remove(el.id);
+                this._dataManager.remove(el.id);
             }
         }
     }

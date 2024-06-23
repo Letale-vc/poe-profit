@@ -15,7 +15,7 @@ describe("WorkingWithFile", () => {
         await fsPromises.unlink(originalFilePath); // Видаляємо тестовий файл
         jest.clearAllMocks();
     });
-    const workingWithFile = new FileManager("test.json");
+    const fileManager = new FileManager("test.json");
 
     describe("loadFile", () => {
         it("should load file and parse its contents", async () => {
@@ -24,7 +24,7 @@ describe("WorkingWithFile", () => {
                 JSON.stringify(testData),
             );
 
-            const contents = await workingWithFile.loadFile();
+            const contents = await fileManager.loadFile();
             expect(contents).toBeDefined();
         });
     });
@@ -35,7 +35,7 @@ describe("WorkingWithFile", () => {
                 .spyOn(fsPromises, "writeFile")
                 .mockImplementation();
             const testData = [{ foo: "bar" }];
-            workingWithFile.saveFile(testData);
+            fileManager.saveFile(testData);
             expect(writeFileMock).toHaveBeenCalledWith(
                 originalFilePath,
                 JSON.stringify(testData, null, 4),
@@ -46,7 +46,7 @@ describe("WorkingWithFile", () => {
     describe("fileInfo", () => {
         it("should return file information", () => {
             jest.spyOn(fsPromises, "stat").mockResolvedValue({} as Stats);
-            const fileInfo = workingWithFile.fileInfo();
+            const fileInfo = fileManager.fileInfo();
             expect(fileInfo).toBeDefined();
         });
     });
