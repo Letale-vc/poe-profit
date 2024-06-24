@@ -1,12 +1,13 @@
-import type { FileManager } from "../../helpers/fileManager/fileManager.js";
 import type { IDisposable } from "../../interface/IDisposable.js";
-import type { GemsExpProfit } from "./types/HelpersTypes.js";
+import type { IFileManager } from "../../interface/IFileManager.js";
+import type { GemsExpProfit } from "./Types/HelpersTypes.js";
 
 export class DataManager implements IDisposable {
     private _fileManager;
     private _dataCash: Record<string, GemsExpProfit> | null = null;
     private _lastUpdateTime: Date | null = null;
-    constructor(fileManager: FileManager<Record<string, GemsExpProfit>>) {
+
+    constructor(fileManager: IFileManager<Record<string, GemsExpProfit>>) {
         this._fileManager = fileManager;
     }
 
@@ -28,9 +29,9 @@ export class DataManager implements IDisposable {
         }
     }
 
-    update(updObj: GemsExpProfit): void {
+  async  update(updObj: GemsExpProfit): Promise<void> {
         if (this._dataCash === null) {
-            this.loadData();
+            await this.loadData();
         }
 
         if (this._dataCash !== null) {
@@ -38,9 +39,9 @@ export class DataManager implements IDisposable {
             this._lastUpdateTime = new Date();
         }
     }
-    add(newObj: GemsExpProfit) {
+    async  add(newObj: GemsExpProfit) {
         if (this._dataCash === null) {
-            this.loadData();
+            await  this.loadData();
         }
 
         if (this._dataCash !== null) {
@@ -49,9 +50,9 @@ export class DataManager implements IDisposable {
         }
     }
 
-    remove(id: string): void {
+    async remove(id: string): Promise<void> {
         if (this._dataCash === null) {
-            this.loadData();
+            await    this.loadData();
         }
 
         if (this._dataCash !== null && id in this._dataCash) {

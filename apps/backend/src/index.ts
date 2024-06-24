@@ -28,11 +28,13 @@ await server.register(cors, {
 });
 
 server.get("/api/data", async (_request, reply) => {
-    await reply.send(poeProfitApp.getAllProfitData());
+    const data = await poeProfitApp.getAllProfitData();
+    await reply.send(data);
 });
 
+const port = Number.parseInt(process.env.PORT ?? "3000");
 try {
-    await server.listen({ port: 8321, host: "0.0.0.0" });
+    await server.listen({ port: port, host: "0.0.0.0" });
 } catch (err) {
     server.log.error(err);
     process.exit(1);

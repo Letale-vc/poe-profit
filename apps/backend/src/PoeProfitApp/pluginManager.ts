@@ -1,12 +1,17 @@
-import fsAsync from "node:fs/promises";
+import fs from "node:fs";
 import path from "node:path";
 import { Logger } from "./helpers/logger.js";
+import type { IPlugin } from "./interface/IPlugin.js";
 import type { ISettings } from "./interface/ISettings.js";
 import { PluginWrapper } from "./pluginWrapper.js";
-import type { PoeDataAggregator } from "./poeDataAggregator.js";
-import type { SettingsContainer } from "./settingsContainer.js";
-import type { SettingsWrapper } from "./settingsWrapper.js";
-import type { Updater } from "./updater.js";
+
+type PluginClass = {
+    new (settingsClass: SettingsClass): IPlugin;
+};
+
+type SettingsClass = {
+    new (): ISettings;
+};
 
 export class PluginManager {
     private readonly pluginsDirName = "plugins";
@@ -14,118 +19,134 @@ export class PluginManager {
         import.meta.dirname,
         this.pluginsDirName,
     );
-    private _poeDataAggregator: PoeDataAggregator;
-    private _settingsContainer: SettingsContainer;
     public allPluginsLoaded: boolean;
     public plugins = new Array<PluginWrapper>();
 
-    constructor(
-        settingsContainer: SettingsContainer,
-        poeDataAggregator: PoeDataAggregator,
-    ) {
-        this._poeDataAggregator = poeDataAggregator;
-        this._settingsContainer = settingsContainer;
+    constructor() {
         this.allPluginsLoaded = false;
     }
 
     async init(): Promise<void> {
         try {
-            const pluginsDirNames = await this._searchPlugins();
+            const pluginsDirNames = this._searchPluginsFolders();
 
             for (const dirName of pluginsDirNames) {
                 const pluginDirPath = path.join(this.pluginsDirPath, dirName);
                 await this.tryLoadPlugin(pluginDirPath);
             }
+
             Logger.info("All plugins loaded.");
             this.allPluginsLoaded = true;
+            await this._initPlugins();
+            Logger.info("All plugins initialized.");
         } catch (error) {
             Logger.error("Can't load plugins.");
             this.allPluginsLoaded = false;
         }
     }
+    private _searchPluginsFolders(): string[] {
+        return fs.readdirSync(this.pluginsDirPath);
+    }
 
-    private async _searchPlugins(): Promise<string[]> {
-        return fsAsync.readdir(this.pluginsDirPath);
+    private _getPluginFiles(pluginDirPath: string): string[] {
+        return fs
+            .readdirSync(pluginDirPath)
+            .filter(
+                (x) =>
+                    !x.endsWith("spec.ts") &&
+                    (x.endsWith(".ts") || x.endsWith(".js")),
+            );
+    }
+
+    private async _findPluginClasses(
+        files: string[],
+        pluginDirPath: string,
+    ): Promise<{
+        classPlugin: PluginClass | null;
+        pluginSettingsClass: SettingsClass | null;
+    }> {
+        let classPlugin: PluginClass | null = null;
+        let pluginSettingsClass: SettingsClass | null = null;
+
+        for (const file of files) {
+            const filePath = path.join(pluginDirPath, file);
+            const pluginUrl = new URL(`file://${filePath}`);
+            const pluginModule = await import(pluginUrl.toString());
+
+            for (const someElement of Object.values(pluginModule)) {
+                if (classPlugin && pluginSettingsClass) {
+                    break;
+                }
+
+                if (typeof someElement !== "function") {
+                    continue;
+                }
+
+                if ("isPluginClass" in someElement) {
+                    Logger.debug(`Found plugin class in module ${pluginUrl}`);
+                    classPlugin = someElement as unknown as PluginClass;
+                } else if ("isSettingsClass" in someElement) {
+                    Logger.debug(`Found settings class in module ${pluginUrl}`);
+                    pluginSettingsClass =
+                        someElement as unknown as SettingsClass;
+                }
+            }
+        }
+        return { classPlugin, pluginSettingsClass };
     }
 
     private async tryLoadPlugin(pluginDirPath: string): Promise<void> {
         try {
-            const files = (await fsAsync.readdir(pluginDirPath)).filter(
-                (x) => x.endsWith(".ts") || x.endsWith(".js"),
-            );
-
-            let classPlugin: {
-                new (_: { new (): SettingsWrapper }): Updater;
-            } | null = null;
-            let pluginSettingsClass: { new (): SettingsWrapper } | null = null;
-
-            for (const file of files) {
-                const filePath = path.join(pluginDirPath, file);
-                const pluginUrl = new URL(`file://${filePath}`);
-                const pluginModule = await import(pluginUrl.toString());
-                for (const [_, someElement] of Object.entries(pluginModule)) {
-                    if (classPlugin && pluginSettingsClass) {
-                        break;
-                    }
-
-                    if (
-                        typeof someElement === "function" &&
-                        "isPluginClass" in someElement
-                    ) {
-                        Logger.debug(
-                            `Found plugin class in module ${pluginUrl}`,
-                        );
-                        classPlugin = someElement as unknown as {
-                            new (_: {
-                                new (): ISettings;
-                            }): Updater;
-                        };
-                    }
-                    if (
-                        typeof someElement === "function" &&
-                        "isSettingsClass" in someElement
-                    ) {
-                        Logger.debug(
-                            `Found settings class in module ${pluginUrl}`,
-                        );
-                        pluginSettingsClass = someElement as unknown as {
-                            new (): SettingsWrapper;
-                        };
-                    }
-                    if (classPlugin && pluginSettingsClass) {
-                        break;
-                    }
-                }
-            }
-
-            if (!classPlugin) {
-                Logger.error(`Not found Plugin class in ${pluginDirPath}`);
+            const files = this._getPluginFiles(pluginDirPath);
+            const { classPlugin, pluginSettingsClass } =
+                await this._findPluginClasses(files, pluginDirPath);
+            if (!classPlugin || !pluginSettingsClass) {
+                Logger.debug(`Not found Plugin in ${pluginDirPath}`);
                 return;
             }
-            if (!pluginSettingsClass) {
-                Logger.error(`Not found settings class in ${pluginDirPath}.`);
-                return;
-            }
-
-            const pluginInstance = new classPlugin(pluginSettingsClass);
-            const pluginWrapper = new PluginWrapper(pluginInstance);
-            pluginWrapper.loadSettings();
-            pluginWrapper.onLoad();
-            await pluginWrapper.init();
-            this.plugins.push(pluginWrapper);
-            Logger.info(`Plugin ${pluginInstance.name} loaded.`);
+            this._createPluginInstance(classPlugin, pluginSettingsClass);
         } catch (error) {
-            if (error instanceof Error) {
-                Logger.error(
-                    `Can't load plugin ${pluginDirPath} error: \n ${error.message}`,
-                );
-                Logger.error(error.stack?.toString() ?? "");
-            }
+            this._logPluginError(pluginDirPath, error);
         }
     }
-    closeAllPlugin(): void {
+    private async _initPlugins(): Promise<void> {
         for (const plugin of this.plugins) {
-            plugin.close();
+            await plugin.init();
+            Logger.info(`Plugin ${plugin.name} initialized.`);
         }
+    }
+
+    private _createPluginInstance(
+        classPlugin: PluginClass,
+        pluginSettingsClass: SettingsClass,
+    ): void {
+        const pluginInstance = new classPlugin(pluginSettingsClass);
+        const pluginWrapper = new PluginWrapper(pluginInstance);
+        pluginWrapper.loadSettings();
+        this.plugins.push(pluginWrapper);
+    }
+
+    private _logPluginError(pluginDirPath: string, error: unknown): void {
+        if (error instanceof Error) {
+            Logger.error(
+                `Can't load plugin ${pluginDirPath} error: \n ${error.message}`,
+            );
+            Logger.error(error.stack?.toString() ?? "");
+        }
+    }
+
+    async closeAllPlugin(): Promise<void> {
+        for (const plugin of this.plugins) {
+            await plugin.close();
+        }
+    }
+
+    async getAllPluginData(): Promise<Record<string, unknown>> {
+        const data: Record<string, unknown> = {};
+        for (const plugin of this.plugins) {
+            data[plugin.name] = await plugin.getData();
+        }
+        Logger.log.debug(data);
+        return data;
     }
 }

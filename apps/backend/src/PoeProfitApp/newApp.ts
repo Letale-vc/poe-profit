@@ -1,4 +1,4 @@
-import type { CoreSettings } from "./CoreSettings/coreSettings.js";
+import type { CoreSettings } from "./coreSettings.js";
 import { Logger } from "./helpers/logger.js";
 import { STATUS_CODE } from "./helpers/utils.js";
 import { PluginManager } from "./pluginManager.js";
@@ -28,10 +28,7 @@ export class PoeProfitApp {
             this._settings = new SettingsContainer();
             this.coreSettings = this._settings.coreSettings;
             this._poeDataAggregator = new PoeDataAggregator(this._settings);
-            this._pluginManager = new PluginManager(
-                this._settings,
-                this._poeDataAggregator,
-            );
+            this._pluginManager = new PluginManager();
         } catch (error) {
             Logger.error("Can't create PoeProfitApp instance.");
             throw error;
@@ -49,12 +46,8 @@ export class PoeProfitApp {
         Logger.info("Initial app success.");
     }
 
-    getAllProfitData(): Record<string, unknown> {
-        const data: Record<string, unknown> = {};
-        for (const plugin of this._pluginManager.plugins) {
-            data[plugin.name] = plugin;
-        }
-        return data;
+    async getAllProfitData(): Promise<Record<string, unknown>> {
+        return this._pluginManager.getAllPluginData();
     }
 
     async start(): Promise<void> {
@@ -72,7 +65,6 @@ export class PoeProfitApp {
 
             try {
                 await this._poeDataAggregator.update();
-
                 for (const plugin of activePlugins) {
                     Logger.info(`${plugin.name} START update`);
                     const status = await plugin.update();

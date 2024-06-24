@@ -10,9 +10,7 @@ export interface IPlugin extends IDisposable {
     _saveSettings(): void;
     name: string;
     init(): Promise<boolean> | boolean;
-    getAllData(): unknown;
+    getAllData(): Promise<unknown>;
     update(): Promise<STATUS_CODE>;
-    onClose(): void;
-    onUnload(): void;
-    onLoad(): void;
+    onClose(): Promise<void> | void;
 }

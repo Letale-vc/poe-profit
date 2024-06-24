@@ -17,25 +17,26 @@ export interface ItemSearchResult {
 }
 
 export class ItemSearcher {
-    #axiosOptions: AxiosRequestConfig = {};
-    #agent: HttpsProxyAgent<string> | undefined;
-    #poeTradeFetch: PoeTradeFetch;
-    #proxy: string | undefined;
-    constructor(poeTradeFetch: PoeTradeFetch) {
-        this.#poeTradeFetch = poeTradeFetch;
-        this.#proxy = process.env.PROXY ?? undefined;
+    private _axiosOptions: AxiosRequestConfig = {};
+    private _agent: HttpsProxyAgent<string> | undefined;
+    private _poeTradeFetch: PoeTradeFetch;
+    private _proxy: string | undefined;
 
-        if (this.#proxy && this.#agent === undefined) {
-            Logger.info(`Set proxy: ${this.#proxy}`);
-            this.#agent = new HttpsProxyAgent(`http://${this.#proxy}`);
-            this.#axiosOptions = Object.freeze({ httpsAgent: this.#agent });
-            Logger.info(`Set proxy agent: ${this.#proxy}`);
+    constructor(poeTradeFetch: PoeTradeFetch) {
+        this._poeTradeFetch = poeTradeFetch;
+        this._proxy = process.env.PROXY ?? undefined;
+
+        if (this._proxy && this._agent === undefined) {
+            Logger.info(`Set proxy: ${this._proxy}`);
+            this._agent = new HttpsProxyAgent(`http://${this._proxy}`);
+            this._axiosOptions = Object.freeze({ httpsAgent: this._agent });
+            Logger.info(`Set proxy agent: ${this._proxy}`);
         }
     }
 
     getTradeLink(requestQuery: RequestBodyType): string {
         const tradeLink = new URL(
-            `https://www.pathofexile.com/trade/search/${this.#poeTradeFetch.leagueName}`,
+            `https://www.pathofexile.com/trade/search/${this._poeTradeFetch.leagueName}`,
         );
         tradeLink.searchParams.append("q", JSON.stringify(requestQuery));
         return tradeLink.toString();
@@ -47,9 +48,9 @@ export class ItemSearcher {
         take = 3,
     ): Promise<ItemSearchResult | undefined> {
         try {
-            const firstResponse = await this.#poeTradeFetch.firsRequest(
+            const firstResponse = await this._poeTradeFetch.firsRequest(
                 requestQuery,
-                this.#axiosOptions,
+                this._axiosOptions,
             );
             const { id, result, total } = firstResponse;
 
@@ -62,10 +63,10 @@ export class ItemSearcher {
                 howManyItemsToSkip,
                 howMuchToTakeFromTheResult,
             );
-            const secondResponse = await this.#poeTradeFetch.secondRequest(
+            const secondResponse = await this._poeTradeFetch.secondRequest(
                 totalTakeResultArray,
                 id,
-                this.#axiosOptions,
+                this._axiosOptions,
             );
             return { result: secondResponse.result, id, total };
         } catch (error) {
@@ -77,21 +78,10 @@ export class ItemSearcher {
         query: TradeExchangeRequestType,
     ): Promise<ExchangeResponseType | undefined> {
         try {
-            const res = await this.#poeTradeFetch.exchangeRequest(query);
+            const res = await this._poeTradeFetch.exchangeRequest(query);
             return res;
         } catch (error) {
             return handleError(error);
-        }
-    }
-
-    #howManyItemsToSkipInTheList(totalList: number) {
-        switch (true) {
-            case totalList > 50 && totalList < 100:
-                return 3;
-            case totalList > 100:
-                return 5;
-            default:
-                return 0;
         }
     }
 }

@@ -11,12 +11,12 @@ import type {
 } from "../../itemSearch/itemSearcher.js";
 import { Updater } from "../../updater.js";
 import type { GemsExpSettings } from "./awakGemsExpSettings.js";
-import { DataManager } from "./dataManager.js";
+import { DataManager } from "./DataManager.js";
 import type {
     GemItemType,
     GemsExpProfit,
     RequestGemList,
-} from "./types/HelpersTypes.js";
+} from "./Types/HelpersTypes.js";
 
 export const AWAKENED_GEMS_EXP_DATA_FILE_NAME = "AwakenedGemsExp.json";
 export default class AwakenedGemsExpUpdater extends Updater<GemsExpSettings> {
@@ -67,7 +67,7 @@ export default class AwakenedGemsExpUpdater extends Updater<GemsExpSettings> {
                     continue;
                 }
                 const profit = this._createProfitObject(el, buying, selling);
-                this._dataManager.update(profit);
+                await this._dataManager.update(profit);
             } catch (error) {
                 if (error instanceof PoeTradeFetchError) {
                     return STATUS_CODE.TRADE_LIMIT;

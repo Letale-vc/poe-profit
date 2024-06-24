@@ -4,5 +4,6 @@ export const CURRENCY = [
     // "awakened-sextant",
     "chaos",
 ] as const;
-
 export type CurrencyTypes = (typeof CURRENCY)[number];
+
+

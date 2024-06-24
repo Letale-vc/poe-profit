@@ -1,13 +1,16 @@
-import type { FileManager } from "../../helpers/fileManager/fileManager.js";
+import { Logger } from "../../helpers/logger.js";
 import type { IDisposable } from "../../interface/IDisposable.js";
+import type { IFileManager } from "../../interface/IFileManager.js";
 import type { DivProfitObject } from "./types/HelpersType.js";
 
 export class DataManager implements IDisposable {
-    private _fileManager;
+    private readonly _fileManager: IFileManager<
+        Record<string, DivProfitObject>
+    >;
     private _dataCash: Record<string, DivProfitObject> | null = null;
     private _lastUpdateTime: Date | null = null;
 
-    constructor(fileManager: FileManager<Record<string, DivProfitObject>>) {
+    constructor(fileManager: IFileManager<Record<string, DivProfitObject>>) {
         this._fileManager = fileManager;
     }
 
@@ -29,9 +32,9 @@ export class DataManager implements IDisposable {
         return fileData !== undefined ? fileData : {};
     }
 
-    update(updObj: DivProfitObject): void {
+    async update(updObj: DivProfitObject): Promise<void> {
         if (this._dataCash === null) {
-            this.loadData();
+            await this.loadData();
         }
 
         if (this._dataCash !== null) {
@@ -39,20 +42,10 @@ export class DataManager implements IDisposable {
             this._lastUpdateTime = new Date();
         }
     }
-    add(newObj: DivProfitObject): void {
-        if (this._dataCash === null) {
-            this.loadData();
-        }
 
-        if (this._dataCash !== null) {
-            this._dataCash[newObj.id] = newObj;
-            this._lastUpdateTime = new Date();
-        }
-    }
-
-    remove(id: string): void {
+    async remove(id: string): Promise<void> {
         if (this._dataCash === null) {
-            this.loadData();
+            await this.loadData();
         }
 
         if (this._dataCash !== null && id in this._dataCash) {
@@ -61,9 +54,9 @@ export class DataManager implements IDisposable {
         }
     }
 
-    dispose(): void {
+    async dispose(): Promise<void> {
         if (this._dataCash !== null) {
-            this._fileManager.saveFile(this._dataCash);
+            await this._fileManager.saveFile(this._dataCash);
         }
         this._dataCash = null;
     }

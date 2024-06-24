@@ -2,10 +2,11 @@ import fs from "node:fs";
 import fsAsync from "node:fs/promises";
 import path from "node:path";
 import { Logger } from "../logger.js";
+import type { IFileManager } from "../../interface/IFileManager.js";
 
-export class FileManager<T> {
-    private _fileName: string;
-    private _pathFileFolder: string;
+export class FileManager<T> implements IFileManager<T>  {
+      private readonly _fileName: string;
+      private readonly _pathFileFolder: string;
 
     constructor(fileName: string) {
         this._fileName = fileName;
@@ -55,7 +56,5 @@ export class FileManager<T> {
         Logger.debug(`Save file:${this._pathFileFolder}`);
     }
 
-    fileInfo(): fs.Stats {
-        return fs.statSync(this._pathFileFolder);
-    }
+
 }

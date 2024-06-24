@@ -9,52 +9,22 @@ export class PluginWrapper {
     constructor(plugin: IPlugin) {
         this.plugin = plugin;
         this.name = plugin.name;
-        this.isEnable = plugin._settings.enable;
+        this.isEnable = false;
     }
 
-    async init(): Promise<void> {
+    async init(): Promise<boolean> {
         try {
-            if (!this.plugin._settings) {
-                throw new Error(
-                    `Cant load plugin ${this.plugin.name} because not have settings.`,
-                );
-            }
-            if (this.plugin.initialized) {
-                throw new Error(
-                    `Plugin ${this.plugin.name} already initialized.`,
-                );
-            }
-            // this.plugin._settings.subscribe((value) => {
-            //     try {
-            //         if (value && !this.plugin.initialized) {
-            //             this.plugin.init();
-            //         }
-            //         if (value && !this.plugin.initialized) {
-            //             this.plugin._settings.enable = false;
-            //         }
-            //     } catch (error) {
-            //         if (error instanceof Error) {
-            //             Logger.error(error.message);
-            //         } else {
-            //             Logger.error(`${this.plugin.name} unknown error.`);
-            //         }
-            //     }
-            // });
-
-            if (this.plugin._settings.enable) {
-                if (this.plugin.initialized) {
-                    throw new Error(
-                        `Plugin ${this.plugin.name} already initialize.`,
-                    );
-                }
-            }
             this.plugin.initialized = await this.plugin.init();
             this.isEnable = this.plugin._settings.enable;
             Logger.debug(`Plugin ${this.plugin.name} initialized.`);
+            return true;
         } catch (error) {
             if (error instanceof Error) {
-                Logger.error(error.message);
+                Logger.error(
+                    `Plugin ${this.plugin.name} not initialized. \n \tError: ${error.message}`,
+                );
             }
+            return false;
         }
     }
 
@@ -62,28 +32,23 @@ export class PluginWrapper {
         return await this.plugin.update();
     }
 
-    onLoad(): void {
-        this.plugin.onLoad();
-    }
-
     onClose(): void {
         this.plugin.onClose();
-    }
-
-    onUnload(): void {
-        this.plugin.onUnload();
     }
 
     loadSettings(): void {
         this.plugin._loadSettings();
     }
 
-    close(): void {
+    async getData(): Promise<unknown> {
+        return this.plugin.getAllData();
+    }
+
+    async close(): Promise<void> {
         try {
             this.plugin._saveSettings();
-            this.plugin.onClose();
-            this.plugin.onUnload();
-            this.plugin.dispose();
+            await this.plugin.onClose();
+            await this.plugin.dispose();
         } catch (error) {
             if (error instanceof Error) {
                 Logger.error(error.message);

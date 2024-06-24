@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { CoreSettings } from "./CoreSettings/coreSettings.js";
+import { CoreSettings } from "./coreSettings.js";
 import { Logger } from "./helpers/logger.js";
 import type { IPlugin } from "./interface/IPlugin.js";
 

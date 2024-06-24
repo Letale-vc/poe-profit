@@ -4,32 +4,22 @@ import type { TradeExchangeRequestType } from "poe-trade-fetch/Types/TradeExchan
 import { PoeTradeFetchError } from "poe-trade-fetch/poeTradeFetchError";
 import { Logger } from "../helpers/logger.js";
 import { STATUS_CODE, handleError, round } from "../helpers/utils.js";
-import { CURRENCY, type CurrencyTypes } from "./currencyNames.js";
+import { CURRENCY, type CurrencyTypes } from "./CurrencyNames.js";
 
-export default class CurrencyPriceFinder {
+// biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
+export class Currency {
     static currencyPrice: Record<CurrencyTypes, number>;
+    private static _lastUpdateTime: Date;
+    private static _poeTradeFetch: PoeTradeFetch;
 
-    #lastUpdateTime;
-
-    #poeTradeFetch: PoeTradeFetch;
-
-    constructor(poeApi: PoeTradeFetch) {
-        this.#poeTradeFetch = poeApi;
-
-        this.#lastUpdateTime = new Date();
-        this.#lastUpdateTime.setUTCHours(
-            this.#lastUpdateTime.getUTCHours() - 1,
-        );
-        CurrencyPriceFinder.currencyPrice = CURRENCY.reduce(
-            (acc, val) => {
-                acc[val] = 1;
-                return acc;
-            },
-            {} as Record<CurrencyTypes, number>,
+    static init(poeTradeFetch: PoeTradeFetch): void {
+        Currency._poeTradeFetch = poeTradeFetch;
+        Currency._lastUpdateTime = new Date();
+        Currency._lastUpdateTime.setUTCHours(
+            Currency._lastUpdateTime.getUTCHours() - 1,
         );
     }
-
-    async #searchCurrencyInTrade(): Promise<
+    private static async searchCurrencyInTrade(): Promise<
         Record<CurrencyTypes, ExchangeResponseType> | undefined
     > {
         try {
@@ -52,7 +42,7 @@ export default class CurrencyPriceFinder {
                 };
 
                 const result =
-                    await this.#poeTradeFetch.exchangeRequest(bodyExchange);
+                    await Currency._poeTradeFetch.exchangeRequest(bodyExchange);
                 searchCurrencyResults[key] = result;
             }
             return searchCurrencyResults;
@@ -61,7 +51,7 @@ export default class CurrencyPriceFinder {
         }
     }
 
-    #currencyPriceCalculation(
+    private static currencyPriceCalculation(
         listingCurrInTrade: ExchangeResponseType,
     ): number {
         const keys = Object.keys(listingCurrInTrade.result);
@@ -80,9 +70,9 @@ export default class CurrencyPriceFinder {
         return 1;
     }
 
-    async update(): Promise<STATUS_CODE> {
+    static async update(): Promise<STATUS_CODE> {
         try {
-            const oneHourAhead = new Date(this.#lastUpdateTime);
+            const oneHourAhead = new Date(Currency._lastUpdateTime);
             oneHourAhead.setUTCHours(oneHourAhead.getUTCHours() + 1);
 
             if (new Date() < oneHourAhead) {
@@ -91,20 +81,22 @@ export default class CurrencyPriceFinder {
             }
 
             Logger.info("Currency START update");
-            const searchCurrencyResult = await this.#searchCurrencyInTrade();
+            const searchCurrencyResult = await Currency.searchCurrencyInTrade();
 
             if (searchCurrencyResult === undefined) {
                 return STATUS_CODE.UNKNOWN_ERROR;
             }
+            const tempCurrencyPrice = {} as Record<CurrencyTypes, number>;
 
             for (const key of CURRENCY) {
                 if (!(key in searchCurrencyResult)) continue;
                 const val = searchCurrencyResult[key];
-                CurrencyPriceFinder.currencyPrice[key] =
-                    this.#currencyPriceCalculation(val);
+                tempCurrencyPrice[key] = Currency.currencyPriceCalculation(val);
             }
 
-            this.#lastUpdateTime = new Date();
+            Currency.currencyPrice = tempCurrencyPrice;
+
+            Currency._lastUpdateTime = new Date();
             Logger.info("Currency END update");
 
             return STATUS_CODE.OK;

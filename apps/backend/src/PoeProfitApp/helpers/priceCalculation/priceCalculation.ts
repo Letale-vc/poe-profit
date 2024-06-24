@@ -1,15 +1,15 @@
 import _ from "lodash";
 import type { PoeSecondResultType } from "poe-trade-fetch";
 import type { ExchangeResponseType } from "poe-trade-fetch/Types/ExchangeResponseType";
-import type { CurrencyTypes } from "../../currency/currencyNames.js";
-import CurrencyPriceFinder from "../../currency/currencyPriceFinder.js";
+import type { CurrencyTypes } from "../../Currency/CurrencyNames.js";
+import { Currency } from "../../Currency/currency.js";
 
 export function calculatePrice(
     itemsArray: PoeSecondResultType[],
     priceMultiplier = 1,
 ): { chaosValue: number; divineValue: number } {
     const chaosValue = calculatePriceInChaos(itemsArray) * priceMultiplier;
-    const divineValue = chaosValue / CurrencyPriceFinder.currencyPrice.divine;
+    const divineValue = chaosValue / Currency.currencyPrice.divine;
     return {
         chaosValue: _.round(chaosValue),
         divineValue: _.round(divineValue, 2),
@@ -41,13 +41,9 @@ export function calculateExchangePrice(
             return (exchangeAmount / itemAmount + acc) / howMuchToDivide;
         }, 0) * priceMultiplier;
     const chaosValue =
-        currency === "chaos"
-            ? price
-            : price * CurrencyPriceFinder.currencyPrice[currency];
+        currency === "chaos" ? price : price * Currency.currencyPrice[currency];
     const divineValue =
-        currency === "chaos"
-            ? price / CurrencyPriceFinder.currencyPrice.divine
-            : price;
+        currency === "chaos" ? price / Currency.currencyPrice.divine : price;
     return {
         chaosValue: _.round(chaosValue),
         divineValue: _.round(divineValue, 2),
@@ -55,7 +51,7 @@ export function calculateExchangePrice(
 }
 
 function turnAnyPriceIntoChaos(value: number, currency: CurrencyTypes) {
-    return value * CurrencyPriceFinder.currencyPrice[currency];
+    return value * Currency.currencyPrice[currency];
 }
 
 function countPriceInChaos(
@@ -80,7 +76,7 @@ function calculatePriceInChaos(itemsArray: PoeSecondResultType[]): number {
 
             const currency = currentValue.listing.price.currency;
 
-            if (!(currency in CurrencyPriceFinder.currencyPrice)) {
+            if (!(currency in Currency.currencyPrice)) {
                 return previousValue;
             }
 

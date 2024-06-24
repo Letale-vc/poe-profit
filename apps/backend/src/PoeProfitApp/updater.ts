@@ -62,7 +62,7 @@ export abstract class Updater<T extends ISettings = ISettings>
 
     onLoad(): void {}
 
-    dispose(): void {
+    dispose(): void | Promise<void> {
         this.onClose();
     }
 
@@ -71,7 +71,7 @@ export abstract class Updater<T extends ISettings = ISettings>
     }
     onUnload(): void {}
 
-    abstract getAllData(): unknown;
+    abstract getAllData(): Promise<unknown>;
 
     abstract update(): Promise<STATUS_CODE>;
 }

@@ -1,22 +1,18 @@
 import { PoeTradeFetch } from "poe-trade-fetch";
 import { round } from "../helpers/utils.js";
-import { CURRENCY } from "./currencyNames.js";
-import CurrencyPriceFinder from "./currencyPriceFinder.js";
+import { CURRENCY } from "./CurrencyNames.js";
+import { Currency } from "./currency.js";
 
 describe("Currency", () => {
-    let currency: CurrencyPriceFinder;
-    let poeApiMock: PoeTradeFetch;
+    let poeTradeFetchMock: PoeTradeFetch;
     beforeEach(() => {
-        // Initialize Currency instance with mock dependencies
-        poeApiMock = new PoeTradeFetch({ userAgent: "TEST" });
-        jest.spyOn(poeApiMock, "exchangeRequest").mockImplementation();
-        currency = new CurrencyPriceFinder(poeApiMock);
+        poeTradeFetchMock = new PoeTradeFetch({ userAgent: "TEST" });
+        jest.spyOn(poeTradeFetchMock, "exchangeRequest").mockImplementation();
+        Currency.init(poeTradeFetchMock);
     });
 
     test("should initialize currencyPrice with default values", () => {
-        for (const val of CURRENCY) {
-            expect(CurrencyPriceFinder.currencyPrice[val]).toBe(1);
-        }
+        expect(Currency.currencyPrice).toBe(undefined);
     });
 
     test("should update currency prices", async () => {
@@ -141,15 +137,13 @@ describe("Currency", () => {
         };
 
         // Mock makeARequestToAnyItem function to return the search result
-        jest.spyOn(poeApiMock, "exchangeRequest").mockResolvedValue(
+        jest.spyOn(poeTradeFetchMock, "exchangeRequest").mockResolvedValue(
             searchResult,
         );
         // Update currency prices
-        await currency.update();
+        await Currency.update();
         // Assert that currency prices have been updated correctly
-        expect(CurrencyPriceFinder.currencyPrice.divine).toBe(
-            round(1200 / 5, 0),
-        );
+        expect(Currency.currencyPrice?.divine).toBe(round(1200 / 5, 0));
         // Assert other currency prices have been updated correctly
     });
 });

@@ -1,5 +1,8 @@
-import type { JestConfigWithTsJest } from "ts-jest";
-const jest_config: JestConfigWithTsJest = {
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+
+
+const jest_config = {
+    preset: "ts-jest",
     clearMocks: true,
     extensionsToTreatAsEsm: [".ts"],
     testEnvironment: "node",
@@ -17,7 +20,7 @@ const jest_config: JestConfigWithTsJest = {
             },
         ],
     },
-    collectCoverageFrom: ["src/**"],
+    collectCoverageFrom: ["./src/**/*"],
 };
 
 export default jest_config;

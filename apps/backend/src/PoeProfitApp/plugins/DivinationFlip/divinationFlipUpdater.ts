@@ -11,11 +11,11 @@ import { STATUS_CODE } from "../../helpers/utils.js";
 import type { ItemSearcher } from "../../itemSearch/itemSearcher.js";
 import type { ItemModifierType } from "../../poeNinja/types/PoeNinjaResponseTypes.js";
 import { Updater } from "../../updater.js";
-import { DataManager } from "./dataManager.js";
+import { DataManager } from "./DataManager.js";
 import {
     type ProfitDivCardType,
     ProfitableCardFinder,
-} from "./profitableDivinationFinder.js";
+} from "./ProfitableDivinationFinder.js";
 import type { DivinationFlipSettings } from "./settings.js";
 import type { DivProfitObject, ItemType } from "./types/HelpersType.js";
 
@@ -71,7 +71,7 @@ export default class DivinationFlipUpdater extends Updater<DivinationFlipSetting
                     itemSelling,
                     val,
                 );
-                this._dataManager.update(profitObject);
+                await this._dataManager.update(profitObject);
             } catch (error) {
                 if (error instanceof PoeTradeFetchError) {
                     return STATUS_CODE.TRADE_LIMIT;
