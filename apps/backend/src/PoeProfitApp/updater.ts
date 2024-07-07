@@ -1,4 +1,3 @@
-import { Logger } from "./helpers/logger.js";
 import type { STATUS_CODE } from "./helpers/utils.js";
 import type { IPlugin } from "./interface/IPlugin.js";
 import type { ISettings } from "./interface/ISettings.js";

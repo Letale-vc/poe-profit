@@ -1,6 +1,5 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 
-
 const jest_config = {
     preset: "ts-jest",
     clearMocks: true,

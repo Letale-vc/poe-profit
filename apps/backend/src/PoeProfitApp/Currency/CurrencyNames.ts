@@ -5,5 +5,3 @@ export const CURRENCY = [
     "chaos",
 ] as const;
 export type CurrencyTypes = (typeof CURRENCY)[number];
-
-

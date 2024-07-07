@@ -29,7 +29,7 @@ export class DataManager implements IDisposable {
         }
     }
 
-  async  update(updObj: GemsExpProfit): Promise<void> {
+    async update(updObj: GemsExpProfit): Promise<void> {
         if (this._dataCash === null) {
             await this.loadData();
         }
@@ -39,9 +39,9 @@ export class DataManager implements IDisposable {
             this._lastUpdateTime = new Date();
         }
     }
-    async  add(newObj: GemsExpProfit) {
+    async add(newObj: GemsExpProfit) {
         if (this._dataCash === null) {
-            await  this.loadData();
+            await this.loadData();
         }
 
         if (this._dataCash !== null) {
@@ -52,7 +52,7 @@ export class DataManager implements IDisposable {
 
     async remove(id: string): Promise<void> {
         if (this._dataCash === null) {
-            await    this.loadData();
+            await this.loadData();
         }
 
         if (this._dataCash !== null && id in this._dataCash) {
